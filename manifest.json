@@ -1,0 +1,15 @@
+{
+  "dependencies": [],
+  "content_type": "AIRCRAFT",
+  "title": "DC Designs F15 Eagles",
+  "manufacturer": "DC Designs",
+  "creator": "DC Designs",
+  "package_version": "1.0.1",
+  "minimum_game_version": "1.13.16",
+  "release_notes": {
+    "neutral": {
+      "LastUpdate": "",
+      "OlderHistory": ""
+    }
+  }
+}
