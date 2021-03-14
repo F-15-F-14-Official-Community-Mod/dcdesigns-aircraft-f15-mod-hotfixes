@@ -6,12 +6,12 @@
            <li>MSFS In-Sim Marketplace</li>
            <ul>
 </h4>
-<h4> Mod to be installed in community folder. Details on finding community folder for your version of MSFS can be found below.
+<h4> Mod to be installed in community folder. Details on finding community folder for your version of MSFS can be found below:
             <p>-https://www.flightsim.com/vbfs/content.php?21235-Finding-The-MSFS-2020-Community-Folder</p>
 </h4>
 
 
-<h4>Development Team-</h4>
+<h4>Development Team</h4>
            <ul>
            <li>CodenameJack447</li>
            <li>Severus Aviation</li>
