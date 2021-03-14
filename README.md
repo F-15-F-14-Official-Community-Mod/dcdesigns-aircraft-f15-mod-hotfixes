@@ -22,10 +22,10 @@
 <h3>Flight Envelope's</h3>
 
 <h4>F100-PW-100/200 (F-15C/D)</h4>
-<p>Originally equipped with PW-100 engines, and later upgraded to PW-200</p>
-<p>Flight envelope for F-15C/D modeled after PW-200 but from the F-15E manual</p>
-<p>F-15E Manual was only used in regards to the PW-200 engine with the F-15C/D models.</p>
-<p>All other information was gathered in the F-15A/B/C/D Manual</p>
+<h6>Originally equipped with PW-100 engines, and later upgraded to PW-200</h6>
+<h6>Flight envelope for F-15C/D modeled after PW-200 but from the F-15E manual</h6>
+<h6>F-15E Manual was only used in regards to the PW-200 engine with the F-15C/D models.</h6>
+<h6>All other information was gathered in the F-15A/B/C/D Manual</h6>
 <br>
 <img src="https://user-images.githubusercontent.com/80608475/111061609-7e43d180-8461-11eb-94e1-24ee485a689b.png"  width="250"/> <img src="https://user-images.githubusercontent.com/80608475/111061618-8c91ed80-8461-11eb-8bd7-2963ef4e1b17.PNG"  width="250"/><img src="https://user-images.githubusercontent.com/80608475/111061628-9d426380-8461-11eb-9bb3-601e4251cff4.PNG"  width="250"/>
 
