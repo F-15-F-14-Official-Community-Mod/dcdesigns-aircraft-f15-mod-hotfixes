@@ -11,7 +11,7 @@
                       
 <h3>***MSFS Marketplace purchased DC Design F-15(C/D/E/I) users***</h3>
 <h5>Currently MSFS Marketplace purchased planes have xml and other file encryption. 
-As a result of the encryption we are unable to apply modifications or edits to those encrypted files. 
+As a result of the encryption we are unable to apply modifications or edits to those encrypted files.(We believe) 
            <br><br>
 You will still have access to the new engine, flight model, and any other file (than can be applied), if using the mod on top of DC Designs F-15 purchased through the MSFS Marketplace.
            <br><br>
