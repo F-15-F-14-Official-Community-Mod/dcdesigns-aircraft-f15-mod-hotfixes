@@ -12,7 +12,7 @@
 
 
 
-##### Documentation Used:
+#### Documentation Used:
           -F-15A Flight Manual
           -F-15E Flight Manual 15 April 1993
           
