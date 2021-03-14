@@ -1,8 +1,8 @@
 ## F-15 (C/D/E/I) Official Community Mod
 
-####  To be used in conjuntion with "DC Designs F-15 C, D, E & I Eagle (for MSFS)" available either through: 
+####  To be used in conjuntion with "DC Designs F-15 C, D, E & I Eagle (for MSFS)" Paid aircraft, available through: 
             -https://www.justflight.com/product/dc-designs-f15-c-d-e-i-eagle-microsoft-flight-simulator
-            -Or MSFS Marketplace
+            -Or MSFS In-Sim Marketplace
 
 
 ####  Development Team-
