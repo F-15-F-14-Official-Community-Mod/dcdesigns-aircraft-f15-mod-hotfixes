@@ -43,8 +43,8 @@
 
 <h4> Documentation Used: </h4>
            <ul>
-           <li>F-15A/B/C/D Flight Manual 1 March 1984</li>
-           <li>F-15E/D Flight Manual 15 April 1993</li>
+           <li>F-15A/B/C/D       Flight Manual 1 March 1984</li>
+           <li>F-15E/D           Flight Manual 15 April 1993</li>
            </ul>   
           
           
