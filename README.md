@@ -1,3 +1,4 @@
+[v1.0.1_rev_1.15i.pdf]()
 <h1> F-15 (C/D/E/I) Official Community Mod </h1>
 <h2>***For Just Flight version of DC Designs F-15***</h2>
 
@@ -22,7 +23,7 @@
 <br>
 <h4>Releases Notes/Changelogs:</h4>
            <ul>
-           <li>[1.15.docx](https://github.com/F-15-C-D-E-I-Official-Community-Mod/dcdesigns-aircraft-f15_rev_1.15/files/6137049/1.15.docx)</li>
+           <li><a href="https://github.com/F-15-C-D-E-I-Official-Community-Mod/dcdesigns-aircraft-f15_rev_1.15-JustFlight/files/6137293/v1.0.1_rev_1.15i.pdf">v1.15i.pdf</a></li>
            </ul>
 
 <h3>Flight Envelopes</h3>
