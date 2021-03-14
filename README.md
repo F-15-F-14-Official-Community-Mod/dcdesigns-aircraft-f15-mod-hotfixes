@@ -1,5 +1,5 @@
 <h1> F-15 (C/D/E/I) Official Community Mod </h1>
-<h2>***For Just Flight version of DC Designs F-15***</h2>
+
 
 <h4>To be used in conjunction with "DC Designs F-15 C, D, E & I Eagle (for MSFS)" paid aircraft, available through:
            <ul>
@@ -7,6 +7,19 @@
            <li>MSFS In-Sim Marketplace</li>
            <ul>
 </h4>
+<h3>Mod works as designed with Just Flight purchased DC Designs F-15(C/D/E/I)</h3>
+                      
+<h4>***MSFS Marketplace purchased DC Design F-15 users***</h4>
+<h5>Currently MSFS Marketplace purchased planes have xml and other file encryption. 
+As a result of the encryption we are unable to apply modifications or edits to those encrypted files. 
+           <br><br>
+You will still have access to the new engine, flight model, and any other file (than can be applied), if using the mod on top of DC Designs F-15 purchased through the MSFS Marketplace.
+           <br><br>
+           Note- This is new to the mod team with regards to  compatibility with MSFS Marketplace purchased jets and possible solutions.
+           We will be looking into this further, and if there is any progress related to the MSFS Marketplace users we will update as soon as possible
+</h5>
+
+ <br><br>                     
 <h4> Mod to be installed in community folder. Details on finding community folder for your version of MSFS can be found below:
             <p>https://www.flightsim.com/vbfs/content.php?21235-Finding-The-MSFS-2020-Community-Folder</p>
 </h4>
