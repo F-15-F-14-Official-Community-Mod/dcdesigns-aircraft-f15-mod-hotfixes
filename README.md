@@ -48,7 +48,7 @@
           -aviationarchives(at)gmail.com
 <h4>Additonal Resources(All were crucial achieving our engine and flight model configurations):</h4>          
           <ul>
-          <li>Roy Homles: FS Thrust Versus Altitude Guide(s) </li>
+          <li>Roy Holmes: FS Thrust Versus Altitude Guide(s) </li>
           <li>Ives Guillaume: Flight Dynamics Guide(s)</li>
           <li>Ozwookie: Excel table conversions/guides</li>
           </ul>
