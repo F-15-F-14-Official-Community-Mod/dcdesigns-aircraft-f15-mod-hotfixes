@@ -22,9 +22,7 @@
 <h3>Flight Envelope's</h3>
 
 <h4>F100-PW-100/200 (F-15C/D)</h4>
-
-<h5>PW-100</h5> <pre>&emsp;&emsp;</pre> <h5>PW-200</h5>
-
+<p>Referenced both engine versions to verify accuracy and no major differences between the two, as the F-15C/D was upgraded with PW-200</p>
 <img src="https://user-images.githubusercontent.com/80608475/111061609-7e43d180-8461-11eb-94e1-24ee485a689b.png"  width="250"/> <img src="https://user-images.githubusercontent.com/80608475/111061618-8c91ed80-8461-11eb-8bd7-2963ef4e1b17.PNG"  width="250"/><img src="https://user-images.githubusercontent.com/80608475/111061628-9d426380-8461-11eb-9bb3-601e4251cff4.PNG"  width="250"/>
 
 
