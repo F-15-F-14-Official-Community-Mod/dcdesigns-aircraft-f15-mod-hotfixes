@@ -1,4 +1,3 @@
-[v1.0.1_rev_1.15i.pdf]()
 <h1> F-15 (C/D/E/I) Official Community Mod </h1>
 <h2>***For Just Flight version of DC Designs F-15***</h2>
 
