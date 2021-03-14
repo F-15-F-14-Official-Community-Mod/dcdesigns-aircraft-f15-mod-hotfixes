@@ -23,7 +23,7 @@
 
 <h4>F100-PW-100/200 (F-15C/D)</h4>
 <p>Referenced both engine versions to verify accuracy and no major differences between the two.</p>
-<p>F-15C/D 200 engines roughly introduced in 1986</p>
+<p>F-15C/D PW-200 engines roughly introduced in 1986</p>
 <img src="https://user-images.githubusercontent.com/80608475/111061609-7e43d180-8461-11eb-94e1-24ee485a689b.png"  width="250"/> <img src="https://user-images.githubusercontent.com/80608475/111061618-8c91ed80-8461-11eb-8bd7-2963ef4e1b17.PNG"  width="250"/><img src="https://user-images.githubusercontent.com/80608475/111061628-9d426380-8461-11eb-9bb3-601e4251cff4.PNG"  width="250"/>
 
 
