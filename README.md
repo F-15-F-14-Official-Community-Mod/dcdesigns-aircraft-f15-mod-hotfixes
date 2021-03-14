@@ -1,16 +1,16 @@
 <h1> F-15 (C/D/E/I) Official Community Mod </h2>
 
-<h3>To be used in conjunction with "DC Designs F-15 C, D, E & I Eagle (for MSFS)" paid aircraft, available through:
+<h4>To be used in conjunction with "DC Designs F-15 C, D, E & I Eagle (for MSFS)" paid aircraft, available through:
            <p>-https://www.justflight.com/product/dc-designs-f15-c-d-e-i-eagle-microsoft-flight-simulator <br>
               -Or MSFS In-Sim Marketplace</p>
-</h3>
-<h3> Mod to be installed in community folder. Details on finding community folder for your version of MSFS can be found below.
-            -https://www.flightsim.com/vbfs/content.php?21235-Finding-The-MSFS-2020-Community-Folder
-</h3>
-<h5>  Development Team-             </h5>
-<h5> -CodenameJack447               </h5>   
-<h5> -Severus Aviation              </h5>
-<h5> -SilentG37                     </h5>
+</h4>
+<h4> Mod to be installed in community folder. Details on finding community folder for your version of MSFS can be found below.
+            <p>-https://www.flightsim.com/vbfs/content.php?21235-Finding-The-MSFS-2020-Community-Folder</p>
+</h4>
+<h5>Development Team-</h5>
+           <h5>-CodenameJack447</h5>   
+           <h5>-Severus Aviation</h5>
+           <h5>-SilentG37</h5>
 
 
 ### Flight Envelope's
