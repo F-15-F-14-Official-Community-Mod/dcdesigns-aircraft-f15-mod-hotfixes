@@ -35,7 +35,7 @@
 
 <img src="https://user-images.githubusercontent.com/80608475/111061314-eb566780-845f-11eb-8257-1fc9bf75cc51.PNG" width="250"/><img src="https://user-images.githubusercontent.com/80608475/111060697-2d7daa00-845c-11eb-9341-6920f3ccb9d9.png"  width="250"/> 
 
-<h5>Note: Take into account that to properly match the flight envelopes, the tests and calibrations were made in a STD day, clean skies, 15 degrees ISA and 35000lbs weight for model’s C/D and 40000lbs for E/I</h5>
+<h5>Note: Take into account that to properly match the flight envelopes, the tests and calibrations were made in a STD day, clean skies, 15 degrees ISA and 35000lbs take-off/gross weight for model’s C/D and 40000lbs for E/I</h5>
 
 
 
