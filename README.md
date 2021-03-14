@@ -1,9 +1,14 @@
 ## F-15 (C/D/E/I) Official Community Mod
 
-###  Development Team-
-#### CodenameJack447
-#### Severus Aviation
-#### SilentG37
+####  To be used in conjuntion with "DC Designs F-15 C, D, E & I Eagle (for MSFS)" available either through: 
+            -https://www.justflight.com/product/dc-designs-f15-c-d-e-i-eagle-microsoft-flight-simulator
+            -Or MSFS Marketplace
+
+
+####  Development Team-
+##### CodenameJack447
+##### Severus Aviation
+##### SilentG37
 
 
 
