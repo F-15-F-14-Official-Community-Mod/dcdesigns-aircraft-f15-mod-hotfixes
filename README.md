@@ -1,4 +1,4 @@
-<h1> F-15 (C/D/E/I) Official Community Mod </h2>
+<h1> F-15 (C/D/E/I) Official Community Mod </h1>
 
 <h4>To be used in conjunction with "DC Designs F-15 C, D, E & I Eagle (for MSFS)" paid aircraft, available through:
            <ul>
