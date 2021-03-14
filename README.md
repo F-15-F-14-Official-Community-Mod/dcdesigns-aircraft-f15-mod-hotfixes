@@ -7,9 +7,9 @@
            <li>MSFS In-Sim Marketplace</li>
            <ul>
 </h4>
-<h3>Mod works as designed with Just Flight purchased DC Designs F-15(C/D/E/I)</h3>
+<h4>Mod works as designed with Just Flight purchased DC Designs F-15(C/D/E/I)</h4>
                       
-<h4>***MSFS Marketplace purchased DC Design F-15 users***</h4>
+<h3>***MSFS Marketplace purchased DC Design F-15 users***</h3>
 <h5>Currently MSFS Marketplace purchased planes have xml and other file encryption. 
 As a result of the encryption we are unable to apply modifications or edits to those encrypted files. 
            <br><br>
