@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Gauge Name="DCD F-15 Strike Eagle MFD" Version="1.0">
+
+
+  
+   <Element>
+<Visible>(A:Circuit Avionics on, bool)</Visible>
+  <Image Name="DCD_HSI.png"/>
+  	<Size X="512" Y="512" />
+
+		<Element>
+			<Visible>(A:Circuit Avionics on,bool)</Visible>
+            <Position X="256" Y="256"/>
+            <Image Name="HSI_ROSE.bmp" Bright="1">
+              <Axis X="162" Y="161"/>
+            </Image>
+            <Rotate>
+              <Value>(A:Plane heading degrees gyro,radians) /-/</Value>
+            </Rotate>
+          </Element>
+	<Element>
+		<Visible>(A:Circuit Avionics on,bool)</Visible>
+		<Position X="202" Y="60"/>
+		<Text X="100" Y="25" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Center" VerticalAdjust="Center">
+		<String>%((A:Plane heading degrees gyro,degrees))%!4.1f!%</String>
+		</Text>
+	</Element>	
+	
+	<Element>
+		<Visible>(A:Circuit Avionics on,bool)</Visible>
+		<Position X="10" Y="340"/>
+		<Text X="100" Y="25" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>HDG %((A:Autopilot heading lock dir,degrees))%!4.1f!%</String>
+		</Text>
+	</Element>	
+	
+	<Element>
+		<Visible>(A:Circuit Avionics on,bool)</Visible>
+		<Position X="10" Y="320"/>
+		<Text X="100" Y="25" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>CRS %((A:NAV1 OBS,degrees))%!4.1f!%</String>
+		</Text>
+	</Element>	
+	
+	<Element>
+	    <Visible>(A:Circuit Avionics on, bool) (A:GPS DRIVES NAV1, bool) and</Visible>
+		<Position X="175" Y="420"/>
+		<Text X="150" Y="25" Bright="Yes" Length="30" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Center" VerticalAdjust="Center">
+		<String>%((A:GPS WP NEXT ID, String))%!s! %((A:GPS WP DISTANCE, nmiles))%!4.2f!%NM</String>
+		</Text>
+	</Element>
+	
+	
+	
+            <Element>
+			<Visible>(A:Circuit Avionics on,bool)</Visible>
+              <Position X="256" Y="256"/>
+              <Image Name="VOR_Graphic.bmp" Bright="1">
+                <Axis X="90" Y="118"/>
+              </Image>
+              <Rotate>
+               <Value>(A:NAV1 OBS,radians) (A:Plane heading degrees gyro,radians) -</Value>
+              </Rotate>
+            </Element>
+			
+	
+			
+
+            <Element>
+			<Visible>(A:HSI TF flags, enum) 1 ==</Visible>
+              <Position X="400" Y="30"/>
+              <Image Name="Direction.bmp" Bright="1">
+              </Image>
+            </Element>
+			
+			            <Element>
+			<Visible>(A:HSI TF flags, enum) 2 ==</Visible>
+              <Position X="400" Y="63"/>
+              <Image Name="Direction_Rev_Crs.bmp" Bright="1">
+              </Image>
+            </Element>
+			
+			
+			
+            <!--Deviation Needle-->
+            <Element>
+              <Visible>(A:Circuit Avionics on,bool) (A:HSI has localizer, bool) 0 ! ==&amp;&amp;</Visible>
+              <Position X="256" Y="256"/>
+              <Rectangle Height="100" Width="4" LineWidth="2" Color="Lime" FillColor="Lime" Bright="Yes">
+                <Pivot X="1" Y="50"/>
+              </Rectangle>
+              <Shift>
+                <Value>(A:HSI CDI needle valid, bool) if{ (A:HSI CDI needle, number) } els{ 0 }</Value>
+                <Scale X="1.0"/>
+              </Shift>
+              <Rotate>
+                <Value>(A:NAV1 OBS,radians) (A:Plane heading degrees gyro,radians) -</Value>
+              </Rotate>
+            </Element>
+			
+			<!--HDG-->
+          <Element>
+		  <Visible>(A:Circuit Avionics on,bool)</Visible>
+            <Position X="256" Y="256"/>
+            <Rectangle Height="12" Width="8" LineWidth="1" Color="Lime" FillColor="Lime" Bright="Yes">
+              <Pivot X="3" Y="174"/>
+            </Rectangle>
+            <Rotate>
+              <Value>(A:Autopilot heading lock dir,radians) (A:Plane heading degrees gyro,radians) -</Value>
+            </Rotate>
+          </Element>
+		  
+		   <!--ADF-->
+          <Element>
+            <Visible>(A:ADF1 signal, number) 10 > if</Visible>
+              <Position X="256" Y="256"/>
+              <Image Name="ADF_BEARING.bmp" Bright="1">
+			  <Axis X="7" Y="128"/>
+              </Image>
+              <Rotate>
+                <Value>(A:ADF1 Radial,radians)</Value>
+              </Rotate>
+            </Element>
+		  
+          <Element>
+            <Visible>(A:Circuit Avionics on,bool) (A:HSI GSI needle valid, bool) &amp;&amp;</Visible>
+            <Position X="28" Y="88"/>
+            <Rectangle Height="3" Width="9" LineWidth="1" Color="Lime" FillColor="Lime" Bright="Yes"/>
+            <Shift>
+              <Value Minimum="-120" Maximum="120">(A:HSI GSI needle, number)</Value>
+              <Scale Y="0.3"/>
+            </Shift>
+          </Element>
+		  
+		  
+		    	<Element>
+		<Visible>(A:Circuit Avionics on,bool)</Visible>
+		<Position X="345" Y="445"/>
+		<Text X="200" Y="30" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>NAV1 %((A:NAV1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
+		</Text>
+	</Element>
+
+  	<Element>
+		<Visible>(A:Circuit Avionics on,bool)</Visible>
+		<Position X="285" Y="445"/>
+		<Text X="200" Y="30" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>%((A:Nav1 ident, string))%!s!</String>
+		</Text>
+	</Element> 
+ 
+   	<Element>
+		<Visible>(A:Circuit Avionics on,bool)</Visible>
+		<Position X="345" Y="420"/>
+		<Text X="200" Y="30" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>DME   %((A:NAV1 DME, nmiles) 999 min 0 max s1 0 &gt;=)%{if}%(l1 100 &gt;=)%{if}%(l1)%!d!%{else}%(l1)%!0.1f!%{end}%{else}----%{end}</String>
+		</Text>
+	</Element>
+
+  	<Element>
+		<Visible>(A:Circuit Avionics on,bool)</Visible>
+		<Position X="10" Y="400"/>
+		<Text X="200" Y="25" Bright="Yes" Length="16" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>IAS     %((A:Airspeed indicated, knots))%!4d!%kts</String>
+		</Text>
+	</Element>
+	  	<Element>
+		<Visible>(A:Circuit Avionics on,bool)</Visible>
+		<Position X="10" Y="420"/>
+		<Text X="200" Y="25" Bright="Yes" Length="16" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>TCAS %((A:airspeed TRUE, knots))%!4d!%kts</String>
+		</Text>
+	</Element>
+	  	<Element>
+		<Visible>(A:Circuit Avionics on,bool)</Visible>
+		<Position X="10" Y="440"/>
+		<Text X="200" Y="25" Bright="Yes" Length="16" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>MACH   %((A:AIRSPEED MACH, mach))%!3.3f!</String>
+		</Text>
+	</Element>
+
+	<Element>
+		<Visible>(A:Circuit Avionics on, bool)</Visible>
+		<Position X="10" Y="80"/>
+		<Text X="250" Y="25" Bright="Yes" Length="18" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>mbar %((A:KOHLSMAN SETTING HG,mbar)) %!4d!</String>
+		</Text>
+	</Element> 
+
+	<Element>
+		<Visible>(A:Circuit Avionics on, bool)</Visible>
+		<Position X="10" Y="60"/>
+		<Text X="250" Y="25" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>inHg %((A:Kohlsman setting hg,inHg)) %!2.2f!</String>
+		</Text>
+	</Element>	
+	
+	<Element>
+		<Visible>(A:Circuit Avionics on,bool)</Visible>
+		<Position X="10" Y="160"/>
+		<Text X="150" Y="25" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>Alt  %((A:Indicated Altitude, feet))%!5d!%ft</String>
+		</Text>
+	</Element>	
+	
+	    <Element>
+		<Visible>(A:Circuit Avionics on,bool)</Visible>
+		<Position X="10" Y="180"/>
+		<Text X="150" Y="25" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>Telv %((A:ELEVATOR TRIM PCT,Percent))%!3d!%%</String>
+		</Text>
+	</Element>	
+
+//added
+
+    <Element>
+	<Visible>(A:AUTOPILOT MASTER,bool)</Visible>
+      <Position X="10" Y="16"/>
+      <Select>
+        <Value>(A:AUTOPILOT ALTITUDE LOCK,bool)</Value>
+        <Case Value="1">
+          <Image Name="ALT.bmp"/>
+        </Case>
+      </Select>
+    </Element>
+	
+ 
+	<Element>
+	 <Visible>(A:AUTOPILOT MASTER,bool)</Visible>
+	  <Position X="20" Y="10"/>
+		<Text X="100" Y="30" Bright="Yes" Length="6" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Right" VerticalAdjust="Center">
+		<String>%((A:AUTOPILOT ALTITUDE LOCK VAR, feet))%!5d!%</String>
+		</Text>
+	</Element>
+ 
+ 
+	
+ 
+   <Element>
+	<Visible>(A:AUTOPILOT MASTER,bool)</Visible>
+      <Position X="10" Y="41"/>
+      <Select>
+        <Value>(A:AUTOPILOT VERTICAL HOLD,bool)</Value>
+        <Case Value="1">
+          <Image Name="VS.bmp"/>
+        </Case>
+      </Select>
+    </Element>
+ 
+
+  <Element>
+	  <Visible>(A:AUTOPILOT MASTER,bool)</Visible>
+	  <Position X="20" Y="35"/>
+    <Text X="100" Y="30" Bright="Yes" Length="6" Font="Arial Unicode MS" Color="Lime"
+    Adjust="Right" VerticalAdjust="Center">
+    <String>%((A:AUTOPILOT VERTICAL HOLD VAR, ft/min))%!5d!%</String>
+    </Text>
+ </Element>
+
+    <Element>
+		<Visible>(A:Circuit Avionics on, bool)</Visible>
+		<Position X="10" Y="100"/>
+		<Text X="100" Y="25" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>OAT %((A:AMBIENT TEMPERATURE,Celsius))%!2.1f!C</String>
+		</Text>
+	</Element>
+	
+	
+	<Element>
+	   <Visible>(A:Circuit Avionics on, bool)</Visible>
+	   <Position X="30" Y="478"/>
+       <Select>
+         <Value>(A:AUTOPILOT MASTER,bool)</Value>
+         <Case Value="1">
+            <Image Name="AP.bmp"/>
+         </Case>
+        </Select>
+    </Element>
+   
+    <Element>
+		<Visible>(A:Circuit Avionics on, bool)</Visible>
+        <Position X="90" Y="478"/>
+        <Select>
+        <Value>(A:AUTOPILOT HEADING LOCK,bool)</Value>
+        <Case Value="1">
+            <Image Name="HDG.bmp"/>
+        </Case>
+        </Select>
+    </Element>
+	
+	<Element>
+	  <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="150" Y="478"/>
+      <Select>
+        <Value>(A:AUTOPILOT NAV1 LOCK, bool)</Value>
+        <Case Value="1">
+          <Image Name="NAV.bmp" ImageSizes="45,40"/>
+        </Case>
+      </Select>
+    </Element>
+	
+	<Element>
+	  <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="210" Y="478"/>
+      <Select>
+        <Value>(A:AUTOPILOT YAW DAMPER, bool)</Value>
+        <Case Value="1">
+          <Image Name="YD.bmp" ImageSizes="45,40"/>
+        </Case>
+      </Select>
+    </Element>
+	
+	<Element>
+	  <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="270" Y="478"/>
+      <Select>
+        <Value>(A:AUTOPILOT GLIDESLOPE HOLD,bool)</Value>
+        <Case Value="1">
+          <Image Name="APP.bmp" ImageSizes="45,40"/>
+        </Case>
+      </Select>
+    </Element>
+	
+		<Element>
+	  <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="330" Y="478"/>
+      <Select>
+        <Value>(A:GPS DRIVES NAV1,bool)</Value>
+        <Case Value="1">
+          <Image Name="GPS.bmp" ImageSizes="45,40"/>
+        </Case>
+      </Select>
+    </Element>
+
+  
+
+</Element>
+
+
+
+	  
+</Gauge>
