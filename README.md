@@ -1,11 +1,11 @@
 ## F-15 (C/D/E/I) Official Community Mod
 
 ####  To be used in conjunction with "DC Designs F-15 C, D, E & I Eagle (for MSFS)" paid aircraft, available through: 
-            https://www.justflight.com/product/dc-designs-f15-c-d-e-i-eagle-microsoft-flight-simulator
-            Or MSFS In-Sim Marketplace
+            -https://www.justflight.com/product/dc-designs-f15-c-d-e-i-eagle-microsoft-flight-simulator
+            -Or MSFS In-Sim Marketplace
 
 #### Mod to be installed in community folder. Details on finding community folder for your version of MSFS can be found below.
-            https://www.flightsim.com/vbfs/content.php?21235-Finding-The-MSFS-2020-Community-Folder
+            -https://www.flightsim.com/vbfs/content.php?21235-Finding-The-MSFS-2020-Community-Folder
 
 ####  Development Team-
 ##### -CodenameJack447
