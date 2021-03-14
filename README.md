@@ -19,6 +19,11 @@
            <ul>
 
 <br>
+<h4>Releases</h4>
+           <ul>
+           <li>[1.15.docx](https://github.com/F-15-C-D-E-I-Official-Community-Mod/dcdesigns-aircraft-f15_rev_1.15/files/6137049/1.15.docx)<li>
+           </ul>
+
 <h3>Flight Envelopes</h3>
 
 <h4>F100-PW-100/200 (F-15C/D)</h4>
