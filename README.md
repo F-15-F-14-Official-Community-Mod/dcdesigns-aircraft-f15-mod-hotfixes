@@ -62,7 +62,7 @@
            </ul>   
           -Credits of Ron Downey via Aviation Archives
           -aviationarchives(at)gmail.com
-<h4>Additonal Resources(All were crucial achieving our engine and flight model configurations):</h4>          
+<h4>Additonal Resources(All were crucial in achieving our engine and flight model configurations):</h4>          
           <ul>
           <li>Roy Holmes: FS Thrust Versus Altitude Guide(s) </li>
           <li>Ives Guillaume: Flight Dynamics Guide(s)</li>
