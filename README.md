@@ -11,9 +11,19 @@
                       
 <h3>***MSFS Marketplace purchased DC Design F-15(C/D/E/I) users***</h3>
 <h4>For marketplace users of the official product, due to Asobo restrictions and DRM encryption protection,<br> 
-           unfortunately our mod will not be able to work, at this current time. 
-           <br><br>
-           Note- If there is any progress related to the MSFS Marketplace users we will update as soon as possible
+         it has limited many of the files we wish to edit.
+<h4>Current files that we believe work for the mod on the MSFS Marketplace version of jet:</h4>
+           <ul>
+                      <li>flight_model.cfg</li>
+                      <li>engines.cfg</li>
+                      <li>cameras.cfg</li>
+                      <li>autopilot functionality</li>
+                      <li>PiD values</li>
+                      <li>external UI config</li>
+           </ul>    
+           Improvements made to the HUD or MFDs will not be applied due to Microsoft DRM, at this current time. 
+  <br><br>          
+           #### Note- If there is any further progress or updates regarding the MSFS Marketplace version users, we will update you as soon as possible.
 </h4>
 
  <br>                    
