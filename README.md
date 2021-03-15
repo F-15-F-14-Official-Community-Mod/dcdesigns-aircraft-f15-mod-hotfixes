@@ -26,7 +26,8 @@
            #### Note- If there is any further progress or updates regarding the MSFS Marketplace version users, we will update you as soon as possible.
 </h4>
 
- <br>                    
+ <br> 
+ <h3>Installation</h3>
 <h4> Mod to be installed in community folder. Details on finding community folder for your version of MSFS can be found below:
             <p>https://www.flightsim.com/vbfs/content.php?21235-Finding-The-MSFS-2020-Community-Folder</p>
 </h4>
