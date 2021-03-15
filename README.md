@@ -10,10 +10,8 @@
 <h4>Mod works as designed with Just Flight purchased DC Designs F-15(C/D/E/I)</h4>
                       
 <h3>***MSFS Marketplace purchased DC Design F-15(C/D/E/I) users***</h3>
-<h5>Currently MSFS Marketplace purchased planes have xml and other file encryption. 
-As a result of the encryption we are unable to apply modifications or edits to those encrypted files. (We believe) 
-           <br><br>
-           At this time, it is unknown if we will be able to implement the mod for MSFS Marketplace user
+<h5>For marketplace users of the official product, due to Asobo restrictions and copy protection,
+           at the moment our version will not be able to work 
            <br><br>
            Note- If there is any progress related to the MSFS Marketplace users we will update as soon as possible
 </h5>
