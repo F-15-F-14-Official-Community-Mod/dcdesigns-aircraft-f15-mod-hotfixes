@@ -10,11 +10,11 @@
 <h4>Mod works as designed with Just Flight purchased DC Designs F-15(C/D/E/I)</h4>
                       
 <h3>***MSFS Marketplace purchased DC Design F-15(C/D/E/I) users***</h3>
-<h5>For marketplace users of the official product, due to Asobo restrictions and copy protection,
-           at the moment our version will not be able to work 
+<h4>For marketplace users of the official product, due to Asobo restrictions and DRM encryption protection, 
+           unfortunately our mod will not be able to work 
            <br><br>
            Note- If there is any progress related to the MSFS Marketplace users we will update as soon as possible
-</h5>
+</h4>
 
  <br><br>                     
 <h4> Mod to be installed in community folder. Details on finding community folder for your version of MSFS can be found below:
