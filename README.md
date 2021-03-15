@@ -4,7 +4,7 @@
 <h4>To be used in conjunction with "DC Designs F-15 C, D, E & I Eagle (for MSFS)" paid aircraft, available through:
            <ul>
            <li>https://www.justflight.com/product/dc-designs-f15-c-d-e-i-eagle-microsoft-flight-simulator</li>
-           <li>MSFS In-Sim Marketplace</li>
+<!--            <li>MSFS In-Sim Marketplace</li> -->
            <ul>
 </h4>
 <h4>Mod works as designed with Just Flight purchased DC Designs F-15(C/D/E/I)</h4>
