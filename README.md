@@ -23,7 +23,8 @@
            </ul>    
            Improvements made to the HUD or MFDs will not be applied due to Microsoft DRM, at this current time. 
   <br><br>          
-           #### Note- If there is any further progress or updates regarding the MSFS Marketplace version users, we will update you as soon as possible.
+   
+#### Note- If there is any further progress or updates regarding the MSFS Marketplace version users, we will update you as soon as possible.
 </h4>
 
  <br> 
