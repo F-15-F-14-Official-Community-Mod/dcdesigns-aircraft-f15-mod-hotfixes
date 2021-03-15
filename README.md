@@ -13,12 +13,9 @@
 <h5>Currently MSFS Marketplace purchased planes have xml and other file encryption. 
 As a result of the encryption we are unable to apply modifications or edits to those encrypted files. (We believe) 
            <br><br>
-           At this time, it is unknown if we will be able to implement the mod for MSFS Marketplace users
-           
- F-15(C/D/E/I) purchased through the MSFS Marketplace.
+           At this time, it is unknown if we will be able to implement the mod for MSFS Marketplace user
            <br><br>
-           Note- This is new to the mod team with regards to  compatibility with MSFS Marketplace purchased jets and possible solutions.
-           We will be looking into this further, and if there is any progress related to the MSFS Marketplace users we will update as soon as possible
+           Note- If there is any progress related to the MSFS Marketplace users we will update as soon as possible
 </h5>
 
  <br><br>                     
