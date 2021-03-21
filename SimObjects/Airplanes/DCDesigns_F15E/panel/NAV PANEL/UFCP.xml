@@ -1,0 +1,100 @@
+﻿<Gauge Name="Navigation" Version="1.0">
+ <Update Frequency="60"/> 
+  
+
+   <Element>
+  <Image Name="VC_Nav.png"/>
+   <Visible>(A:Circuit Avionics on, bool)</Visible>
+	<Size X="512" Y="512" /> 
+
+  
+    			   <Element>
+				   <Visible>(A:Circuit Avionics on, bool)</Visible>
+			   <Position X="80" Y="80"/>
+ <Text X="350" Y="30" Bright="Yes" Length="18" Font="Tahoma" Color="Red"
+Adjust="Left" VerticalAdjust="Center">
+ <String>ADF FREQ: %((A:ADF ACTIVE FREQUENCY:1,KHz))%!5.1f!</String>
+ </Text>
+ </Element>
+ 
+    			   <Element>
+			   <Visible>(A:Circuit Avionics on, bool)</Visible>
+			   <Position X="80" Y="135"/>
+ <Text X="350" Y="30" Bright="Yes" Length="20" Font="Tahoma" Color="Red"
+Adjust="Left" VerticalAdjust="Center">
+ <String>NAV 1 FREQ: %((A:NAV1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
+ </Text>
+ </Element>
+ 
+     			   <Element>
+			   <Visible>(A:Circuit Avionics on, bool)</Visible>
+			   <Position X="320" Y="135"/>
+ <Text X="350" Y="30" Bright="Yes" Length="20" Font="Tahoma" Color="Red"
+Adjust="Left" VerticalAdjust="Center">
+ <String>STBY: %((A:NAV1 STANDBY FREQUENCY, Megahertz))%!6.2f!</String>
+ </Text>
+ </Element>
+ 
+     			   <Element>
+			   <Visible>(A:Circuit Avionics on, bool)</Visible>
+			   <Position X="80" Y="190"/>
+ <Text X="350" Y="30" Bright="Yes" Length="20" Font="Tahoma" Color="Red"
+Adjust="Left" VerticalAdjust="Center">
+ <String>COM 1 FREQ: %((A:COM1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
+ </Text>
+ </Element>
+ 
+      			   <Element>
+			   <Visible>(A:Circuit Avionics on, bool)</Visible>
+			   <Position X="320" Y="190"/>
+ <Text X="350" Y="30" Bright="Yes" Length="20" Font="Tahoma" Color="Red"
+Adjust="Left" VerticalAdjust="Center">
+ <String>STBY: %((A:COM1 STANDBY FREQUENCY, Megahertz))%!6.2f!</String>
+ </Text>
+ </Element>
+ 
+	 <Element>
+		<Visible>(A:Circuit Avionics on, bool)</Visible>
+		<Position X="80" Y="240"/>
+		<Text X="250" Y="30" Bright="Yes" Length="20" Font="Tahoma" Color="Red"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>LAT: %((A:GPS POSITION LAT, radians))%!6.4f!</String>
+		</Text>
+	</Element>
+ 
+ 	 <Element>
+		<Visible>(A:Circuit Avionics on, bool)</Visible>
+		<Position X="300" Y="240"/>
+		<Text X="250" Y="30" Bright="Yes" Length="20" Font="Tahoma" Color="Red"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>LON: %((A:GPS POSITION LON, radians))%!6.4f!</String>
+		</Text>
+ </Element>
+ 
+   <Element>
+<Visible>(A:Circuit Avionics on, bool)</Visible>
+			   <Position X="80" Y="295"/>
+ <Text X="250" Y="30" Bright="Yes" Length="20" Font="Tahoma" Color="Red"
+Adjust="Left" VerticalAdjust="Center">
+ <String>XPDR:  %((A:TRANSPONDER CODE:1, number))%!4d!%</String>
+ </Text>
+ </Element>
+ 
+     			   <Element>
+			   <Visible>(A:Circuit Avionics on, bool)</Visible>
+			   <Position X="80" Y="347"/>
+ <Text X="250" Y="30" Bright="Yes" Length="100" Font="Tahoma" Color="Red"
+Adjust="Left" VerticalAdjust="Center">
+ <String>TOTAL FUEL: %((A:FUEL TOTAL QUANTITY WEIGHT, pounds)) %!5d!%</String>
+ </Text>
+ </Element>
+
+ </Element>
+
+</Gauge>  
+
+
+
+
+
+

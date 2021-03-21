@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Gauge Name="Engine Display" Version="1.0">
+<Update Frequency="60"/> 
 
 <Element>
+
 <Visible>(A:Circuit Avionics on, bool)</Visible>
   <Image Name="Engine_Data.bmp"/>
-  </Element>
+
   
   
 <Element>
@@ -13,7 +15,7 @@
 <Position X="200" Y="200"/>
  <Text X="120" Y="90" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
 Adjust="Center" VerticalAdjust="Center">
- <String>%((A:GENERAL ENG PCT MAX RPM:1, percent))%!3d!%</String>
+ <String>%((A:TURB ENG N2:1, percent))%!3d!%</String>
  </Text>
  </Element>
  
@@ -22,7 +24,7 @@ Adjust="Center" VerticalAdjust="Center">
 			   <Position X="700" Y="200"/>
  <Text X="120" Y="90" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
 Adjust="Center" VerticalAdjust="Center">
- <String>%((A:GENERAL ENG PCT MAX RPM:2, percent))%!3d!%</String>
+ <String>%((A:TURB ENG N2:2, percent))%!3d!%</String>
  </Text>
  </Element>
  
@@ -89,10 +91,10 @@ Adjust="Center" VerticalAdjust="Center">
 			<Axis X="0" Y="0"/>
 			</Image>
 			<Rotate>
-			<Value Minimum="50" Maximum="100">(A:TURB ENG PRIMARY NOZZLE PERCENT:1, percent)</Value>
+			<Value Minimum="0" Maximum="100">(A:TURB ENG PRIMARY NOZZLE PERCENT:1, percent)</Value>
 			<Nonlinearity>
-			<Item Value="50" Degrees="-45"/>
-			<Item Value="100" Degrees= "45"/>
+			<Item Value="0" Degrees="-45.00"/>
+			<Item Value="100" Degrees= "45.00"/>
 			</Nonlinearity>
          </Rotate>
    </Element>
@@ -104,15 +106,15 @@ Adjust="Center" VerticalAdjust="Center">
 			<Axis X="0" Y="0"/>
 			</Image>
 			<Rotate>
-			<Value Minimum="50" Maximum="100">(A:TURB ENG PRIMARY NOZZLE PERCENT:2, percent)</Value>
+			<Value Minimum="0" Maximum="100">(A:TURB ENG PRIMARY NOZZLE PERCENT:2, percent)</Value>
 			<Nonlinearity>
-			<Item Value="50" Degrees="-45"/>
-			<Item Value="100" Degrees= "45"/>
+			<Item Value="0" Degrees="-45.00"/>
+			<Item Value="100" Degrees= "45.00"/>
 			</Nonlinearity>
          </Rotate>
    </Element>
- 
- 
+  
+  </Element>
 
 </Gauge>
 

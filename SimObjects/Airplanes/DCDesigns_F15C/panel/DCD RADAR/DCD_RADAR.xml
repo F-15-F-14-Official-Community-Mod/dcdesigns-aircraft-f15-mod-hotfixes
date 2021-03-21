@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Gauge Name="DCD F-15 Eagle Radar" Version="1.0">
-
+ <Update Frequency="60"/> 
 
 
 	
@@ -271,7 +271,7 @@
 		<Position X="335" Y="86"/>
 		<Text X="60" Y="20" Bright="Yes" Length="3" Font="Arial Unicode MS" Color="white"
 		Adjust="right" VerticalAdjust="Center">
-		<String>%((A:TURB ENG CORRECTED N2:1, percent))%!3d!%</String>
+		<String>%((A:TURB ENG N2:1, percent))%!3d!%</String>
 		</Text>
 	</Element>
  
@@ -280,7 +280,7 @@
 	    <Position X="452" Y="86"/>
 		<Text X="60" Y="20" Bright="Yes" Length="3" Font="Arial Unicode MS" Color="white"
 		Adjust="left" VerticalAdjust="Center">
-		<String>%((A:TURB ENG CORRECTED N2:2, percent))%!3d!%</String>
+		<String>%((A:TURB ENG N2:2, percent))%!3d!%</String>
 		</Text>
 	</Element>
 	
