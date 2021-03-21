@@ -44,7 +44,7 @@
 <br>
 <h4>Releases Notes/Changelogs:</h4>
            <ul>
-           <li><a href="https://github.com/F-15-C-D-E-I-Official-Community-Mod/dcdesigns-aircraft-f15_rev_1.15-JustFlight/files/6137293/v1.0.1_rev_1.15i.pdf">v1.15i.pdf</a></li>
+           <li><a href="https://github.com/F-15-C-D-E-I-Official-Community-Mod/dcdesigns-aircraft-f15_v1.0.1_rev_1.16/files/6177904/1.16.pdf">v1.16.pdf</a></li>
            </ul>
 
 <h3>Flight Envelopes</h3>
