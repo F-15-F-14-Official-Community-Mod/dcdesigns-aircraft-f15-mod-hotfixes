@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Gauge Name="DC Designs Drums">
+   <Update Frequency="60"/> 
+   
+         <!--Fuel Gauges-->
+   
+   
+	       <Element>
+<Visible>(A:Circuit Avionics on, bool)</Visible>
+  <Image Name="Fuel Gauge.png"/>	  
+	<Size X="180" Y="245" />
+
+	   
+
+ 
+    			   <Element>
+			   <Visible>(A:Circuit Avionics on, bool)</Visible>
+			   <Position X="60" Y="170"/>
+ <Text X="100" Y="40" Bright="Yes" Length="100" Font="Tahoma" Color="White"
+Adjust="Left" VerticalAdjust="Center">
+ <String>%((A:FUEL TOTAL QUANTITY WEIGHT, pounds)) %!5d!%</String>
+ </Text>
+ </Element>
+ 
+   </Element>
+
+</Gauge>

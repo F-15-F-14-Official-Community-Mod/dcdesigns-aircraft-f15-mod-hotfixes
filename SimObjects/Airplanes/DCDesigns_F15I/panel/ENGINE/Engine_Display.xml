@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Gauge Name="Engine Display" Version="1.0">
-<Update Frequency="60"/> 
+	<Update Frequency="60"/> 					 
 
 <Element>
-
 <Visible>(A:Circuit Avionics on, bool)</Visible>
   <Image Name="Engine_Data.bmp"/>
 
@@ -93,8 +92,8 @@ Adjust="Center" VerticalAdjust="Center">
 			<Rotate>
 			<Value Minimum="0" Maximum="100">(A:TURB ENG PRIMARY NOZZLE PERCENT:1, percent)</Value>
 			<Nonlinearity>
-			<Item Value="0" Degrees="-45.00"/>
-			<Item Value="100" Degrees= "45.00"/>
+			<Item Value="0" Degrees="-45"/>
+			<Item Value="100" Degrees= "45"/>
 			</Nonlinearity>
          </Rotate>
    </Element>
@@ -108,13 +107,13 @@ Adjust="Center" VerticalAdjust="Center">
 			<Rotate>
 			<Value Minimum="0" Maximum="100">(A:TURB ENG PRIMARY NOZZLE PERCENT:2, percent)</Value>
 			<Nonlinearity>
-			<Item Value="0" Degrees="-45.00"/>
-			<Item Value="100" Degrees= "45.00"/>
+			<Item Value="0" Degrees="-45"/>
+			<Item Value="100" Degrees= "45"/>
 			</Nonlinearity>
          </Rotate>
    </Element>
-  
-  </Element>
+ 
+  </Element> 
 
 </Gauge>
 
