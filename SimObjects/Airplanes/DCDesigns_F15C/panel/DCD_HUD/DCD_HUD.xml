@@ -22,7 +22,7 @@
 			  	<Element>
 		<Visible>(A:Circuit Avionics on, bool)</Visible>
 		<Position X="325" Y="238"/>
-		<Text X="80" Y="30" Bright="Yes" Length="6" Font="Tahoma" Color="Lime"
+		<Text X="80" Y="25" Bright="Yes" Length="6" Font="Tahoma" Color="Lime"
 		Adjust="Right" VerticalAdjust="Center">
 		<String>%((A:VERTICAL SPEED, ft/min))%!5d!%</String>
 		</Text>
@@ -39,7 +39,7 @@
  
 	<Element>
 		<Visible>(A:Circuit Avionics on, bool) (A:Radio height, feet) 1000 &lt;= and</Visible>
-        <Position X="310" Y="245"/>
+        <Position X="315" Y="255"/>
         <Text X="80" Y="30" Bright="Yes" Length="6" Font="tahoma" Color="Lime" Adjust="Right" VerticalAdjust="Center" Multiline="No" Fixed="No">
         <String>%((A:Radio height, feet))%!5d!%  R%</String>
         </Text>
@@ -53,22 +53,22 @@
 		<String>%((P:Local time,hours) flr 23 + 24 % 1 +)%!02d! : %((P:Local time,minutes) flr 60 %)%!02d! : %((P:Local time,seconds) flr 60 %)%!02d!</String>
 		</Text>
 	</Element>
+
+	<Element>
+		<Visible>(A:Circuit Avionics on, bool) (A:G FORCE, GForce) 9.0 &gt;= and</Visible>
+		<Position X="153" Y="225"/>
+		<Text X="200" Y="30" Bright="Yes" Length="8" Font="Tahoma" Color="Lime"
+		Adjust="Center" VerticalAdjust="Center">
+		<String>% G LIMIT %</String>
+		</Text>
+	</Element>
   
     <Element>
 		<Visible>(A:Circuit Avionics on, bool)</Visible>
 		<Position X="60" Y="370"/>
 		<Text X="90" Y="20" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
-		<String>A %((A:INCIDENCE ALPHA,degrees))%!3.1f!</String>
-		</Text>
-	</Element>
- 
-    <Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="60" Y="390"/>
-		<Text X="90" Y="20" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>G %((A:G FORCE, GForce))%!3.1f!</String>
+		<String>AOA %((A:INCIDENCE ALPHA,degrees))%!3.1f!</String>
 		</Text>
 	</Element>
  
@@ -77,10 +77,20 @@
 		<Position X="60" Y="410"/>
 		<Text X="90" Y="20" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
-		<String>M %((A:AIRSPEED MACH, mach))%!3.3f!</String>
+		<String>%((A:G FORCE, GForce))%!3.1f! G</String>
 		</Text>
 	</Element>
-		<Element>
+ 
+    <Element>
+		<Visible>(A:Circuit Avionics on, bool)</Visible>
+		<Position X="60" Y="390"/>
+		<Text X="90" Y="20" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>%((A:AIRSPEED MACH, mach))%!3.3f!</String>
+		</Text>
+	</Element>
+
+	<Element>
 		<Visible>(A:AUTOPILOT MASTER,bool)</Visible>
         <Position X="60" Y="440"/>
 		<Text X="90" Y="20" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
@@ -478,5 +488,3 @@
 		</Element>
 				
 </Gauge>
-
-
