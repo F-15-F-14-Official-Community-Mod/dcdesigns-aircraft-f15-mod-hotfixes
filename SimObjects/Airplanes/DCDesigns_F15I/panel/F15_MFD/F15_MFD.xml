@@ -228,7 +228,14 @@
 		</Text>
 	</Element>	
 
-//added
+	<Element>
+		<Visible>(A:Circuit Avionics on, bool)</Visible>
+		<Position X="10" Y="140"/>
+		<Text X="170" Y="25" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>G-Force %((A:G FORCE, GForce))%!3.1f!</String>
+		</Text>
+	</Element>
 
     <Element>
 	<Visible>(A:AUTOPILOT MASTER,bool)</Visible>
