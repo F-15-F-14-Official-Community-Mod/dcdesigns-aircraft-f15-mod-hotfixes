@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 
 <Gauge Name="DCD F-15 Strike Eagle MFD" Version="1.0">
 <Update Frequency="60"/> 
@@ -91,7 +91,7 @@
 			
             <!--Deviation Needle-->
             <Element>
-              <Visible>(A:Circuit Avionics on,bool) (A:HSI has localizer, bool) 0 ! ==&amp;&amp;</Visible>
+              <Visible>(A:Circuit Avionics on,bool)</Visible>
               <Position X="256" Y="256"/>
               <Rectangle Height="100" Width="4" LineWidth="2" Color="Lime" FillColor="Lime" Bright="Yes">
                 <Pivot X="1" Y="50"/>
