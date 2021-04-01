@@ -1,17 +1,19 @@
-﻿<Gauge Name="Navigation" Version="1.0">
+<?xml version="1.0" encoding="utf-8" ?>
+<Gauge Name="Navigation" Version="1.0">
  <Update Frequency="60"/> 
   
   <Element>
       <Image Name="VC_Nav.bmp"/>
 	  <Visible>(A:Circuit Avionics on, bool)</Visible>
-	  </Element>
-  
+  </Element>		 
 
   
+
+
     			   <Element>
 				   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="285" Y="2"/>
- <Text X="100" Y="40" Bright="Yes" Length="14" Font="Tahoma" Color="White"
+			   <Position X="370" Y="450"/>
+ <Text X="150" Y="60" Bright="Yes" Length="14" Font="Tahoma" Color="White"
 Adjust="Left" VerticalAdjust="Center">
  <String>%((A:ADF ACTIVE FREQUENCY:1,KHz))%!5.1f!</String>
  </Text>
@@ -19,13 +21,13 @@ Adjust="Left" VerticalAdjust="Center">
  
     			   <Element>
 			   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="100" Y="6"/>
- <Text X="100" Y="30" Bright="Yes" Length="14" Font="Tahoma" Color="White"
+			   <Position X="10" Y="450"/>
+ <Text X="150" Y="60" Bright="Yes" Length="14" Font="Tahoma" Color="White"
 Adjust="Left" VerticalAdjust="Center">
  <String>%((A:NAV1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
  </Text>
  </Element>
- 
+
  
  
      			   <Element>
