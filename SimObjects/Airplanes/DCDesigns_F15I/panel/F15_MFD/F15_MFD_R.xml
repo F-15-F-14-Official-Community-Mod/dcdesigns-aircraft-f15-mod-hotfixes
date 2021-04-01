@@ -48,7 +48,7 @@ Adjust="Center" VerticalAdjust="Center">
    <Element>
 <Visible>(A:Circuit Avionics on, bool)</Visible>
 <Position X="200" Y="175"/>
- <Text X="120" Y="45" Bright="Yes" Length="8" Font="Tahoma" Color="Lime"
+ <Text X="130" Y="45" Bright="Yes" Length="12" Font="Tahoma" Color="Lime"
 Adjust="Center" VerticalAdjust="Center">
  <String>%FF (PPH)%</String>
  </Text>

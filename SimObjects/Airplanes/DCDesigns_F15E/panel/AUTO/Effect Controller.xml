@@ -5,7 +5,7 @@
   <Element>
     <Select>
       <Value>
-        (A:FLAPS HANDLE PERCENT,percent) 10 &gt; if{ (A:AIRSPEED INDICATED,knots) 250 &gt; if{ 1 (&gt;K:FLAPS_UP) }
+        (A:FLAPS HANDLE PERCENT,percent) 10 &gt; if{ (A:AIRSPEED INDICATED,knots) 265 &gt; if{ 1 (&gt;K:FLAPS_UP) }
      </Value>
     </Select>
   </Element>
