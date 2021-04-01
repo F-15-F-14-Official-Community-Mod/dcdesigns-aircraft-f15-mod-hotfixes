@@ -83,8 +83,8 @@
 		</Text>
 	</Element>
 	
-		<Element>
-	    <Visible>(A:Circuit Avionics on, bool) (A:GPS DRIVES NAV1, bool) (A:GPS IS ACTIVE WAY POINT,bool) </Visible>
+	<Element>
+	    <Visible>(A:Circuit Avionics on, bool) (A:GPS DRIVES NAV1, bool) (A:GPS IS ACTIVE WAY POINT,bool) and </Visible>
 		<Position X="65" Y="265"/>
 		<Text X="150" Y="30" Bright="Yes" Length="30" Font="Arial Unicode MS" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
@@ -255,6 +255,15 @@
 		<String>Alt %((A:Indicated Altitude, feet))%!5d!%ft</String>
 		</Text>
 	</Element>	
+	
+	<Element>
+		<Visible>(A:Circuit Avionics on, bool)</Visible>
+		<Position X="206" Y="335"/>
+		<Text X="170" Y="30" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
+		Adjust="Left" VerticalAdjust="Center">
+		<String>G-Force %((A:G FORCE, GForce))%!3.1f!</String>
+		</Text>
+	</Element>
 	
     <Element>
 		<Visible>(A:Circuit Avionics on,bool)</Visible>
