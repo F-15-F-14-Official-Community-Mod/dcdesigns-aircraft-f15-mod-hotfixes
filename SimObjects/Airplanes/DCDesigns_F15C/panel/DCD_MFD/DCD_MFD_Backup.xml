@@ -1,925 +1,925 @@
 ﻿<Gauge Name="DCD F-18 Super Hornet MFD" Version="1.0">
- <Update Frequency="60"/> 
+  <Update Frequency="60"/>
   <Image Name="Screen_Off.bmp"/>
 
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-  <Image Name="Background.bmp"/>
-</Element>  
+  <Element>
+    <Visible>(A:Circuit Avionics on, bool)</Visible>
+    <Image Name="Background.bmp"/>
+  </Element>
 
-      <!--Checklist Screen-->
-
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 1 == &amp;&amp;</Visible>
-  <Image Name="Checklist.bmp"/>
-
-  
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 1 == &amp;&amp;</Visible>
-<Position X="190" Y="424"/>
-<Select>
-<Value>(L:Chains, bool)</Value>
-         <Case Value="1">
-            <Image Name="Chains.bmp" ImageSizes="153,17"/>
-         </Case>
-</Select>
-</Element>
+  <!--Checklist Screen-->
 
   <Element>
-  <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 1 == &amp;&amp;</Visible>
-			   <Position X="16" Y="400"/>
- <Text X="120" Y="20" Bright="Yes" Length="20" Font="Tahoma" Color="Lime"
-Adjust="Left" VerticalAdjust="Center">
- <String>ELV TRIM: %((A:ELEVATOR TRIM PCT, PERCENT) 10 / 100 %) %!2.1f!%</String>
- </Text>
- </Element>
- 
- <Mouse>
-  <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 1 == &amp;&amp;</Visible>
-<Area Left="215" Top="422" Width="140" Height="30">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:Chains, bool) ! (>L:Chains, bool)</Click>
-<Tooltip>Deck chains</Tooltip>
-</Area>
+    <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 1 == &amp;&amp;</Visible>
+    <Image Name="Checklist.bmp"/>
 
-</Mouse>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 1 == &amp;&amp;</Visible>
+      <Position X="190" Y="424"/>
+      <Select>
+        <Value>(L:Chains, bool)</Value>
+        <Case Value="1">
+          <Image Name="Chains.bmp" ImageSizes="153,17"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 1 == &amp;&amp;</Visible>
+      <Position X="16" Y="400"/>
+      <Text X="120" Y="20" Bright="Yes" Length="20" Font="Tahoma" Color="Lime"
+     Adjust="Left" VerticalAdjust="Center">
+        <String>ELV TRIM: %((A:ELEVATOR TRIM PCT, PERCENT) 10 / 100 %) %!2.1f!%</String>
+      </Text>
+    </Element>
+
+    <Mouse>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 1 == &amp;&amp;</Visible>
+      <Area Left="215" Top="422" Width="140" Height="30">
+        <Cursor Type="Hand"/>
+        <Click Kind="LeftSingle">(L:Chains, bool) ! (>L:Chains, bool)</Click>
+        <Tooltip>Deck chains</Tooltip>
+      </Area>
+
+    </Mouse>
   </Element>
 
 
-      <!--HSI Screen-->
- 
- <Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 2 == &amp;&amp;</Visible>
-  <Image Name="Background.bmp"/>
-  
-   <Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 2 == &amp;&amp;</Visible>
-  <Image Name="DCD_HSI.bmp"/>
-
-
-    <Element>
-  <Visible>(A:Circuit Avionics on,bool)</Visible>
-            <Position X="256" Y="256"/>
-            <Image Name="HSI_ROSE.bmp" Bright="1">
-              <Axis X="150" Y="150"/>
-            </Image>
-            <Rotate>
-              <Value>(A:Plane heading degrees gyro,radians) /-/</Value>
-            </Rotate>
-          </Element>
-  
-            <Element>
-			<Visible>(A:Circuit Avionics on,bool)</Visible>
-              <Position X="256" Y="256"/>
-              <Image Name="VOR_Graphic.bmp" Bright="1">
-                <Axis X="90" Y="122"/>
-              </Image>
-              <Rotate>
-                <Value>(A:NAV1 OBS,radians) (A:Plane heading degrees gyro,radians) -</Value>
-              </Rotate>
-            </Element>
-			
-
-            <Element>
-			<Visible>(A:HSI TF flags, enum) 1 ==</Visible>
-              <Position X="400" Y="60"/>
-              <Image Name="Direction.bmp" Bright="1">
-              </Image>
-            </Element>
-			
-			            <Element>
-			<Visible>(A:HSI TF flags, enum) 2 ==</Visible>
-              <Position X="400" Y="93"/>
-              <Image Name="Direction_Rev_Crs.bmp" Bright="1">
-              </Image>
-            </Element>
-			
-			
-			
-            <!--Deviation Needle-->
-            <Element>
-              <Visible>(A:Circuit Avionics on,bool) (A:HSI has localizer, bool) 0 ! ==&amp;&amp;</Visible>
-              <Position X="256" Y="256"/>
-              <Rectangle Height="100" Width="4" LineWidth="2" Color="Lime" FillColor="Lime" Bright="Yes">
-                <Pivot X="1" Y="50"/>
-              </Rectangle>
-              <Shift>
-                <Value>(A:HSI CDI needle valid, bool) if{ (A:HSI CDI needle, number) } els{ 0 }</Value>
-                <Scale X="0.3"/>
-              </Shift>
-              <Rotate>
-                <Value>(A:NAV1 OBS,radians) (A:Plane heading degrees gyro,radians) -</Value>
-              </Rotate>
-            </Element>
-			
-			<!--HDG-->
-          <Element>
-		  <Visible>(A:Circuit Avionics on,bool)</Visible>
-            <Position X="256" Y="256"/>
-            <Rectangle Height="12" Width="8" LineWidth="1" Color="Lime" FillColor="Lime" Bright="Yes">
-              <Pivot X="14" Y="174"/>
-            </Rectangle>
-            <Rotate>
-              <Value>(A:Autopilot heading lock dir,radians) (A:Plane heading degrees gyro,radians) -</Value>
-            </Rotate>
-          </Element>
-		  
-		   <!--ADF-->
-          <Element>
-            <Visible>(A:ADF1 signal, number) 10 > if</Visible>
-              <Position X="256" Y="256"/>
-              <Image Name="ADF_BEARING.bmp" Bright="1">
-			  <Axis X="7" Y="128"/>
-              </Image>
-              <Rotate>
-                <Value>(A:ADF1 Radial,radians)</Value>
-              </Rotate>
-            </Element>
-		  
-          <Element>
-		  <Visible>(A:Circuit Avionics on,bool)</Visible>
-            <Visible>(A:HSI GSI needle valid, bool) (L:MFD3 NAV,bool) 0 == &amp;&amp;</Visible>
-            <Position X="28" Y="88"/>
-            <Rectangle Height="3" Width="9" LineWidth="1" Color="Lime" FillColor="Lime" Bright="Yes"/>
-            <Shift>
-              <Value Minimum="-120" Maximum="120">(A:HSI GSI needle, number)</Value>
-              <Scale Y="0.3"/>
-            </Shift>
-          </Element>
-		  
-		  
-		    	<Element>
-		<Visible>(A:Circuit Avionics on,bool)</Visible>
-		<Position X="400" Y="450"/>
-		<Text X="200" Y="30" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>%((A:NAV1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
-		</Text>
-	</Element>
-
-  	<Element>
-		<Visible>(A:Circuit Avionics on,bool)</Visible>
-		<Position X="345" Y="450"/>
-		<Text X="200" Y="30" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>%((A:Nav1 ident, string))%!s!</String>
-		</Text>
-	</Element>  
- 
-   	<Element>
-		<Visible>(A:Circuit Avionics on,bool)</Visible>
-		<Position X="345" Y="425"/>
-		<Text X="200" Y="30" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>DME    %((A:NAV1 DME, nmiles) 999 min 0 max s1 0 &gt;=)%{if}%(l1 100 &gt;=)%{if}%(l1)%!d!%{else}%(l1)%!0.1f!%{end}%{else}----%{end}</String>
-		</Text>
-	</Element>
-
-  	<Element>
-		<Visible>(A:Circuit Avionics on,bool)</Visible>
-		<Position X="80" Y="425"/>
-		<Text X="200" Y="30" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>G/S %((A:GROUND VELOCITY, knots))%!4d!%</String>
-		</Text>
-	</Element>
-	
-</Element>
-</Element>
-
-      <!--Weapons Screen-->
-
- <Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-  <Image Name="Background.bmp"/>	  
-	   </Element>
-	  
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-  <Image Name="WPN.bmp"/>
-
+  <!--HSI Screen-->
 
   <Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-			   <Position X="130" Y="430"/>
- <Text X="250" Y="30" Bright="Yes" Length="20" Font="Tahoma" Color="Lime"
-Adjust="Left" VerticalAdjust="Center">
- <String>TOTAL WEIGHT: %((A:TOTAL WEIGHT,POUNDS))%!3d!%</String>
- </Text>
- </Element>
- 
+    <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 2 == &amp;&amp;</Visible>
+    <Image Name="Background.bmp"/>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 2 == &amp;&amp;</Visible>
+      <Image Name="DCD_HSI.bmp"/>
 
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="235" Y="200"/>
-<Select>
-<Value>(L:Fuel Tank, bool)</Value>
-         <Case Value="1">
-            <Image Name="CTR_Tank.bmp" ImageSizes="53,138"/>
-         </Case>
-</Select>
-</Element>
+      <Element>
+        <Visible>(A:Circuit Avionics on,bool)</Visible>
+        <Position X="256" Y="256"/>
+        <Image Name="HSI_ROSE.bmp" Bright="1">
+          <Axis X="150" Y="150"/>
+        </Image>
+        <Rotate>
+          <Value>(A:Plane heading degrees gyro,radians) /-/</Value>
+        </Rotate>
+      </Element>
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="247" Y="81"/>
-<Select>
-<Value>(L:Station3, bool)</Value>
-         <Case Value="1">
-            <Image Name="Tick.bmp" ImageSizes="29,25"/>
-         </Case>
-</Select>
-</Element>
-
-
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="100" Y="220"/>
-<Select>
-<Value>(L:AIM-9L, bool)</Value>
-         <Case Value="1">
-            <Image Name="AIM9.bmp" ImageSizes="13,77"/>
-         </Case>
-</Select>
-</Element>
-
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="158" Y="295"/>
-<Select>
-<Value>(L:AIM-9L2, bool) (L:AIM-120, bool) ! &amp;&amp; if{ 1 } els{ 0 }</Value>
-         <Case Value="1">
-            <Image Name="AIM9.bmp" ImageSizes="13,77"/>
-         </Case>
-</Select>
-</Element>
-
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="400" Y="220"/>
-<Select>
-<Value>(L:AIM-9R, bool)</Value>
-         <Case Value="1">
-            <Image Name="AIM9.bmp" ImageSizes="13,77"/>
-         </Case>
-</Select>
-</Element>
-
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="344" Y="293"/>
-<Select>
-<Value>(L:AIM-9R2, bool) (L:AIM-120R, bool) ! &amp;&amp; if{ 1 } els{ 0 }</Value>
-         <Case Value="1">
-            <Image Name="AIM9.bmp" ImageSizes="13,77"/>
-         </Case>
-</Select>
-</Element>
-
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="153" Y="155"/>
-<Select>
-<Value>(L:AIM-120, bool)</Value>
-         <Case Value="1">
-            <Image Name="120.bmp" ImageSizes="22,103"/>
-         </Case>
-</Select>
-</Element>
-
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="338" Y="156"/>
-<Select>
-<Value>(L:AIM-120R, bool)</Value>
-         <Case Value="1">
-            <Image Name="120.bmp" ImageSizes="22,103"/>
-         </Case>
-</Select>
-</Element>
+      <Element>
+        <Visible>(A:Circuit Avionics on,bool)</Visible>
+        <Position X="256" Y="256"/>
+        <Image Name="VOR_Graphic.bmp" Bright="1">
+          <Axis X="90" Y="122"/>
+        </Image>
+        <Rotate>
+          <Value>(A:NAV1 OBS,radians) (A:Plane heading degrees gyro,radians) -</Value>
+        </Rotate>
+      </Element>
 
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="115" Y="199"/>
-<Select>
-<Value>(L:Fuel Tank Left Wing, bool)</Value>
-         <Case Value="1">
-            <Image Name="CTR_Tank.bmp" ImageSizes="53,138"/>
-         </Case>
-</Select>
-</Element>
+      <Element>
+        <Visible>(A:HSI TF flags, enum) 1 ==</Visible>
+        <Position X="400" Y="60"/>
+        <Image Name="Direction.bmp" Bright="1">
+        </Image>
+      </Element>
 
-
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="358" Y="200"/>
-<Select>
-<Value>(L:Fuel Tank Right Wing, bool)</Value>
-         <Case Value="1">
-            <Image Name="CTR_Tank.bmp" ImageSizes="29,25"/>
-         </Case>
-</Select>
-</Element>
-
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="196" Y="123"/>
-<Select>
-<Value>(L:AIM-120V1, bool)</Value>
-         <Case Value="1">
-            <Image Name="120.bmp" ImageSizes="22,103"/>
-         </Case>
-</Select>
-</Element>
-
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="196" Y="280"/>
-<Select>
-<Value>(L:AIM-120V2, bool)</Value>
-         <Case Value="1">
-            <Image Name="120.bmp" ImageSizes="22,103"/>
-         </Case>
-</Select>
-</Element>
-
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="298" Y="123"/>
-<Select>
-<Value>(L:AIM-120RV1, bool)</Value>
-         <Case Value="1">
-            <Image Name="120.bmp" ImageSizes="22,103"/>
-         </Case>
-</Select>
-</Element>
-
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="298" Y="280"/>
-<Select>
-<Value>(L:AIM-120RV2, bool)</Value>
-         <Case Value="1">
-            <Image Name="120.bmp" ImageSizes="22,103"/>
-         </Case>
-</Select>
-</Element>
+      <Element>
+        <Visible>(A:HSI TF flags, enum) 2 ==</Visible>
+        <Position X="400" Y="93"/>
+        <Image Name="Direction_Rev_Crs.bmp" Bright="1">
+        </Image>
+      </Element>
 
 
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="126" Y="85"/>
-<Select>
-<Value>(L:Station4, bool)</Value>
-         <Case Value="1">
-            <Image Name="Tick.bmp" ImageSizes="29,25"/>
-         </Case>
-</Select>
-</Element>
+      <!--Deviation Needle-->
+      <Element>
+        <Visible>(A:Circuit Avionics on,bool) (A:HSI has localizer, bool) 0 ! ==&amp;&amp;</Visible>
+        <Position X="256" Y="256"/>
+        <Rectangle Height="100" Width="4" LineWidth="2" Color="Lime" FillColor="Lime" Bright="Yes">
+          <Pivot X="1" Y="50"/>
+        </Rectangle>
+        <Shift>
+          <Value>(A:HSI CDI needle valid, bool) if{ (A:HSI CDI needle, number) } els{ 0 }</Value>
+          <Scale X="0.3"/>
+        </Shift>
+        <Rotate>
+          <Value>(A:NAV1 OBS,radians) (A:Plane heading degrees gyro,radians) -</Value>
+        </Rotate>
+      </Element>
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="370" Y="85"/>
-<Select>
-<Value>(L:Station5, bool)</Value>
-         <Case Value="1">
-            <Image Name="Tick.bmp" ImageSizes="29,25"/>
-         </Case>
-</Select>
-</Element>
+      <!--HDG-->
+      <Element>
+        <Visible>(A:Circuit Avionics on,bool)</Visible>
+        <Position X="256" Y="256"/>
+        <Rectangle Height="12" Width="8" LineWidth="1" Color="Lime" FillColor="Lime" Bright="Yes">
+          <Pivot X="14" Y="174"/>
+        </Rectangle>
+        <Rotate>
+          <Value>(A:Autopilot heading lock dir,radians) (A:Plane heading degrees gyro,radians) -</Value>
+        </Rotate>
+      </Element>
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="98" Y="85"/>
-<Select>
-<Value>(L:Station6, bool)</Value>
-         <Case Value="1">
-            <Image Name="Tick.bmp" ImageSizes="29,25"/>
-         </Case>
-</Select>
-</Element>
+      <!--ADF-->
+      <Element>
+        <Visible>(A:ADF1 signal, number) 10 > if</Visible>
+        <Position X="256" Y="256"/>
+        <Image Name="ADF_BEARING.bmp" Bright="1">
+          <Axis X="7" Y="128"/>
+        </Image>
+        <Rotate>
+          <Value>(A:ADF1 Radial,radians)</Value>
+        </Rotate>
+      </Element>
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-<Position X="397" Y="85"/>
-<Select>
-<Value>(L:Station7, bool)</Value>
-         <Case Value="1">
-            <Image Name="Tick.bmp" ImageSizes="29,25"/>
-         </Case>
-</Select>
-</Element>
- </Element>
-
-
-<Mouse>
-
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
-
-<Area Left="235" Top="203" Width="42" Height="138">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:Fuel Tank, bool) ! (>L:Fuel Tank, bool)</Click>
-<Tooltip>CTR TANK</Tooltip>
-</Area>
-
-<Area Left="100" Top="220" Width="13" Height="77">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:AIM-9L, bool) ! (>L:AIM-9L, bool)</Click>
-<Tooltip>AIM-9</Tooltip>
-</Area>
-
-<Area Left="157" Top="294" Width="13" Height="77">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:AIM-9L2, bool) ! (>L:AIM-9L2, bool)</Click>
-<Tooltip>AIM-9</Tooltip>
-</Area>
+      <Element>
+        <Visible>(A:Circuit Avionics on,bool)</Visible>
+        <Visible>(A:HSI GSI needle valid, bool) (L:MFD3 NAV,bool) 0 == &amp;&amp;</Visible>
+        <Position X="28" Y="88"/>
+        <Rectangle Height="3" Width="9" LineWidth="1" Color="Lime" FillColor="Lime" Bright="Yes"/>
+        <Shift>
+          <Value Minimum="-120" Maximum="120">(A:HSI GSI needle, number)</Value>
+          <Scale Y="0.3"/>
+        </Shift>
+      </Element>
 
 
-<Area Left="247" Top="81" Width="20" Height="20">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:Station3, bool) ! (>L:Station3, bool)</Click>
-<Tooltip>CTR Pylon</Tooltip>
-</Area>
-
-<Area Left="118" Top="200" Width="42" Height="138">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:Fuel Tank Left Wing, bool) ! (>L:Fuel Tank Left Wing, bool)</Click>
-<Tooltip>Left TANK</Tooltip>
-</Area>
-
-
-<Area Left="360" Top="200" Width="42" Height="138">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:Fuel Tank Right Wing, bool) ! (>L:Fuel Tank Right Wing, bool)</Click>
-<Tooltip>Right TANK</Tooltip>
-</Area>
-
-
-
-<Area Left="400" Top="220" Width="13" Height="77">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:AIM-9R,bool) ! (>L:AIM-9R,bool)</Click>
-<Tooltip>AIM-9</Tooltip>
-</Area>
-
-<Area Left="345" Top="294" Width="13" Height="77">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:AIM-9R2,bool) ! (>L:AIM-9R2,bool)</Click>
-<Tooltip>AIM-9</Tooltip>
-</Area>
-
-
-<Area Left="157" Top="157" Width="20" Height="100">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:AIM-120,bool) ! (>L:AIM-120,bool)</Click>
-<Tooltip>AIM-120</Tooltip>
-</Area>
-
-<Area Left="340" Top="157" Width="22" Height="103">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:AIM-120R,bool) ! (>L:AIM-120R,bool)</Click>
-<Tooltip>AIM-120</Tooltip>
-</Area>
-
-<Area Left="200" Top="125" Width="22" Height="103">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:AIM-120V1, bool) ! (>L:AIM-120V1, bool)</Click>
-<Tooltip>AIM-120</Tooltip>
-</Area>
-
-<Area Left="200" Top="280" Width="22" Height="103">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:AIM-120V2, bool) ! (>L:AIM-120V2, bool)</Click>
-<Tooltip>AIM-120</Tooltip>
-</Area>
-
-<Area Left="300" Top="125" Width="22" Height="103">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:AIM-120RV1, bool) ! (>L:AIM-120RV1, bool)</Click>
-<Tooltip>AIM-120</Tooltip>
-</Area>
-
-<Area Left="300" Top="280" Width="22" Height="103">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:AIM-120RV2, bool) ! (>L:AIM-120RV2, bool)</Click>
-<Tooltip>AIM-120</Tooltip>
-</Area>
-
-
-<Area Left="97" Top="85" Width="30" Height="30">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:Station6,bool) ! (>L:Station6,bool)</Click>
-<Tooltip>HP 6</Tooltip>
-</Area>
-
-<Area Left="126" Top="85" Width="30" Height="30">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:Station4,bool) ! (>L:Station4,bool)</Click>
-<Tooltip>HP 4</Tooltip>
-</Area>
-
-<Area Left="370" Top="85" Width="30" Height="30">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:Station5,bool) ! (>L:Station5,bool)</Click>
-<Tooltip>HP 5</Tooltip>
-</Area>
-
-<Area Left="397" Top="86" Width="30" Height="30">
-<Cursor Type="Hand"/>
-<Click Kind="LeftSingle">(L:Station7,bool) ! (>L:Station7,bool)</Click>
-<Tooltip>HP 7</Tooltip>
-</Area>
-
-
-
-</Mouse>
-
-      <!--HUD Repeater Screen-->
-
- <Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 4 == &amp;&amp;</Visible>
-  <Image Name="Background.bmp"/>
-  	</Element>
-  
-   <Element>
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 4 == &amp;&amp;</Visible>
-  <Image Name="DCD_HUD.bmp"/>
-
-	  
-  	<Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="15" Y="195"/>
-		<Text X="120" Y="40" Bright="Yes" Length="4" Font="Tahoma" Color="Lime"
-		Adjust="Right" VerticalAdjust="Center">
-		<String>%((A:Airspeed indicated, knots)) %!3d!%</String>
-		</Text>
-	</Element>
- 
-   	<Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="370" Y="195"/>
-		<Text X="80" Y="40" Bright="Yes" Length="6" Font="Tahoma" Color="Lime"
-		Adjust="Right" VerticalAdjust="Center">
-		<String>%((A:Indicated Altitude, feet)) %!5d!%</String>
-		</Text>
-	</Element>
-	
-	   	<Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="380" Y="290"/>
-		<Text X="80" Y="40" Bright="Yes" Length="6" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>%((A:KOHLSMAN SETTING HG,mbar))%!4d!</String>
-		</Text>
-	</Element>
- 
-	<Element>
-		<Visible>(A:Circuit Avionics on, bool) (A:Radio height, feet) 1000 &lt;= and</Visible>
-        <Position X="380" Y="152"/>
-        <Text X="80" Y="30" Bright="Yes" Length="6" Font="tahoma" Color="Lime" Adjust="Right" VerticalAdjust="Center" Multiline="No" Fixed="No">
-        <String>%((A:Radio height, feet))%!5d!%  R%</String>
+      <Element>
+        <Visible>(A:Circuit Avionics on,bool)</Visible>
+        <Position X="400" Y="450"/>
+        <Text X="200" Y="30" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+        Adjust="Left" VerticalAdjust="Center">
+          <String>%((A:NAV1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
         </Text>
+      </Element>
+
+      <Element>
+        <Visible>(A:Circuit Avionics on,bool)</Visible>
+        <Position X="345" Y="450"/>
+        <Text X="200" Y="30" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+        Adjust="Left" VerticalAdjust="Center">
+          <String>%((A:Nav1 ident, string))%!s!</String>
+        </Text>
+      </Element>
+
+      <Element>
+        <Visible>(A:Circuit Avionics on,bool)</Visible>
+        <Position X="345" Y="425"/>
+        <Text X="200" Y="30" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+        Adjust="Left" VerticalAdjust="Center">
+          <String>DME    %((A:NAV1 DME, nmiles) 999 min 0 max s1 0 &gt;=)%{if}%(l1 100 &gt;=)%{if}%(l1)%!d!%{else}%(l1)%!0.1f!%{end}%{else}----%{end}</String>
+        </Text>
+      </Element>
+
+      <Element>
+        <Visible>(A:Circuit Avionics on,bool)</Visible>
+        <Position X="80" Y="425"/>
+        <Text X="200" Y="30" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+        Adjust="Left" VerticalAdjust="Center">
+          <String>G/S %((A:GROUND VELOCITY, knots))%!4d!%</String>
+        </Text>
+      </Element>
+
     </Element>
- 
- 
+  </Element>
+
+  <!--Weapons Screen-->
+
+  <Element>
+    <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+    <Image Name="Background.bmp"/>
+  </Element>
+
+  <Element>
+    <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+    <Image Name="WPN.bmp"/>
+
+
     <Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="40" Y="390"/>
-		<Text X="120" Y="30" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>A %((A:INCIDENCE ALPHA,degrees))%!3.1f!</String>
-		</Text>
-	</Element>
- 
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="130" Y="430"/>
+      <Text X="250" Y="30" Bright="Yes" Length="20" Font="Tahoma" Color="Lime"
+     Adjust="Left" VerticalAdjust="Center">
+        <String>TOTAL WEIGHT: %((A:TOTAL WEIGHT,POUNDS))%!3d!%</String>
+      </Text>
+    </Element>
+
+
+
     <Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="40" Y="420"/>
-		<Text X="120" Y="30" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>G %((A:G FORCE, GForce))%!3.1f!</String>
-		</Text>
-	</Element>
- 
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="235" Y="200"/>
+      <Select>
+        <Value>(L:Fuel Tank, bool)</Value>
+        <Case Value="1">
+          <Image Name="CTR_Tank.bmp" ImageSizes="53,138"/>
+        </Case>
+      </Select>
+    </Element>
+
     <Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="40" Y="450"/>
-		<Text X="120" Y="30" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>M %((A:AIRSPEED MACH, mach))%!3.1f!</String>
-		</Text>
-	</Element>
- 
- 
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="247" Y="81"/>
+      <Select>
+        <Value>(L:Station3, bool)</Value>
+        <Case Value="1">
+          <Image Name="Tick.bmp" ImageSizes="29,25"/>
+        </Case>
+      </Select>
+    </Element>
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="100" Y="220"/>
+      <Select>
+        <Value>(L:AIM-9L, bool)</Value>
+        <Case Value="1">
+          <Image Name="AIM9.bmp" ImageSizes="13,77"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="158" Y="295"/>
+      <Select>
+        <Value>(L:AIM-9L2, bool) (L:AIM-120, bool) ! &amp;&amp; if{ 1 } els{ 0 }</Value>
+        <Case Value="1">
+          <Image Name="AIM9.bmp" ImageSizes="13,77"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="400" Y="220"/>
+      <Select>
+        <Value>(L:AIM-9R, bool)</Value>
+        <Case Value="1">
+          <Image Name="AIM9.bmp" ImageSizes="13,77"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="344" Y="293"/>
+      <Select>
+        <Value>(L:AIM-9R2, bool) (L:AIM-120R, bool) ! &amp;&amp; if{ 1 } els{ 0 }</Value>
+        <Case Value="1">
+          <Image Name="AIM9.bmp" ImageSizes="13,77"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="153" Y="155"/>
+      <Select>
+        <Value>(L:AIM-120, bool)</Value>
+        <Case Value="1">
+          <Image Name="120.bmp" ImageSizes="22,103"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="338" Y="156"/>
+      <Select>
+        <Value>(L:AIM-120R, bool)</Value>
+        <Case Value="1">
+          <Image Name="120.bmp" ImageSizes="22,103"/>
+        </Case>
+      </Select>
+    </Element>
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="115" Y="199"/>
+      <Select>
+        <Value>(L:Fuel Tank Left Wing, bool)</Value>
+        <Case Value="1">
+          <Image Name="CTR_Tank.bmp" ImageSizes="53,138"/>
+        </Case>
+      </Select>
+    </Element>
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="358" Y="200"/>
+      <Select>
+        <Value>(L:Fuel Tank Right Wing, bool)</Value>
+        <Case Value="1">
+          <Image Name="CTR_Tank.bmp" ImageSizes="29,25"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="196" Y="123"/>
+      <Select>
+        <Value>(L:AIM-120V1, bool)</Value>
+        <Case Value="1">
+          <Image Name="120.bmp" ImageSizes="22,103"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="196" Y="280"/>
+      <Select>
+        <Value>(L:AIM-120V2, bool)</Value>
+        <Case Value="1">
+          <Image Name="120.bmp" ImageSizes="22,103"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="298" Y="123"/>
+      <Select>
+        <Value>(L:AIM-120RV1, bool)</Value>
+        <Case Value="1">
+          <Image Name="120.bmp" ImageSizes="22,103"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="298" Y="280"/>
+      <Select>
+        <Value>(L:AIM-120RV2, bool)</Value>
+        <Case Value="1">
+          <Image Name="120.bmp" ImageSizes="22,103"/>
+        </Case>
+      </Select>
+    </Element>
+
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="126" Y="85"/>
+      <Select>
+        <Value>(L:Station4, bool)</Value>
+        <Case Value="1">
+          <Image Name="Tick.bmp" ImageSizes="29,25"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="370" Y="85"/>
+      <Select>
+        <Value>(L:Station5, bool)</Value>
+        <Case Value="1">
+          <Image Name="Tick.bmp" ImageSizes="29,25"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="98" Y="85"/>
+      <Select>
+        <Value>(L:Station6, bool)</Value>
+        <Case Value="1">
+          <Image Name="Tick.bmp" ImageSizes="29,25"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+      <Position X="397" Y="85"/>
+      <Select>
+        <Value>(L:Station7, bool)</Value>
+        <Case Value="1">
+          <Image Name="Tick.bmp" ImageSizes="29,25"/>
+        </Case>
+      </Select>
+    </Element>
+  </Element>
+
+
+  <Mouse>
+
+    <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 3 == &amp;&amp;</Visible>
+
+    <Area Left="235" Top="203" Width="42" Height="138">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:Fuel Tank, bool) ! (>L:Fuel Tank, bool)</Click>
+      <Tooltip>CTR TANK</Tooltip>
+    </Area>
+
+    <Area Left="100" Top="220" Width="13" Height="77">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:AIM-9L, bool) ! (>L:AIM-9L, bool)</Click>
+      <Tooltip>AIM-9</Tooltip>
+    </Area>
+
+    <Area Left="157" Top="294" Width="13" Height="77">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:AIM-9L2, bool) ! (>L:AIM-9L2, bool)</Click>
+      <Tooltip>AIM-9</Tooltip>
+    </Area>
+
+
+    <Area Left="247" Top="81" Width="20" Height="20">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:Station3, bool) ! (>L:Station3, bool)</Click>
+      <Tooltip>CTR Pylon</Tooltip>
+    </Area>
+
+    <Area Left="118" Top="200" Width="42" Height="138">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:Fuel Tank Left Wing, bool) ! (>L:Fuel Tank Left Wing, bool)</Click>
+      <Tooltip>Left TANK</Tooltip>
+    </Area>
+
+
+    <Area Left="360" Top="200" Width="42" Height="138">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:Fuel Tank Right Wing, bool) ! (>L:Fuel Tank Right Wing, bool)</Click>
+      <Tooltip>Right TANK</Tooltip>
+    </Area>
+
+
+
+    <Area Left="400" Top="220" Width="13" Height="77">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:AIM-9R,bool) ! (>L:AIM-9R,bool)</Click>
+      <Tooltip>AIM-9</Tooltip>
+    </Area>
+
+    <Area Left="345" Top="294" Width="13" Height="77">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:AIM-9R2,bool) ! (>L:AIM-9R2,bool)</Click>
+      <Tooltip>AIM-9</Tooltip>
+    </Area>
+
+
+    <Area Left="157" Top="157" Width="20" Height="100">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:AIM-120,bool) ! (>L:AIM-120,bool)</Click>
+      <Tooltip>AIM-120</Tooltip>
+    </Area>
+
+    <Area Left="340" Top="157" Width="22" Height="103">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:AIM-120R,bool) ! (>L:AIM-120R,bool)</Click>
+      <Tooltip>AIM-120</Tooltip>
+    </Area>
+
+    <Area Left="200" Top="125" Width="22" Height="103">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:AIM-120V1, bool) ! (>L:AIM-120V1, bool)</Click>
+      <Tooltip>AIM-120</Tooltip>
+    </Area>
+
+    <Area Left="200" Top="280" Width="22" Height="103">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:AIM-120V2, bool) ! (>L:AIM-120V2, bool)</Click>
+      <Tooltip>AIM-120</Tooltip>
+    </Area>
+
+    <Area Left="300" Top="125" Width="22" Height="103">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:AIM-120RV1, bool) ! (>L:AIM-120RV1, bool)</Click>
+      <Tooltip>AIM-120</Tooltip>
+    </Area>
+
+    <Area Left="300" Top="280" Width="22" Height="103">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:AIM-120RV2, bool) ! (>L:AIM-120RV2, bool)</Click>
+      <Tooltip>AIM-120</Tooltip>
+    </Area>
+
+
+    <Area Left="97" Top="85" Width="30" Height="30">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:Station6,bool) ! (>L:Station6,bool)</Click>
+      <Tooltip>HP 6</Tooltip>
+    </Area>
+
+    <Area Left="126" Top="85" Width="30" Height="30">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:Station4,bool) ! (>L:Station4,bool)</Click>
+      <Tooltip>HP 4</Tooltip>
+    </Area>
+
+    <Area Left="370" Top="85" Width="30" Height="30">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:Station5,bool) ! (>L:Station5,bool)</Click>
+      <Tooltip>HP 5</Tooltip>
+    </Area>
+
+    <Area Left="397" Top="86" Width="30" Height="30">
+      <Cursor Type="Hand"/>
+      <Click Kind="LeftSingle">(L:Station7,bool) ! (>L:Station7,bool)</Click>
+      <Tooltip>HP 7</Tooltip>
+    </Area>
+
+
+
+  </Mouse>
+
+  <!--HUD Repeater Screen-->
+
+  <Element>
+    <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 4 == &amp;&amp;</Visible>
+    <Image Name="Background.bmp"/>
+  </Element>
+
+  <Element>
+    <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 4 == &amp;&amp;</Visible>
+    <Image Name="DCD_HUD.bmp"/>
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="15" Y="195"/>
+      <Text X="120" Y="40" Bright="Yes" Length="4" Font="Tahoma" Color="Lime"
+      Adjust="Right" VerticalAdjust="Center">
+        <String>%((A:Airspeed indicated, knots)) %!3d!%</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="370" Y="195"/>
+      <Text X="80" Y="40" Bright="Yes" Length="6" Font="Tahoma" Color="Lime"
+      Adjust="Right" VerticalAdjust="Center">
+        <String>%((A:Indicated Altitude, feet)) %!5d!%</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="380" Y="290"/>
+      <Text X="80" Y="40" Bright="Yes" Length="6" Font="Tahoma" Color="Lime"
+      Adjust="Left" VerticalAdjust="Center">
+        <String>%((A:KOHLSMAN SETTING HG,mbar))%!4d!</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (A:Radio height, feet) 1000 &lt;= and</Visible>
+      <Position X="380" Y="152"/>
+      <Text X="80" Y="30" Bright="Yes" Length="6" Font="tahoma" Color="Lime" Adjust="Right" VerticalAdjust="Center" Multiline="No" Fixed="No">
+        <String>%((A:Radio height, feet))%!5d!%  R%</String>
+      </Text>
+    </Element>
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="40" Y="390"/>
+      <Text X="120" Y="30" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
+      Adjust="Left" VerticalAdjust="Center">
+        <String>A %((A:INCIDENCE ALPHA,degrees))%!3.1f!</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="40" Y="420"/>
+      <Text X="120" Y="30" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
+      Adjust="Left" VerticalAdjust="Center">
+        <String>G %((A:G FORCE, GForce))%!3.1f!</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="40" Y="450"/>
+      <Text X="120" Y="30" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
+      Adjust="Left" VerticalAdjust="Center">
+        <String>M %((A:AIRSPEED MACH, mach))%!3.1f!</String>
+      </Text>
+    </Element>
+
+
 
     <Element id="Wind Direction">
-			<Visible>(A:Circuit Avionics on, bool)</Visible>
-        <Position X="455" Y="400"/>
-        <Image Name="wind_direction.bmp">
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="455" Y="400"/>
+      <Image Name="wind_direction.bmp">
         <Transparent>True</Transparent>
         <Axis X="14" Y="14"/>
         <Bright>True</Bright>
-        </Image>
-        <Rotate>
+      </Image>
+      <Rotate>
         <Value>(A:Ambient Wind Direction,degrees) (A:Plane heading degrees gyro,degrees) - (A:MAGVAR, degrees) - 180 - dgrd</Value>
-		</Rotate>
-	</Element>
+      </Rotate>
+    </Element>
 
 
     <Element>
-        <Position X="245" Y="100"/>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-        <Image Name="HDG_Arrow.bmp">
+      <Position X="245" Y="100"/>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Image Name="HDG_Arrow.bmp">
         <Transparent>True</Transparent>
         <Bright>True</Bright>
-        </Image>
-	</Element>
+      </Image>
+    </Element>
 
 
     <Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="350" Y="425"/>
-		<Text X="120" Y="30" Bright="Yes" Length="12" Font="Tahoma" Color="Lime"
-		Adjust="Right" VerticalAdjust="Center">
-		<String>%((A:Ambient Wind Velocity,knots) s0 0 &gt;)%{if}%(l0)%!3d!%{else}---%{end}</String>
-		</Text>
-	</Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="350" Y="425"/>
+      <Text X="120" Y="30" Bright="Yes" Length="12" Font="Tahoma" Color="Lime"
+      Adjust="Right" VerticalAdjust="Center">
+        <String>%((A:Ambient Wind Velocity,knots) s0 0 &gt;)%{if}%(l0)%!3d!%{else}---%{end}</String>
+      </Text>
+    </Element>
 
 
 
- 
-           <!--Glideslope Elements-->
-		  
-          <Element>
-            <Visible>(A:HSI GSI needle valid, bool)</Visible>
-            <Position X="206" Y="256"/>
-            <Rectangle Height="2" Width="100" LineWidth="1" Color="Lime" FillColor="Lime" Bright="Yes"/>
-            <Shift>
-              <Value Minimum="-100" Maximum="100">(A:HSI GSI needle, number)</Value>
-              <Scale Y="0.3"/>
-            </Shift>
-          </Element>
-		  
-		            <Element>
-            <Visible>(A:HSI GSI needle valid, bool)</Visible>
-            <Position X="256" Y="206"/>
-            <Rectangle Height="100" Width="2" LineWidth="1" Color="Lime" FillColor="Lime" Bright="Yes"/>
-            <Shift>
-              <Value Minimum="-100" Maximum="100">(A:HSI CDI needle, number)</Value>
-              <Scale X="0.3"/>
-            </Shift>
-          </Element>
-		  
-		  	<Element>
-            <Visible>(A:HSI GSI needle valid, bool)</Visible>
-            <Position X="245" Y="240"/>
-            <Circle Height="20" Width="20" LineWidth="3" Color="Lime" Bright="Yes"/>
-          </Element>
-		  
 
-			
-		<!--Velocity Vector-->		
-		<Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-			<Image Name="Velocity_Vector.bmp" Bright="Yes" ImageSizes="86,63">
-			</Image>
-			<Shift>		 
-				<Value Minimum="-6.0" Maximum="6.0">(A:VELOCITY BODY X, m/s)</Value>				
-				<Nonlinearity>
-					<Item Value="0"  X="212"/>
-					<Item Value="90" X="-512"/>					
-				</Nonlinearity>
-			</Shift>
-			<Shift>
-		 		<Value Minimum="-2.7" Maximum="10.9">(A:VELOCITY BODY Y, m/s)</Value>				
-				<Nonlinearity>
-					<Item Value="0" Y="256"/>
-					<Item Value="90"  Y="512"/>
-				</Nonlinearity>
-			</Shift>
-			</Element>	
-			
+    <!--Glideslope Elements-->
 
- 	<Element>
-		<Clip Left="130" Right="400"/>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>		
-		<Image Name="Heading_tape.bmp" Bright="Yes" ImageSizes="1800,22">
-		 </Image>
-		<Shift>
-		<Value>(A:Plane heading degrees gyro, degrees) 60 -</Value>
-		<Nonlinearity>
-            <Item Value="0" X="-108" Y="60"/>
-			<Item Value="90" X="-508" Y="60"/>
-			<Item Value="180" X="-900" Y="60"/>
-			<Item Value="270" X="-1293" Y="60"/>
+    <Element>
+      <Visible>(A:HSI GSI needle valid, bool)</Visible>
+      <Position X="206" Y="256"/>
+      <Rectangle Height="2" Width="100" LineWidth="1" Color="Lime" FillColor="Lime" Bright="Yes"/>
+      <Shift>
+        <Value Minimum="-100" Maximum="100">(A:HSI GSI needle, number)</Value>
+        <Scale Y="0.3"/>
+      </Shift>
+    </Element>
+
+    <Element>
+      <Visible>(A:HSI GSI needle valid, bool)</Visible>
+      <Position X="256" Y="206"/>
+      <Rectangle Height="100" Width="2" LineWidth="1" Color="Lime" FillColor="Lime" Bright="Yes"/>
+      <Shift>
+        <Value Minimum="-100" Maximum="100">(A:HSI CDI needle, number)</Value>
+        <Scale X="0.3"/>
+      </Shift>
+    </Element>
+
+    <Element>
+      <Visible>(A:HSI GSI needle valid, bool)</Visible>
+      <Position X="245" Y="240"/>
+      <Circle Height="20" Width="20" LineWidth="3" Color="Lime" Bright="Yes"/>
+    </Element>
+
+
+
+    <!--Velocity Vector-->
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Image Name="Velocity_Vector.bmp" Bright="Yes" ImageSizes="86,63">
+      </Image>
+      <Shift>
+        <Value Minimum="-6.0" Maximum="6.0">(A:VELOCITY BODY X, m/s)</Value>
+        <Nonlinearity>
+          <Item Value="0"  X="212"/>
+          <Item Value="90" X="-512"/>
         </Nonlinearity>
-		</Shift>	
-	</Element>
- 
-	<Element>
-    	<Position X="0" Y="0"/>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-	    <MaskImage Name="Ladder_Mask.bmp" Bright="Yes" ImageSizes="512,512">
-		<Axis X="256" Y="256"/>
-		</MaskImage>
-		<Image Name="HUD_Ladder_Q1.bmp" Bright="Yes" ImageSizes="250,900">
-		<Axis X="125" Y="450"/>
-		</Image>
-		<Shift>
+      </Shift>
+      <Shift>
+        <Value Minimum="-2.7" Maximum="10.9">(A:VELOCITY BODY Y, m/s)</Value>
+        <Nonlinearity>
+          <Item Value="0" Y="256"/>
+          <Item Value="90"  Y="512"/>
+        </Nonlinearity>
+      </Shift>
+    </Element>
+
+
+    <Element>
+      <Clip Left="130" Right="400"/>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Image Name="Heading_tape.bmp" Bright="Yes" ImageSizes="1800,22">
+      </Image>
+      <Shift>
+        <Value>(A:Plane heading degrees gyro, degrees) 60 -</Value>
+        <Nonlinearity>
+          <Item Value="0" X="-108" Y="60"/>
+          <Item Value="90" X="-508" Y="60"/>
+          <Item Value="180" X="-900" Y="60"/>
+          <Item Value="270" X="-1293" Y="60"/>
+        </Nonlinearity>
+      </Shift>
+    </Element>
+
+    <Element>
+      <Position X="0" Y="0"/>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <MaskImage Name="Ladder_Mask.bmp" Bright="Yes" ImageSizes="512,512">
+        <Axis X="256" Y="256"/>
+      </MaskImage>
+      <Image Name="HUD_Ladder_Q1.bmp" Bright="Yes" ImageSizes="250,900">
+        <Axis X="125" Y="450"/>
+      </Image>
+      <Shift>
         <Value Maximum="90" Minimum="-90">(A:Attitude indicator pitch degrees,degrees) /-/</Value>
-		<Nonlinearity>
-			<Item Value="0" Y="-450"/>
-			<Item Value="90" Y="450"/>
-			<Item Value="-90" Y="900"/>
-		</Nonlinearity>
-		</Shift>
-				
-		<Rotate>
-			<Value>(A:Attitude indicator bank degrees, radians)</Value>
-		</Rotate>
-				
-	</Element>
-	
-		<Element>
-    	<Position X="0" Y="0"/>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-	    <MaskImage Name="Ladder_Mask.bmp" Bright="Yes" ImageSizes="512,512">
-		<Axis X="256" Y="256"/>
-		</MaskImage>
-		<Image Name="HUD_Ladder_Q2.bmp" Bright="Yes" ImageSizes="250,900">
-		<Axis X="125" Y="450"/>
-		</Image>
-		<Shift>
+        <Nonlinearity>
+          <Item Value="0" Y="-450"/>
+          <Item Value="90" Y="450"/>
+          <Item Value="-90" Y="900"/>
+        </Nonlinearity>
+      </Shift>
+
+      <Rotate>
+        <Value>(A:Attitude indicator bank degrees, radians)</Value>
+      </Rotate>
+
+    </Element>
+
+    <Element>
+      <Position X="0" Y="0"/>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <MaskImage Name="Ladder_Mask.bmp" Bright="Yes" ImageSizes="512,512">
+        <Axis X="256" Y="256"/>
+      </MaskImage>
+      <Image Name="HUD_Ladder_Q2.bmp" Bright="Yes" ImageSizes="250,900">
+        <Axis X="125" Y="450"/>
+      </Image>
+      <Shift>
         <Value Maximum="90" Minimum="-90">(A:Attitude indicator pitch degrees,degrees) /-/</Value>
-		<Nonlinearity>
-			<Item Value="0" Y="450"/>
-			<Item Value="-90" Y="-450"/>
-			<Item Value="90" Y="-900"/>
-		</Nonlinearity>
-		</Shift>
-				
-		<Rotate>
-			<Value>(A:Attitude indicator bank degrees, radians)</Value>
-		</Rotate>
-				
-	</Element>
-	</Element>
-		
-<!--NAV Screen-->	
-	  
+        <Nonlinearity>
+          <Item Value="0" Y="450"/>
+          <Item Value="-90" Y="-450"/>
+          <Item Value="90" Y="-900"/>
+        </Nonlinearity>
+      </Shift>
+
+      <Rotate>
+        <Value>(A:Attitude indicator bank degrees, radians)</Value>
+      </Rotate>
+
+    </Element>
+  </Element>
+
+  <!--NAV Screen-->
+
   <Element>
-      <Image Name="VC_Nav.bmp"/>
-	  <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+    <Image Name="VC_Nav.bmp"/>
+    <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
 
-  
-  			   <Element>
-			   <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-			   <Position X="20" Y="90"/>
- <Text X="200" Y="40" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
-Adjust="Left" VerticalAdjust="Center">
- <String>COM 1: %((A:COM1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
- </Text>
- </Element>
- 
-   			   <Element>
-			   <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-			   <Position X="284" Y="105"/>
- <Text X="100" Y="40" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
-Adjust="Left" VerticalAdjust="Center">
- <String>%((A:COM1 STANDBY FREQUENCY, Megahertz))%!6.2f!</String>
- </Text>
- </Element>
- 
-   			   <Element>
-			   <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-			   <Position X="284" Y="189"/>
- <Text X="100" Y="40" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
-Adjust="Left" VerticalAdjust="Center">
- <String>%((A:NAV1 STANDBY FREQUENCY, Megahertz))%!6.2f!</String>
- </Text>
- </Element>
- 
-   			   <Element>
-			   <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-			   <Position X="20" Y="175"/>
- <Text X="200" Y="40" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
-Adjust="Left" VerticalAdjust="Center">
- <String>NAV 1: %((A:NAV1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
- </Text>
- </Element>
- 
- 
-    			   <Element>
-				   <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-			   <Position X="20" Y="344"/>
- <Text X="200" Y="40" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
-Adjust="Left" VerticalAdjust="Center">
- <String>ADF:    %((A:ADF ACTIVE FREQUENCY:1,KHz))%!5.1f!</String>
- </Text>
- </Element>
- 
- 
-    			   <Element>
-				   <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-			   <Position X="20" Y="260"/>
- <Text X="200" Y="40" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
-Adjust="R" VerticalAdjust="Center">
- <String>XPDR:  %((A:TRANSPONDER CODE:1, number))%!4d!%</String>
- </Text>
- </Element>
- 
-     			   <Element>
-				   <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-			   <Position X="280" Y="275"/>
- <Text X="100" Y="40" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
-Adjust="Center" VerticalAdjust="Center">
- <String>%((A:AUTOPILOT ALTITUDE LOCK VAR, feet))%!5d!%</String>
- </Text>
- </Element>
- 
-      			   <Element>
-				   <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-			   <Position X="390" Y="275"/>
- <Text X="100" Y="40" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
-Adjust="Center" VerticalAdjust="Center">
- <String>%((A:AUTOPILOT VERTICAL HOLD VAR, ft/min))%!4d!%</String>
- </Text>
- </Element>
- 
- 
 
     <Element>
-	<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-	<Position X="4" Y="415"/>
-      <Select>
-         <Value>(A:AUTOPILOT MASTER,bool)</Value>
-         <Case Value="1">
-            <Image Name="AP_On.bmp" ImageSizes="70,70"/>
-         </Case>
-      </Select>
-   </Element>
-   
-       <Element>
-	   <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-	<Position X="100" Y="415"/>
-      <Select>
-         <Value>(A:AUTOPILOT FLIGHT DIRECTOR ACTIVE,bool)</Value>
-         <Case Value="1">
-            <Image Name="FD.bmp" ImageSizes="70,70"/>
-         </Case>
-      </Select>
-   </Element>
-   
-   
- <Element>
- <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-<Position X="280" Y="330"/>
-<Select>
-<Value>(A:AUTOPILOT HEADING LOCK,bool)</Value>
-<Case Value="1">
-<Image Name="HDG.bmp" ImageSizes="100,65"/>
-</Case>
-</Select>
-</Element>
-
- <Element>
- <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-<Position X="280" Y="250"/>
-<Select>
-<Value>(A:AUTOPILOT ALTITUDE LOCK,bool)</Value>
-<Case Value="1">
-<Image Name="ALT.bmp" ImageSizes="100,65"/>
-</Case>
-</Select>
-</Element>
-
- <Element>
- <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-<Position X="280" Y="250"/>
-<Select>
-<Value>(A:AUTOPILOT ALTITUDE LOCK,bool)</Value>
-<Case Value="1">
-<Image Name="ALT.bmp" ImageSizes="100,65"/>
-</Case>
-</Select>
-</Element>
-
- <Element>
- <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-<Position X="400" Y="415"/>
-<Select>
-<Value>(A:GPS DRIVES NAV1,bool)</Value>
-<Case Value="1">
-<Image Name="GPS.bmp" ImageSizes="100,65"/>
-</Case>
-</Select>
-</Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="20" Y="90"/>
+      <Text X="200" Y="40" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+     Adjust="Left" VerticalAdjust="Center">
+        <String>COM 1: %((A:COM1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
+      </Text>
+    </Element>
 
     <Element>
-	<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="284" Y="105"/>
+      <Text X="100" Y="40" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+     Adjust="Left" VerticalAdjust="Center">
+        <String>%((A:COM1 STANDBY FREQUENCY, Megahertz))%!6.2f!</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="284" Y="189"/>
+      <Text X="100" Y="40" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+     Adjust="Left" VerticalAdjust="Center">
+        <String>%((A:NAV1 STANDBY FREQUENCY, Megahertz))%!6.2f!</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="20" Y="175"/>
+      <Text X="200" Y="40" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+     Adjust="Left" VerticalAdjust="Center">
+        <String>NAV 1: %((A:NAV1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
+      </Text>
+    </Element>
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="20" Y="344"/>
+      <Text X="200" Y="40" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+     Adjust="Left" VerticalAdjust="Center">
+        <String>ADF:    %((A:ADF ACTIVE FREQUENCY:1,KHz))%!5.1f!</String>
+      </Text>
+    </Element>
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="20" Y="260"/>
+      <Text X="200" Y="40" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+     Adjust="R" VerticalAdjust="Center">
+        <String>XPDR:  %((A:TRANSPONDER CODE:1, number))%!4d!%</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="280" Y="275"/>
+      <Text X="100" Y="40" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%((A:AUTOPILOT ALTITUDE LOCK VAR, feet))%!5d!%</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="390" Y="275"/>
+      <Text X="100" Y="40" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%((A:AUTOPILOT VERTICAL HOLD VAR, ft/min))%!4d!%</String>
+      </Text>
+    </Element>
+
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="4" Y="415"/>
+      <Select>
+        <Value>(A:AUTOPILOT MASTER,bool)</Value>
+        <Case Value="1">
+          <Image Name="AP_On.bmp" ImageSizes="70,70"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="100" Y="415"/>
+      <Select>
+        <Value>(A:AUTOPILOT FLIGHT DIRECTOR ACTIVE,bool)</Value>
+        <Case Value="1">
+          <Image Name="FD.bmp" ImageSizes="70,70"/>
+        </Case>
+      </Select>
+    </Element>
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="280" Y="330"/>
+      <Select>
+        <Value>(A:AUTOPILOT HEADING LOCK,bool)</Value>
+        <Case Value="1">
+          <Image Name="HDG.bmp" ImageSizes="100,65"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="280" Y="250"/>
+      <Select>
+        <Value>(A:AUTOPILOT ALTITUDE LOCK,bool)</Value>
+        <Case Value="1">
+          <Image Name="ALT.bmp" ImageSizes="100,65"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="280" Y="250"/>
+      <Select>
+        <Value>(A:AUTOPILOT ALTITUDE LOCK,bool)</Value>
+        <Case Value="1">
+          <Image Name="ALT.bmp" ImageSizes="100,65"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="400" Y="415"/>
+      <Select>
+        <Value>(A:GPS DRIVES NAV1,bool)</Value>
+        <Case Value="1">
+          <Image Name="GPS.bmp" ImageSizes="100,65"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
       <Position X="276" Y="415"/>
       <Select>
         <Value>(A:AUTOPILOT NAV1 LOCK, bool)</Value>
@@ -930,256 +930,256 @@ Adjust="Center" VerticalAdjust="Center">
     </Element>
 
 
- <Element>
- <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-<Position X="400" Y="160"/>
-<Select>
-<Value>(A:AUTOPILOT MACH HOLD,bool)</Value>
-<Case Value="1">
-<Image Name="MACH.bmp" ImageSizes="100,65"/>
-</Case>
-</Select>
-</Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="400" Y="160"/>
+      <Select>
+        <Value>(A:AUTOPILOT MACH HOLD,bool)</Value>
+        <Case Value="1">
+          <Image Name="MACH.bmp" ImageSizes="100,65"/>
+        </Case>
+      </Select>
+    </Element>
 
- <Element>
- <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-<Position X="400" Y="325"/>
-<Select>
-<Value>(A:AUTOPILOT GLIDESLOPE HOLD,bool)</Value>
-<Case Value="1">
-<Image Name="APP.bmp" ImageSizes="100,65"/>
-</Case>
-</Select>
-</Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="400" Y="325"/>
+      <Select>
+        <Value>(A:AUTOPILOT GLIDESLOPE HOLD,bool)</Value>
+        <Case Value="1">
+          <Image Name="APP.bmp" ImageSizes="100,65"/>
+        </Case>
+      </Select>
+    </Element>
 
- <Element>
- <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-<Position X="500" Y="325"/>
-<Select>
-<Value>(A:AUTOPILOT VERTICAL HOLD VAR,feet)</Value>
-<Case Value="1">
-<Image Name="VS.bmp" ImageSizes="100,65"/>
-</Case>
-</Select>
-</Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="500" Y="325"/>
+      <Select>
+        <Value>(A:AUTOPILOT VERTICAL HOLD VAR,feet)</Value>
+        <Case Value="1">
+          <Image Name="VS.bmp" ImageSizes="100,65"/>
+        </Case>
+      </Select>
+    </Element>
 
- <Element>
- <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
-<Position X="400" Y="77"/>
-<Select>
-<Value>(A:AUTOPILOT AIRSPEED HOLD,bool)</Value>
-<Case Value="1">
-<Image Name="IAS.bmp" ImageSizes="100,65"/>
-</Case>
-</Select>
-</Element>
-	  </Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+      <Position X="400" Y="77"/>
+      <Select>
+        <Value>(A:AUTOPILOT AIRSPEED HOLD,bool)</Value>
+        <Case Value="1">
+          <Image Name="IAS.bmp" ImageSizes="100,65"/>
+        </Case>
+      </Select>
+    </Element>
+  </Element>
 
-<Mouse>
+  <Mouse>
 
-<Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
+    <Visible>(A:Circuit Avionics on, bool) (L:MFD Button, enum) 5 == &amp;&amp;</Visible>
 
- <Area Left="280" Top="400" Width="50" Height="65">
- <Cursor Type="Hand"/>
- <Click Event="AP_NAV1_HOLD_ON" Repeat="No"/>
-   <Tooltip>NAV1 HOLD</Tooltip>
- </Area>
- 
-  <Area Left="330" Top="400" Width="50" Height="65">
- <Cursor Type="Hand"/>
- <Click Event="AP_NAV1_HOLD_OFF" Repeat="No"/>
-   <Tooltip>NAV1 HOLD OFF</Tooltip>
- </Area>
+    <Area Left="280" Top="400" Width="50" Height="65">
+      <Cursor Type="Hand"/>
+      <Click Event="AP_NAV1_HOLD_ON" Repeat="No"/>
+      <Tooltip>NAV1 HOLD</Tooltip>
+    </Area>
 
-
- <Area Left="400" Top="77" Width="100" Height="65">
- <Cursor Type="Hand"/>
- <Click Event="AP_AIRSPEED_HOLD" Repeat="No"/>
-   <Tooltip>IAS HOLD</Tooltip>
- </Area>
- 
- <Area Left="410" Top="255" Width="50" Height="40">
- <Cursor Type="UpArrow"/>
- <Click Event="AP_VS_VAR_INC" Repeat="No"/>
-   <Tooltip>VS INC</Tooltip>
- </Area>
- 
-  <Area Left="460" Top="255" Width="50" Height="40">
- <Cursor Type="DownArrow"/>
- <Click Event="AP_VS_VAR_DEC" Repeat="No"/>
-   <Tooltip>VS DEC</Tooltip>
- </Area>
-
- <Area Left="270" Top="255" Width="50" Height="40">
- <Cursor Type="UpArrow"/>
- <Click Event="AP_ALT_VAR_INC" Repeat="No"/>
-   <Tooltip>ALT INC</Tooltip>
- </Area>
- 
-  <Area Left="320" Top="255" Width="50" Height="40">
- <Cursor Type="DownArrow"/>
- <Click Event="AP_ALT_VAR_DEC" Repeat="No"/>
-   <Tooltip>ALT DEC</Tooltip>
- </Area>
-
- <Area Left="400" Top="325" Width="100" Height="65">
- <Cursor Type="Hand"/>
- <Click Event="AP_APR_HOLD" Repeat="No"/>
-   <Tooltip>Approach HOLD</Tooltip>
- </Area>
-
- <Area Left="400" Top="160" Width="100" Height="65">
- <Cursor Type="Hand"/>
- <Click Event="AP_PANEL_MACH_HOLD" Repeat="No"/>
-   <Tooltip>Mach HOLD</Tooltip>
- </Area>
-
- <Area Left="280" Top="240" Width="100" Height="30">
- <Cursor Type="Hand"/>
- <Click Event="AP_PANEL_ALTITUDE_HOLD" Repeat="No"/>
-   <Tooltip>AP ALT HOLD</Tooltip>
- </Area>
- 
-
- <Area Left="280" Top="330" Width="100" Height="50">
- <Cursor Type="Hand"/>
- <Click Event="AP_PANEL_HEADING_HOLD" Repeat="No"/>
-   <Tooltip>HEADING HOLD ON</Tooltip>
- </Area>
+    <Area Left="330" Top="400" Width="50" Height="65">
+      <Cursor Type="Hand"/>
+      <Click Event="AP_NAV1_HOLD_OFF" Repeat="No"/>
+      <Tooltip>NAV1 HOLD OFF</Tooltip>
+    </Area>
 
 
- <Area Left="100" Top="415" Width="80" Height="80">
- <Cursor Type="Hand"/>
- <Click Event="TOGGLE_FLIGHT_DIRECTOR" Repeat="No"/>
-   <Tooltip>Flight Director</Tooltip>
- </Area>
+    <Area Left="400" Top="77" Width="100" Height="65">
+      <Cursor Type="Hand"/>
+      <Click Event="AP_AIRSPEED_HOLD" Repeat="No"/>
+      <Tooltip>IAS HOLD</Tooltip>
+    </Area>
 
- <Area Left="4" Top="415" Width="35" Height="70">
- <Cursor Type="Hand"/>
- <Click Event="AUTOPILOT_OFF" Repeat="No"/>
-   <Tooltip>Autopilot Off</Tooltip>
- </Area>
- 
-  <Area Left="44" Top="415" Width="35" Height="70">
- <Cursor Type="Hand"/>
- <Click Event="AUTOPILOT_ON" Repeat="No"/>
-   <Tooltip>Autopilot On</Tooltip>
- </Area>
+    <Area Left="410" Top="255" Width="50" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="AP_VS_VAR_INC" Repeat="No"/>
+      <Tooltip>VS INC</Tooltip>
+    </Area>
 
- <Area Left="133" Top="90" Width="40" Height="40">
- <Cursor Type="DownArrow"/>
- <Click Event="COM_RADIO_WHOLE_DEC" Repeat="Yes"/>
- </Area>
- 
-  <Area Left="133" Top="90" Width="40" Height="40">
- <Cursor Type="DownArrow"/>
- <Click Event="COM_RADIO_WHOLE_INC" Repeat="Yes"/>
- </Area>
- 
-   <Area Left="188" Top="90" Width="40" Height="40">
- <Cursor Type="UpArrow"/>
- <Click Event="COM_RADIO_FRACT_DEC" Repeat="Yes"/>
- </Area>
- 
- <Area Left="188" Top="90" Width="40" Height="40">
- <Cursor Type="UpArrow"/>
- <Click Event="COM_RADIO_FRACT_INC" Repeat="Yes"/>
- </Area>
- 
- <Area Left="110" Top="340" Width="20" Height="40">
- <Cursor Type="UpArrow"/>
- <Click Event="ADF_100_INC" Repeat="Yes"/>
- </Area>
- 
-  <Area Left="120" Top="340" Width="20" Height="40">
- <Cursor Type="DownArrow"/>
- <Click Event="ADF_100_DEC" Repeat="Yes"/>
- </Area>
- 
-  <Area Left="130" Top="340" Width="20" Height="40">
- <Cursor Type="UpArrow"/>
- <Click Event="ADF_10_INC" Repeat="Yes"/>
- </Area>
- 
-  <Area Left="140" Top="340" Width="20" Height="40">
- <Cursor Type="DownArrow"/>
- <Click Event="ADF_10_DEC" Repeat="Yes"/>
- </Area>
- 
-   <Area Left="150" Top="340" Width="20" Height="40">
- <Cursor Type="UpArrow"/>
- <Click Event="ADF_1_INC" Repeat="Yes"/>
- </Area>
- 
-  <Area Left="160" Top="340" Width="20" Height="40">
- <Cursor Type="DownArrow"/>
- <Click Event="ADF_1_DEC" Repeat="Yes"/>
- </Area>
- 
+    <Area Left="460" Top="255" Width="50" Height="40">
+      <Cursor Type="DownArrow"/>
+      <Click Event="AP_VS_VAR_DEC" Repeat="No"/>
+      <Tooltip>VS DEC</Tooltip>
+    </Area>
+
+    <Area Left="270" Top="255" Width="50" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="AP_ALT_VAR_INC" Repeat="No"/>
+      <Tooltip>ALT INC</Tooltip>
+    </Area>
+
+    <Area Left="320" Top="255" Width="50" Height="40">
+      <Cursor Type="DownArrow"/>
+      <Click Event="AP_ALT_VAR_DEC" Repeat="No"/>
+      <Tooltip>ALT DEC</Tooltip>
+    </Area>
+
+    <Area Left="400" Top="325" Width="100" Height="65">
+      <Cursor Type="Hand"/>
+      <Click Event="AP_APR_HOLD" Repeat="No"/>
+      <Tooltip>Approach HOLD</Tooltip>
+    </Area>
+
+    <Area Left="400" Top="160" Width="100" Height="65">
+      <Cursor Type="Hand"/>
+      <Click Event="AP_PANEL_MACH_HOLD" Repeat="No"/>
+      <Tooltip>Mach HOLD</Tooltip>
+    </Area>
+
+    <Area Left="280" Top="240" Width="100" Height="30">
+      <Cursor Type="Hand"/>
+      <Click Event="AP_PANEL_ALTITUDE_HOLD" Repeat="No"/>
+      <Tooltip>AP ALT HOLD</Tooltip>
+    </Area>
+
+
+    <Area Left="280" Top="330" Width="100" Height="50">
+      <Cursor Type="Hand"/>
+      <Click Event="AP_PANEL_HEADING_HOLD" Repeat="No"/>
+      <Tooltip>HEADING HOLD ON</Tooltip>
+    </Area>
+
+
+    <Area Left="100" Top="415" Width="80" Height="80">
+      <Cursor Type="Hand"/>
+      <Click Event="TOGGLE_FLIGHT_DIRECTOR" Repeat="No"/>
+      <Tooltip>Flight Director</Tooltip>
+    </Area>
+
+    <Area Left="4" Top="415" Width="35" Height="70">
+      <Cursor Type="Hand"/>
+      <Click Event="AUTOPILOT_OFF" Repeat="No"/>
+      <Tooltip>Autopilot Off</Tooltip>
+    </Area>
+
+    <Area Left="44" Top="415" Width="35" Height="70">
+      <Cursor Type="Hand"/>
+      <Click Event="AUTOPILOT_ON" Repeat="No"/>
+      <Tooltip>Autopilot On</Tooltip>
+    </Area>
+
+    <Area Left="133" Top="90" Width="40" Height="40">
+      <Cursor Type="DownArrow"/>
+      <Click Event="COM_RADIO_WHOLE_DEC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="133" Top="90" Width="40" Height="40">
+      <Cursor Type="DownArrow"/>
+      <Click Event="COM_RADIO_WHOLE_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="188" Top="90" Width="40" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="COM_RADIO_FRACT_DEC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="188" Top="90" Width="40" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="COM_RADIO_FRACT_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="110" Top="340" Width="20" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="ADF_100_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="120" Top="340" Width="20" Height="40">
+      <Cursor Type="DownArrow"/>
+      <Click Event="ADF_100_DEC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="130" Top="340" Width="20" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="ADF_10_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="140" Top="340" Width="20" Height="40">
+      <Cursor Type="DownArrow"/>
+      <Click Event="ADF_10_DEC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="150" Top="340" Width="20" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="ADF_1_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="160" Top="340" Width="20" Height="40">
+      <Cursor Type="DownArrow"/>
+      <Click Event="ADF_1_DEC" Repeat="Yes"/>
+    </Area>
+
     <Area Left="170" Top="340" Width="20" Height="40">
- <Cursor Type="UpArrow"/>
- <Click Event="ADF_FRACT_INC_CARRY" Repeat="Yes"/>
- </Area>
- 
-  <Area Left="180" Top="340" Width="20" Height="40">
- <Cursor Type="DownArrow"/>
- <Click Event="ADF_FRACT_DEC_CARRY" Repeat="Yes"/>
- </Area>
+      <Cursor Type="UpArrow"/>
+      <Click Event="ADF_FRACT_INC_CARRY" Repeat="Yes"/>
+    </Area>
 
- <Area Left="15" Top="250" Width="180" Height="40">
- <Tooltip ID="TOOLTIPTEXT_TRANSPONDER_ID"/>
- </Area>
+    <Area Left="180" Top="340" Width="20" Height="40">
+      <Cursor Type="DownArrow"/>
+      <Click Event="ADF_FRACT_DEC_CARRY" Repeat="Yes"/>
+    </Area>
 
- <Area Left="120" Top="255" Width="20" Height="40">
- <Cursor Type="UpArrow"/>
- <Click Event="XPNDR_1000_INC" Repeat="Yes"/>
- </Area>
- 
-  <Area Left="140" Top="255" Width="20" Height="40">
- <Cursor Type="UpArrow"/>
- <Click Event="XPNDR_100_INC" Repeat="Yes"/>
- </Area>
- 
-   <Area Left="160" Top="255" Width="20" Height="40">
- <Cursor Type="UpArrow"/>
- <Click Event="XPNDR_10_INC" Repeat="Yes"/>
- </Area>
- 
+    <Area Left="15" Top="250" Width="180" Height="40">
+      <Tooltip ID="TOOLTIPTEXT_TRANSPONDER_ID"/>
+    </Area>
+
+    <Area Left="120" Top="255" Width="20" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="XPNDR_1000_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="140" Top="255" Width="20" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="XPNDR_100_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="160" Top="255" Width="20" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="XPNDR_10_INC" Repeat="Yes"/>
+    </Area>
+
     <Area Left="180" Top="255" Width="20" Height="40">
- <Cursor Type="UpArrow"/>
- <Click Event="XPNDR_1_INC" Repeat="Yes"/>
- </Area>
- 
-	<Area Left="120" Top="170" Width="25" Height="40">
- <Cursor Type="DownArrow"/>
- <Click Event="NAV1_RADIO_WHOLE_DEC" Repeat="Yes"/>
- </Area>
- 
- 	<Area Left="145" Top="170" Width="25" Height="40">
- <Cursor Type="UpArrow"/>
- <Click Event="NAV1_RADIO_WHOLE_INC" Repeat="Yes"/>
- </Area>
- 
- 	<Area Left="180" Top="170" Width="20" Height="40">
- <Cursor Type="DownArrow"/>
- <Click Event="NAV1_RADIO_FRACT_DEC" Repeat="Yes"/>
- </Area>
- 
- 	<Area Left="180" Top="170" Width="20" Height="40">
- <Cursor Type="UpArrow"/>
- <Click Event="NAV1_RADIO_FRACT_INC" Repeat="Yes"/>
- </Area>
- 
-  	<Area Left="190" Top="400" Width="80" Height="100">
- <Cursor Type="Hand"/>
-  <Tooltip>Swap COM frequencies</Tooltip>
- <Click Event="COM_STBY_RADIO_SWAP" Repeat="Yes"/>
- </Area>
- 
+      <Cursor Type="UpArrow"/>
+      <Click Event="XPNDR_1_INC" Repeat="Yes"/>
+    </Area>
 
- 
+    <Area Left="120" Top="170" Width="25" Height="40">
+      <Cursor Type="DownArrow"/>
+      <Click Event="NAV1_RADIO_WHOLE_DEC" Repeat="Yes"/>
+    </Area>
 
- </Mouse>
+    <Area Left="145" Top="170" Width="25" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="NAV1_RADIO_WHOLE_INC" Repeat="Yes"/>
+    </Area>
 
-	  
+    <Area Left="180" Top="170" Width="20" Height="40">
+      <Cursor Type="DownArrow"/>
+      <Click Event="NAV1_RADIO_FRACT_DEC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="180" Top="170" Width="20" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="NAV1_RADIO_FRACT_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="190" Top="400" Width="80" Height="100">
+      <Cursor Type="Hand"/>
+      <Tooltip>Swap COM frequencies</Tooltip>
+      <Click Event="COM_STBY_RADIO_SWAP" Repeat="Yes"/>
+    </Area>
+
+
+
+
+  </Mouse>
+
+
 </Gauge>

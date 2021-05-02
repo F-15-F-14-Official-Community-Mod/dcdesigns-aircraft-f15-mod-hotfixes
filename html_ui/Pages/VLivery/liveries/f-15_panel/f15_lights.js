@@ -22,7 +22,7 @@ class f15_lights extends TemplateElement {
     disconnectedCallback() {
     }
     Update() {
-		this.updateInstruments();
+        this.updateInstruments();
     }
     /*playInstrumentSound(soundId) {
         if (this.isElectricityAvailable()) {
@@ -33,18 +33,18 @@ class f15_lights extends TemplateElement {
     }	*/
     updateInstruments() {
 
-       // TAXI LIGHTS CONTROL
-       if (SimVar.GetSimVarValue("IS GEAR RETRACTABLE", "Boolean")) {
-         var gears_extracted = SimVar.GetSimVarValue("GEAR CENTER POSITION", "Percent");
-		 var ground = SimVar.GetSimVarValue("SIM ON GROUND", "Boolean");
-         if (SimVar.GetSimVarValue("LIGHT TAXI", "bool") && gears_extracted <= 99)
-            SimVar.SetSimVarValue("K:TOGGLE_TAXI_LIGHTS", "bool", false)
-         else if (!SimVar.GetSimVarValue("LIGHT TAXI", "bool") && gears_extracted > 99 && !ground)
-            SimVar.SetSimVarValue("K:TOGGLE_TAXI_LIGHTS", "bool", true)
-       }
+        // TAXI LIGHTS CONTROL
+        if (SimVar.GetSimVarValue("IS GEAR RETRACTABLE", "Boolean")) {
+            var gears_extracted = SimVar.GetSimVarValue("GEAR CENTER POSITION", "Percent");
+            var ground = SimVar.GetSimVarValue("SIM ON GROUND", "Boolean");
+            if (SimVar.GetSimVarValue("LIGHT TAXI", "bool") && gears_extracted <= 99)
+                SimVar.SetSimVarValue("K:TOGGLE_TAXI_LIGHTS", "bool", false)
+            else if (!SimVar.GetSimVarValue("LIGHT TAXI", "bool") && gears_extracted > 99 && !ground)
+                SimVar.SetSimVarValue("K:TOGGLE_TAXI_LIGHTS", "bool", true)
+        }
 
-    
-	}
-    
+
+    }
+
 }
 registerLivery("f15_lights-element", f15_lights);

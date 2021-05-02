@@ -1,148 +1,148 @@
 ﻿<Gauge Name="Navigation" Version="1.0">
-   <Update Frequency="60"/> 
-  
+  <Update Frequency="60"/>
+
   <Element>
-      <Image Name="VC_Nav.bmp"/>
-	  <Visible>(A:Circuit Avionics on, bool)</Visible>
-	  </Element>
-  
+    <Image Name="VC_Nav.bmp"/>
+    <Visible>(A:Circuit Avionics on, bool)</Visible>
+  </Element>
 
-  
-    			   <Element>
-				   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="80" Y="70"/>
- <Text X="350" Y="40" Bright="Yes" Length="18" Font="LCD" Color="Red"
-Adjust="Left" VerticalAdjust="Center">
- <String>ADF FREQ: %((A:ADF ACTIVE FREQUENCY:1,KHz))%!5.1f!</String>
- </Text>
- </Element>
- 
-    			   <Element>
-			   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="80" Y="128"/>
- <Text X="350" Y="40" Bright="Yes" Length="20" Font="LCD" Color="Red"
-Adjust="Left" VerticalAdjust="Center">
- <String>NAV 1 FREQ: %((A:NAV1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
- </Text>
- </Element>
- 
-     			   <Element>
-			   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="80" Y="180"/>
- <Text X="350" Y="40" Bright="Yes" Length="20" Font="LCD" Color="Red"
-Adjust="Left" VerticalAdjust="Center">
- <String>COM 1 FREQ: %((A:COM1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
- </Text>
- </Element>
- 
- 
-	 <Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="80" Y="230"/>
-		<Text X="250" Y="40" Bright="Yes" Length="20" Font="LCD" Color="Red"
+
+
+  <Element>
+    <Visible>(A:Circuit Avionics on, bool)</Visible>
+    <Position X="80" Y="70"/>
+    <Text X="350" Y="40" Bright="Yes" Length="18" Font="LCD" Color="Red"
+   Adjust="Left" VerticalAdjust="Center">
+      <String>ADF FREQ: %((A:ADF ACTIVE FREQUENCY:1,KHz))%!5.1f!</String>
+    </Text>
+  </Element>
+
+  <Element>
+    <Visible>(A:Circuit Avionics on, bool)</Visible>
+    <Position X="80" Y="128"/>
+    <Text X="350" Y="40" Bright="Yes" Length="20" Font="LCD" Color="Red"
+   Adjust="Left" VerticalAdjust="Center">
+      <String>NAV 1 FREQ: %((A:NAV1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
+    </Text>
+  </Element>
+
+  <Element>
+    <Visible>(A:Circuit Avionics on, bool)</Visible>
+    <Position X="80" Y="180"/>
+    <Text X="350" Y="40" Bright="Yes" Length="20" Font="LCD" Color="Red"
+   Adjust="Left" VerticalAdjust="Center">
+      <String>COM 1 FREQ: %((A:COM1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
+    </Text>
+  </Element>
+
+
+  <Element>
+    <Visible>(A:Circuit Avionics on, bool)</Visible>
+    <Position X="80" Y="230"/>
+    <Text X="250" Y="40" Bright="Yes" Length="20" Font="LCD" Color="Red"
 		Adjust="Left" VerticalAdjust="Center">
-		<String>LAT: %((A:GPS POSITION LAT, radians))%!6.4f!</String>
-		</Text>
-	</Element>
- 
- 	 <Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="300" Y="230"/>
-		<Text X="250" Y="40" Bright="Yes" Length="20" Font="LCD" Color="Red"
+      <String>LAT: %((A:GPS POSITION LAT, radians))%!6.4f!</String>
+    </Text>
+  </Element>
+
+  <Element>
+    <Visible>(A:Circuit Avionics on, bool)</Visible>
+    <Position X="300" Y="230"/>
+    <Text X="250" Y="40" Bright="Yes" Length="20" Font="LCD" Color="Red"
 		Adjust="Left" VerticalAdjust="Center">
-		<String>LON: %((A:GPS POSITION LON, radians))%!6.4f!</String>
-		</Text>
- </Element>
- 
-   <Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="80" Y="283"/>
- <Text X="250" Y="40" Bright="Yes" Length="20" Font="LCD" Color="Red"
-Adjust="Left" VerticalAdjust="Center">
- <String>TOTAL WEIGHT: %((A:TOTAL WEIGHT,POUNDS))%!3d!%</String>
- </Text>
- </Element>
- 
-     			   <Element>
-			   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="80" Y="335"/>
- <Text X="250" Y="40" Bright="Yes" Length="100" Font="LCD" Color="Red"
-Adjust="Left" VerticalAdjust="Center">
- <String>TOTAL FUEL: %((A:FUEL TOTAL QUANTITY WEIGHT, pounds)) %!5d!%</String>
- </Text>
- </Element>
+      <String>LON: %((A:GPS POSITION LON, radians))%!6.4f!</String>
+    </Text>
+  </Element>
+
+  <Element>
+    <Visible>(A:Circuit Avionics on, bool)</Visible>
+    <Position X="80" Y="283"/>
+    <Text X="250" Y="40" Bright="Yes" Length="20" Font="LCD" Color="Red"
+   Adjust="Left" VerticalAdjust="Center">
+      <String>TOTAL WEIGHT: %((A:TOTAL WEIGHT,POUNDS))%!3d!%</String>
+    </Text>
+  </Element>
+
+  <Element>
+    <Visible>(A:Circuit Avionics on, bool)</Visible>
+    <Position X="80" Y="335"/>
+    <Text X="250" Y="40" Bright="Yes" Length="100" Font="LCD" Color="Red"
+   Adjust="Left" VerticalAdjust="Center">
+      <String>TOTAL FUEL: %((A:FUEL TOTAL QUANTITY WEIGHT, pounds)) %!5d!%</String>
+    </Text>
+  </Element>
 
 
-<Mouse>
+  <Mouse>
 
- 
- <Area Left="285" Top="2" Width="10" Height="30">
- <Cursor Type="UpArrow"/>
- <Click Event="ADF_100_INC" Repeat="Yes"/>
- </Area>
- 
-  <Area Left="295" Top="2" Width="10" Height="30">
- <Cursor Type="DownArrow"/>
- <Click Event="ADF_100_DEC" Repeat="Yes"/>
- </Area>
- 
-  <Area Left="305" Top="2" Width="10" Height="30">
- <Cursor Type="UpArrow"/>
- <Click Event="ADF_10_INC" Repeat="Yes"/>
- </Area>
- 
-  <Area Left="315" Top="2" Width="10" Height="30">
- <Cursor Type="DownArrow"/>
- <Click Event="ADF_10_DEC" Repeat="Yes"/>
- </Area>
- 
-   <Area Left="325" Top="2" Width="10" Height="30">
- <Cursor Type="UpArrow"/>
- <Click Event="ADF_1_INC" Repeat="Yes"/>
- </Area>
- 
-  <Area Left="335" Top="2" Width="10" Height="30">
- <Cursor Type="DownArrow"/>
- <Click Event="ADF_1_DEC" Repeat="Yes"/>
- </Area>
- 
+
+    <Area Left="285" Top="2" Width="10" Height="30">
+      <Cursor Type="UpArrow"/>
+      <Click Event="ADF_100_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="295" Top="2" Width="10" Height="30">
+      <Cursor Type="DownArrow"/>
+      <Click Event="ADF_100_DEC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="305" Top="2" Width="10" Height="30">
+      <Cursor Type="UpArrow"/>
+      <Click Event="ADF_10_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="315" Top="2" Width="10" Height="30">
+      <Cursor Type="DownArrow"/>
+      <Click Event="ADF_10_DEC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="325" Top="2" Width="10" Height="30">
+      <Cursor Type="UpArrow"/>
+      <Click Event="ADF_1_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="335" Top="2" Width="10" Height="30">
+      <Cursor Type="DownArrow"/>
+      <Click Event="ADF_1_DEC" Repeat="Yes"/>
+    </Area>
+
     <Area Left="345" Top="2" Width="10" Height="30">
- <Cursor Type="UpArrow"/>
- <Click Event="ADF_FRACT_INC_CARRY" Repeat="Yes"/>
- </Area>
- 
-  <Area Left="355" Top="2" Width="10" Height="30">
- <Cursor Type="DownArrow"/>
- <Click Event="ADF_FRACT_DEC_CARRY" Repeat="Yes"/>
- </Area>
- 
- 	<Area Left="100" Top="2" Width="20" Height="40">
- <Cursor Type="DownArrow"/>
- <Click Event="NAV1_RADIO_WHOLE_DEC" Repeat="Yes"/>
- </Area>
- 
- 	<Area Left="120" Top="2" Width="20" Height="40">
- <Cursor Type="UpArrow"/>
- <Click Event="NAV1_RADIO_WHOLE_INC" Repeat="Yes"/>
- </Area>
- 
- 	<Area Left="140" Top="2" Width="20" Height="40">
- <Cursor Type="DownArrow"/>
- <Click Event="NAV1_RADIO_FRACT_DEC" Repeat="Yes"/>
- </Area>
- 
- 	<Area Left="160" Top="2" Width="20" Height="40">
- <Cursor Type="UpArrow"/>
- <Click Event="NAV1_RADIO_FRACT_INC" Repeat="Yes"/>
- </Area>
+      <Cursor Type="UpArrow"/>
+      <Click Event="ADF_FRACT_INC_CARRY" Repeat="Yes"/>
+    </Area>
 
- 
+    <Area Left="355" Top="2" Width="10" Height="30">
+      <Cursor Type="DownArrow"/>
+      <Click Event="ADF_FRACT_DEC_CARRY" Repeat="Yes"/>
+    </Area>
 
- 
+    <Area Left="100" Top="2" Width="20" Height="40">
+      <Cursor Type="DownArrow"/>
+      <Click Event="NAV1_RADIO_WHOLE_DEC" Repeat="Yes"/>
+    </Area>
 
- </Mouse>
- 
-</Gauge>  
+    <Area Left="120" Top="2" Width="20" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="NAV1_RADIO_WHOLE_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="140" Top="2" Width="20" Height="40">
+      <Cursor Type="DownArrow"/>
+      <Click Event="NAV1_RADIO_FRACT_DEC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="160" Top="2" Width="20" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="NAV1_RADIO_FRACT_INC" Repeat="Yes"/>
+    </Area>
+
+
+
+
+
+  </Mouse>
+
+</Gauge>
 
 
 

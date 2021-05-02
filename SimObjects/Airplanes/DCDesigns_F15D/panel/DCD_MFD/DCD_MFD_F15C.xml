@@ -1,187 +1,191 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Gauge Name="DCD F-15 Eagle MFD" Version="1.0">
-<Update Frequency="60"/> 
+  <Update Frequency="60"/>
 
 
 
 
   <Element>
-  <Image Name="WPN.bmp"/>
+    <Image Name="WPN.bmp"/>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-	<Size X="512" Y="512" />
-
-
-
-	  
-
-  <Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="130" Y="430"/>
- <Text X="250" Y="30" Bright="Yes" Length="20" Font="Tahoma" Color="Lime"
-Adjust="Left" VerticalAdjust="Center">
- <String>TOTAL WEIGHT: %((A:TOTAL WEIGHT,POUNDS))%!3d!%</String>
- </Text>
- </Element>
- 
-
-
-<Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="235" Y="200"/>
-<Select>
-<Value>(A:FUEL TANK EXTERNAL1 QUANTITY, GALLONS) 8 &gt; if{ 1 } els{ 0 }</Value>
-         <Case Value="1">
-            <Image Name="CTR_Tank.bmp" ImageSizes="53,138"/>
-         </Case>
-</Select>
-</Element>
-
-<Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="115" Y="199"/>
-<Select>
-<Value>(A:FUEL TANK EXTERNAL2 QUANTITY, GALLONS) 10 &gt; if{ 1 } els{ 0 }</Value>
-         <Case Value="1">
-            <Image Name="CTR_Tank.bmp" ImageSizes="53,138"/>
-         </Case>
-</Select>
-</Element>
-
-
-<Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="358" Y="200"/>
-<Select>
-<Value>(A:FUEL TANK EXTERNAL2 QUANTITY, GALLONS) 10 &gt; if{ 1 } els{ 0 }</Value>
-         <Case Value="1">
-            <Image Name="CTR_Tank.bmp" ImageSizes="29,25"/>
-         </Case>
-</Select>
-</Element>
+    <Size X="512" Y="512" />
 
 
 
 
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="100" Y="220"/>
-<Select>
-<Value>(A:Payload Station Weight:3, pounds) 188 &gt; if{ 1 } els{ 0 }</Value>
-         <Case Value="1">
-            <Image Name="AIM9.bmp" ImageSizes="13,77"/>
-         </Case>
-</Select>
-</Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="130" Y="430"/>
+      <Text X="250" Y="30" Bright="Yes" Length="20" Font="Tahoma" Color="Lime"
+     Adjust="Left" VerticalAdjust="Center">
+        <String>TOTAL WEIGHT: %((A:TOTAL WEIGHT,POUNDS))%!3d!%</String>
+      </Text>
+    </Element>
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="158" Y="295"/>
-<Select>
-<Value>(A:Payload Station Weight:4, pounds) 188 &gt; if{ 1 } els{ 0 }</Value>
-         <Case Value="1">
-            <Image Name="AIM9.bmp" ImageSizes="13,77"/>
-         </Case>
-</Select>
-</Element>
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="400" Y="220"/>
-<Select>
-<Value>(A:Payload Station Weight:3, pounds) 188 &gt; if{ 1 } els{ 0 }</Value>
-         <Case Value="1">
-            <Image Name="AIM9.bmp" ImageSizes="13,77"/>
-         </Case>
-</Select>
-</Element>
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="344" Y="293"/>
-<Select>
-<Value>(A:Payload Station Weight:4, pounds) 188 &gt; if{ 1 } els{ 0 }</Value>
-         <Case Value="1">
-            <Image Name="AIM9.bmp" ImageSizes="13,77"/>
-         </Case>
-</Select>
-</Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="235" Y="200"/>
+      <Select>
+        <Value>(A:FUEL TANK EXTERNAL1 QUANTITY, GALLONS) 8 &gt; if{ 1 } els{ 0 }</Value>
+        <Case Value="1">
+          <Image Name="CTR_Tank.bmp" ImageSizes="53,138"/>
+        </Case>
+      </Select>
+    </Element>
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="153" Y="155"/>
-<Select>
-<Value>(A:Payload Station Weight:5, pounds) 345 &gt;
-				  (A:Payload Station Weight:3, pounds) 355 &lt; &amp;&amp;
-				   if{ 1 } els{ 0 }</Value>
-         <Case Value="1">
-            <Image Name="120.bmp" ImageSizes="22,103"/>
-         </Case>
-</Select>
-</Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="115" Y="199"/>
+      <Select>
+        <Value>(A:FUEL TANK EXTERNAL2 QUANTITY, GALLONS) 10 &gt; if{ 1 } els{ 0 }</Value>
+        <Case Value="1">
+          <Image Name="CTR_Tank.bmp" ImageSizes="53,138"/>
+        </Case>
+      </Select>
+    </Element>
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="338" Y="156"/>
-<Select>
-<Value>(A:Payload Station Weight:6, pounds) 345 &gt;
-				  (A:Payload Station Weight:4, pounds) 355 &lt; &amp;&amp;
-				   if{ 1 } els{ 0 }</Value>
-         <Case Value="1">
-            <Image Name="120.bmp" ImageSizes="22,103"/>
-         </Case>
-</Select>
-</Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="358" Y="200"/>
+      <Select>
+        <Value>(A:FUEL TANK EXTERNAL2 QUANTITY, GALLONS) 10 &gt; if{ 1 } els{ 0 }</Value>
+        <Case Value="1">
+          <Image Name="CTR_Tank.bmp" ImageSizes="29,25"/>
+        </Case>
+      </Select>
+    </Element>
 
 
 
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="196" Y="123"/>
-<Select>
-<Value>(A:Payload Station Weight:7, pounds) 345 &gt; if{ 1 } els{ 0 }</Value>
-         <Case Value="1">
-            <Image Name="120.bmp" ImageSizes="22,103"/>
-         </Case>
-</Select>
-</Element>
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="196" Y="280"/>
-<Select>
-<Value>(A:Payload Station Weight:8, pounds) 345 &gt; if{ 1 } els{ 0 }</Value>
-         <Case Value="1">
-            <Image Name="120.bmp" ImageSizes="22,103"/>
-         </Case>
-</Select>
-</Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="100" Y="220"/>
+      <Select>
+        <Value>(A:Payload Station Weight:3, pounds) 188 &gt; if{ 1 } els{ 0 }</Value>
+        <Case Value="1">
+          <Image Name="AIM9.bmp" ImageSizes="13,77"/>
+        </Case>
+      </Select>
+    </Element>
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="298" Y="123"/>
-<Select>
-<Value>(A:Payload Station Weight:9, pounds) 345 &gt; if{ 1 } els{ 0 }</Value>
-         <Case Value="1">
-            <Image Name="120.bmp" ImageSizes="22,103"/>
-         </Case>
-</Select>
-</Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="158" Y="295"/>
+      <Select>
+        <Value>(A:Payload Station Weight:4, pounds) 188 &gt; if{ 1 } els{ 0 }</Value>
+        <Case Value="1">
+          <Image Name="AIM9.bmp" ImageSizes="13,77"/>
+        </Case>
+      </Select>
+    </Element>
 
-<Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="298" Y="280"/>
-<Select>
-<Value>(A:Payload Station Weight:10, pounds) 345 &gt; if{ 1 } els{ 0 }</Value>
-         <Case Value="1">
-            <Image Name="120.bmp" ImageSizes="22,103"/>
-         </Case>
-</Select>
-</Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="400" Y="220"/>
+      <Select>
+        <Value>(A:Payload Station Weight:3, pounds) 188 &gt; if{ 1 } els{ 0 }</Value>
+        <Case Value="1">
+          <Image Name="AIM9.bmp" ImageSizes="13,77"/>
+        </Case>
+      </Select>
+    </Element>
 
-</Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="344" Y="293"/>
+      <Select>
+        <Value>(A:Payload Station Weight:4, pounds) 188 &gt; if{ 1 } els{ 0 }</Value>
+        <Case Value="1">
+          <Image Name="AIM9.bmp" ImageSizes="13,77"/>
+        </Case>
+      </Select>
+    </Element>
 
-	  
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="153" Y="155"/>
+      <Select>
+        <Value>
+          (A:Payload Station Weight:5, pounds) 345 &gt;
+          (A:Payload Station Weight:3, pounds) 355 &lt; &amp;&amp;
+          if{ 1 } els{ 0 }
+        </Value>
+        <Case Value="1">
+          <Image Name="120.bmp" ImageSizes="22,103"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="338" Y="156"/>
+      <Select>
+        <Value>
+          (A:Payload Station Weight:6, pounds) 345 &gt;
+          (A:Payload Station Weight:4, pounds) 355 &lt; &amp;&amp;
+          if{ 1 } els{ 0 }
+        </Value>
+        <Case Value="1">
+          <Image Name="120.bmp" ImageSizes="22,103"/>
+        </Case>
+      </Select>
+    </Element>
+
+
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="196" Y="123"/>
+      <Select>
+        <Value>(A:Payload Station Weight:7, pounds) 345 &gt; if{ 1 } els{ 0 }</Value>
+        <Case Value="1">
+          <Image Name="120.bmp" ImageSizes="22,103"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="196" Y="280"/>
+      <Select>
+        <Value>(A:Payload Station Weight:8, pounds) 345 &gt; if{ 1 } els{ 0 }</Value>
+        <Case Value="1">
+          <Image Name="120.bmp" ImageSizes="22,103"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="298" Y="123"/>
+      <Select>
+        <Value>(A:Payload Station Weight:9, pounds) 345 &gt; if{ 1 } els{ 0 }</Value>
+        <Case Value="1">
+          <Image Name="120.bmp" ImageSizes="22,103"/>
+        </Case>
+      </Select>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="298" Y="280"/>
+      <Select>
+        <Value>(A:Payload Station Weight:10, pounds) 345 &gt; if{ 1 } els{ 0 }</Value>
+        <Case Value="1">
+          <Image Name="120.bmp" ImageSizes="22,103"/>
+        </Case>
+      </Select>
+    </Element>
+
+  </Element>
+
+
 </Gauge>

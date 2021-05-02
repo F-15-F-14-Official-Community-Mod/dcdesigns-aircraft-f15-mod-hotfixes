@@ -1,35 +1,35 @@
 <Include Path="Asobo\Generic\Animations.xml"/>
 
 <Template Name="Left_Toggle_Switch_Template">
-    <DefaultTemplateParameters>
-        <SIMVAR_PREFIX>L</SIMVAR_PREFIX>
-        <ANIM_LENGTH>50</ANIM_LENGTH>
-        <CONVERSION_FACTOR>1</CONVERSION_FACTOR>
-        <OFFSET>0</OFFSET>
-        <PRE_CODE></PRE_CODE>
-        <POST_CODE></POST_CODE>
-    </DefaultTemplateParameters>
+  <DefaultTemplateParameters>
+    <SIMVAR_PREFIX>L</SIMVAR_PREFIX>
+    <ANIM_LENGTH>50</ANIM_LENGTH>
+    <CONVERSION_FACTOR>1</CONVERSION_FACTOR>
+    <OFFSET>0</OFFSET>
+    <PRE_CODE></PRE_CODE>
+    <POST_CODE></POST_CODE>
+  </DefaultTemplateParameters>
 
-    <Component ID="#NODE_ID#" Node="#NODE_ID#">
-        <MouseRect>
-            <MOUSEFLAGS>#MOUSEFLAGS#</MOUSEFLAGS>
-            <Cursor>#CURSOR#</Cursor>
-            <TOOLTIPID>#TOOLTIPID#</TOOLTIPID>
-            <CallbackCode>
-                <Code>
-                #PRE_CODE#
-                
-                (M:Event) 'LeftSingle' scmi 0 == if{
-                    (#SIMVAR_PREFIX#:#SIMVAR#,bool) ! (&gt;#SIMVAR_PREFIX#:#SIMVAR#,bool)
-                } 
-                
-                #POST_CODE#
-                </Code>
-            </CallbackCode>
-        </MouseRect>
-    </Component>
-    
-    <UseTemplate Name="ASOBO_GT_Anim_Code">
-        <ANIM_CODE>(#SIMVAR_PREFIX#:#SIMVAR#,bool) #ANIM_LENGTH# * #CONVERSION_FACTOR# * #OFFSET# + </ANIM_CODE>
-    </UseTemplate>
+  <Component ID="#NODE_ID#" Node="#NODE_ID#">
+    <MouseRect>
+      <MOUSEFLAGS>#MOUSEFLAGS#</MOUSEFLAGS>
+      <Cursor>#CURSOR#</Cursor>
+      <TOOLTIPID>#TOOLTIPID#</TOOLTIPID>
+      <CallbackCode>
+        <Code>
+          #PRE_CODE#
+
+          (M:Event) 'LeftSingle' scmi 0 == if{
+          (#SIMVAR_PREFIX#:#SIMVAR#,bool) ! (&gt;#SIMVAR_PREFIX#:#SIMVAR#,bool)
+          }
+
+          #POST_CODE#
+        </Code>
+      </CallbackCode>
+    </MouseRect>
+  </Component>
+
+  <UseTemplate Name="ASOBO_GT_Anim_Code">
+    <ANIM_CODE>(#SIMVAR_PREFIX#:#SIMVAR#,bool) #ANIM_LENGTH# * #CONVERSION_FACTOR# * #OFFSET# + </ANIM_CODE>
+  </UseTemplate>
 </Template>
