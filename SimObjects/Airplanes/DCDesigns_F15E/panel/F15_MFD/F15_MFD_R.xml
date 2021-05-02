@@ -1,163 +1,160 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Gauge Name="DCD F-15E Strike Eagle MFD_R" Version="1.0">
-<Update Frequency="60"/> 
+  <Update Frequency="60"/>
 
 
-<Element>
-  <Image Name="ENG_Screen.png"/>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-	<Size X="512" Y="512" />
-  
   <Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="150" Y="10"/>
- <Text X="220" Y="45" Bright="Yes" Length="300" Font="Tahoma" Color="Lime"
-Adjust="Center" VerticalAdjust="Center">
- <String>%ENG PARAMS%</String>
- </Text>
- </Element>	  
+    <Image Name="ENG_Screen.png"/>
+    <Visible>(A:Circuit Avionics on, bool)</Visible>
+    <Size X="512" Y="512" />
 
-   <Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="200" Y="125"/>
- <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Lime"
-Adjust="Center" VerticalAdjust="Center">
- <String>%RPM%</String>
- </Text>
- </Element>	
- 
-  <Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="50" Y="125"/>
- <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
-Adjust="Center" VerticalAdjust="Center">
- <String>%((A:TURB ENG N2:1, percent))%!3d!%</String>
- </Text>
- </Element>
- 
- <Element>
- <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="350" Y="125"/>
- <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
-Adjust="Center" VerticalAdjust="Center">
- <String>%((A:TURB ENG N2:2, percent))%!3d!%</String>
- </Text>
- </Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="150" Y="10"/>
+      <Text X="220" Y="45" Bright="Yes" Length="300" Font="Tahoma" Color="Lime"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%ENG PARAMS%</String>
+      </Text>
+    </Element>
 
-   <Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="200" Y="175"/>
- <Text X="130" Y="45" Bright="Yes" Length="12" Font="Tahoma" Color="Lime"
-Adjust="Center" VerticalAdjust="Center">
- <String>%FF (PPH)%</String>
- </Text>
- </Element>
- 
- 			   <Element>
-			   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="50" Y="175"/>
- <Text X="120" Y="45" Bright="Yes" Length="5" Font="Tahoma" Color="Cyan"
-Adjust="Center" VerticalAdjust="Center">
- <String>%((A:ENG1 FUEL FLOW PPH, pounds per hour))%!4d!%</String>
- </Text>
- </Element>
- 
-  			   <Element>
-			   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="350" Y="175"/>
- <Text X="120" Y="45" Bright="Yes" Length="5" Font="Tahoma" Color="Cyan"
-Adjust="Center" VerticalAdjust="Center">
- <String>%((A:ENG2 FUEL FLOW PPH, pounds per hour))%!4d!%</String>
- </Text>
- </Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="200" Y="125"/>
+      <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Lime"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%RPM%</String>
+      </Text>
+    </Element>
 
-   <Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="200" Y="225"/>
- <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Lime"
-Adjust="Center" VerticalAdjust="Center">
- <String>%OIL PRESS%</String>
- </Text>
- </Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="50" Y="125"/>
+      <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%((A:TURB ENG N2:1, percent))%!3d!%</String>
+      </Text>
+    </Element>
 
- 
-   			   <Element>
-			   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="25" Y="225"/>
- <Text X="180" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
-Adjust="Center" VerticalAdjust="Center">
- <String>%((A:GENERAL ENG1 OIL PRESSURE, PSI))%!3d!%</String>
- </Text>
- </Element>
- 
- 
-    			   <Element>
-				   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="325" Y="225"/>
- <Text X="180" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
-Adjust="Center" VerticalAdjust="Center">
- <String>%((A:GENERAL ENG2 OIL PRESSURE, PSI))%!3d!%</String>
- </Text>
- </Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="350" Y="125"/>
+      <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%((A:TURB ENG N2:2, percent))%!3d!%</String>
+      </Text>
+    </Element>
 
-   <Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="200" Y="275"/>
- <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Lime"
-Adjust="Center" VerticalAdjust="Center">
- <String>%ENGINE TEMP%</String>
- </Text>
- </Element>
- 
-     			   <Element>
-				   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="50" Y="275"/>
- <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
-Adjust="Center" VerticalAdjust="Center">
- <String>%((A:Eng1 exhaust gas temperature, celsius))%!3d!%</String>
- </Text>
- </Element>
- 
-      			   <Element>
-				   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="350" Y="275"/>
- <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
-Adjust="Center" VerticalAdjust="Center">
- <String>%((A:Eng2 exhaust gas temperature, celsius))%!3d!%</String>
- </Text>
- </Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="200" Y="175"/>
+      <Text X="130" Y="45" Bright="Yes" Length="12" Font="Tahoma" Color="Lime"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%FF (PPH)%</String>
+      </Text>
+    </Element>
 
-   <Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-<Position X="200" Y="325"/>
- <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Lime"
-Adjust="Center" VerticalAdjust="Center">
- <String>%HYD PRESS%</String>
- </Text>
- </Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="50" Y="175"/>
+      <Text X="120" Y="45" Bright="Yes" Length="5" Font="Tahoma" Color="Cyan"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%((A:TURB ENG CORRECTED FF:1, pounds per hour))%!4d!%</String>
+      </Text>
+    </Element>
 
- 
-       			   <Element>
-				   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="50" Y="325"/>
- <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
-Adjust="Center" VerticalAdjust="Center">
- <String>%((A:ENG1 HYDRAULIC PRESSURE, psi))%!3d!%</String>
- </Text>
- </Element>
- 
-        			   <Element>
-				   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="350" Y="325"/>
- <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
-Adjust="Center" VerticalAdjust="Center">
- <String>%((A:ENG2 HYDRAULIC PRESSURE, psi))%!3d!%</String>
- </Text>
- </Element>
-  
-</Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="350" Y="175"/>
+      <Text X="120" Y="45" Bright="Yes" Length="5" Font="Tahoma" Color="Cyan"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%((A:TURB ENG CORRECTED FF:2, pounds per hour))%!4d!%</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="200" Y="225"/>
+      <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Lime"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%OIL PRESS%</String>
+      </Text>
+    </Element>
 
 
- 
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="25" Y="225"/>
+      <Text X="180" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%((A:GENERAL ENG1 OIL PRESSURE, PSI))%!3d!%</String>
+      </Text>
+    </Element>
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="325" Y="225"/>
+      <Text X="180" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%((A:GENERAL ENG2 OIL PRESSURE, PSI))%!3d!%</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="200" Y="275"/>
+      <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Lime"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%ENGINE TEMP%</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="50" Y="275"/>
+      <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%((A:TURB ENG ITT:1, Celsius))%!d!</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="350" Y="275"/>
+      <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%((A:TURB ENG ITT:2, Celsius))%!d!</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="200" Y="325"/>
+      <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Lime"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%HYD PRESS%</String>
+      </Text>
+    </Element>
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="50" Y="325"/>
+      <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%((A:ENG1 HYDRAULIC PRESSURE, psi))%!3d!%</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="350" Y="325"/>
+      <Text X="120" Y="45" Bright="Yes" Length="3" Font="Tahoma" Color="Cyan"
+     Adjust="Center" VerticalAdjust="Center">
+        <String>%((A:ENG2 HYDRAULIC PRESSURE, psi))%!3d!%</String>
+      </Text>
+    </Element>
+  </Element>
+
 </Gauge>
