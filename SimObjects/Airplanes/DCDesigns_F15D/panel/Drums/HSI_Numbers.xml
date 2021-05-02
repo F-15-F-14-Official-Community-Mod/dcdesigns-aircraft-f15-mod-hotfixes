@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Gauge Name="DC Designs Drums">
-     <Update Frequency="60"/>   
-   
-         <!--HSI Gauge-->
-   
-   
-	       <Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-  <Image Name="HSI Gauge.png"/>	  
-	<Size X="512" Y="512" />
-	   
-	   
-   	<Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="30" Y="12"/>
-		<Text X="200" Y="30" Bright="No" Length="14" Font="Tahoma Bold" Color="White"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>%((A:NAV1 DME, nmiles))%!3d!</String>
-		</Text>
-	</Element>
- 
-   			   <Element>
-			   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="420" Y="12"/>
- <Text X="200" Y="30" Bright="Yes" Length="100" Font="Tahoma Bold" Color="White"
-Adjust="Left" VerticalAdjust="Center">
- <String>%((A:NAV1 OBS,radians) 57.2 *)%!3d!</String>
- </Text>
- </Element>
+  <Update Frequency="60"/>
 
- 		   <!--ADF-->
-          <Element>
-            <Visible>(A:ADF1 signal, number) 10 > if</Visible>
-              <Position X="256" Y="230"/>
-              <Image Name="ADF_BEARING.bmp" Bright="No">
-			  <Axis X="7" Y="128"/>
-              </Image>
-              <Rotate>
-                <Value>(A:ADF1 Radial,radians)</Value>
-              </Rotate>
-            </Element>
- 
-          <Element>
-		  <Visible>(A:Circuit Avionics on,bool)</Visible>
-            <Position X="256" Y="230"/>
-              <Image Name="HSI Bug.bmp" Bright="No">
-              <Axis X="240" Y="240"/>
-			  </Image>
-            <Rotate>
-              <Value>(A:Autopilot heading lock dir,radians) (A:Plane heading degrees gyro,radians) -</Value>
-            </Rotate>
-          </Element> 
- 
- 
-</Element>
+  <!--HSI Gauge-->
+
+
+  <Element>
+    <Visible>(A:Circuit Avionics on, bool)</Visible>
+    <Image Name="HSI Gauge.png"/>
+    <Size X="512" Y="512" />
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="30" Y="12"/>
+      <Text X="200" Y="30" Bright="No" Length="14" Font="Tahoma Bold" Color="White"
+      Adjust="Left" VerticalAdjust="Center">
+        <String>%((A:NAV1 DME, nmiles))%!3d!</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="420" Y="12"/>
+      <Text X="200" Y="30" Bright="Yes" Length="100" Font="Tahoma Bold" Color="White"
+     Adjust="Left" VerticalAdjust="Center">
+        <String>%((A:NAV1 OBS,radians) 57.2 *)%!3d!</String>
+      </Text>
+    </Element>
+
+    <!--ADF-->
+    <Element>
+      <Visible>(A:ADF1 signal, number) 10 > if</Visible>
+      <Position X="256" Y="230"/>
+      <Image Name="ADF_BEARING.bmp" Bright="No">
+        <Axis X="7" Y="128"/>
+      </Image>
+      <Rotate>
+        <Value>(A:ADF1 Radial,radians)</Value>
+      </Rotate>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on,bool)</Visible>
+      <Position X="256" Y="230"/>
+      <Image Name="HSI Bug.bmp" Bright="No">
+        <Axis X="240" Y="240"/>
+      </Image>
+      <Rotate>
+        <Value>(A:Autopilot heading lock dir,radians) (A:Plane heading degrees gyro,radians) -</Value>
+      </Rotate>
+    </Element>
+
+
+  </Element>
 
 </Gauge>

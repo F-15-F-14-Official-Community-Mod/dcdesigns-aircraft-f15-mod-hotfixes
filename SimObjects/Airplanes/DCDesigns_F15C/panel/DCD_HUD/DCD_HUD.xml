@@ -1,490 +1,500 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Gauge Name="HUD Display" Version="1.0">
-<Update Frequency="60"/>
+  <Update Frequency="60"/>
 
-	<Element>
+  <Element>
     <Visible>(A:Circuit Avionics on, bool) (L:HUD Power Switch, bool) and</Visible>
-	<Size X="512" Y="512" />
-
-  
+    <Size X="512" Y="512" />
 
 
-	<Element>
-  		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="55" Y="215"/>
-		<Text X="80" Y="30" Bright="Yes" Length="4" Font="Tahoma" Color="Lime"
-		Adjust="Right" VerticalAdjust="Center">
-		<String>%((A:Airspeed indicated, knots)) %!3d!%</String>
-		</Text>
-	</Element>
-	
-			  	<Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="325" Y="238"/>
-		<Text X="80" Y="25" Bright="Yes" Length="6" Font="Tahoma" Color="Lime"
-		Adjust="Right" VerticalAdjust="Center">
-		<String>%((A:VERTICAL SPEED, ft/min))%!5d!%</String>
-		</Text>
-	</Element>
- 
-   	<Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="325" Y="215"/>
-		<Text X="80" Y="30" Bright="Yes" Length="6" Font="Tahoma" Color="Lime"
-		Adjust="Right" VerticalAdjust="Center">
-		<String>%((A:Indicated Altitude, feet)) %!5d!%</String>
-		</Text>
-	</Element>
- 
-	<Element>
-		<Visible>(A:Circuit Avionics on, bool) (A:Radio height, feet) 1000 &lt;= and</Visible>
-        <Position X="315" Y="255"/>
-        <Text X="80" Y="30" Bright="Yes" Length="6" Font="tahoma" Color="Lime" Adjust="Right" VerticalAdjust="Center" Multiline="No" Fixed="No">
-        <String>%((A:Radio height, feet))%!5d!%  R%</String>
-        </Text>
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="63" Y="215"/>
+      <Text X="80" Y="31" Bright="Yes" Length="4" Font="Tahoma" Color="Lime"
+      Adjust="Right" VerticalAdjust="Center">
+        <String>%((A:Airspeed indicated, knots)) %!3d!%</String>
+      </Text>
     </Element>
- 
-     <Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="60" Y="490"/>
-		<Text X="90" Y="20" Bright="Yes" Length="12" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>%((P:Local time,hours) flr 23 + 24 % 1 +)%!02d! : %((P:Local time,minutes) flr 60 %)%!02d! : %((P:Local time,seconds) flr 60 %)%!02d!</String>
-		</Text>
-	</Element>
 
-	<Element>
-		<Visible>(A:Circuit Avionics on, bool) (A:G FORCE, GForce) 9.0 &gt;= and</Visible>
-		<Position X="153" Y="225"/>
-		<Text X="200" Y="30" Bright="Yes" Length="8" Font="Tahoma" Color="Lime"
-		Adjust="Center" VerticalAdjust="Center">
-		<String>% G LIMIT %</String>
-		</Text>
-	</Element>
-  
     <Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="60" Y="370"/>
-		<Text X="90" Y="20" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>AOA %((A:INCIDENCE ALPHA,degrees))%!3.1f!</String>
-		</Text>
-	</Element>
- 
-    <Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="60" Y="410"/>
-		<Text X="90" Y="20" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>%((A:G FORCE, GForce))%!3.1f! G</String>
-		</Text>
-	</Element>
- 
-    <Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="60" Y="390"/>
-		<Text X="90" Y="20" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>%((A:AIRSPEED MACH, mach))%!3.3f!</String>
-		</Text>
-	</Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="320" Y="238"/>
+      <Text X="80" Y="26" Bright="Yes" Length="6" Font="Tahoma" Color="Lime"
+      Adjust="Right" VerticalAdjust="Center">
+        <String>%((A:VERTICAL SPEED, ft/min))%!5d!%</String>
+      </Text>
+    </Element>
 
-	<Element>
-		<Visible>(A:AUTOPILOT MASTER,bool)</Visible>
-        <Position X="60" Y="440"/>
-		<Text X="90" Y="20" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>ALT %((A:AUTOPILOT ALTITUDE LOCK VAR, feet))%!5d!%</String>	 
-		</Text>			   
-	</Element>
- 
     <Element>
-		<Visible>(A:AUTOPILOT MASTER,bool)</Visible>
-	    <Position X="60" Y="460"/>
-		<Text X="90" Y="20" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-	    <String>V/S  %((A:AUTOPILOT VERTICAL HOLD VAR, ft/min))%!4d!%</String>		   
-	    </Text>
-	</Element>
-	
-			<Element> 
-		      <Visible>(A:Circuit Avionics on, bool)</Visible> 
-    	  		<Position X="0" Y="0"/>
-			<Image Name="Airspeed_Tape.bmp" Bright="Yes" ImageSizes="100,1200">
-				<Axis X="0" Y="0"/>
-		    	</Image>
-			<Clip Top="70" Left="1" Right="270" Bottom="340"/>	
-			<Shift>
-			     <Value>(A:Airspeed indicated, knot)</Value>
-				<Nonlinearity>   //---- 1 pxel per 1 knots
-					<Item Value="1200" X="0" Y="-1000"/>
-				<Item Value="0" X="0" Y="250"/>
-					
-				</Nonlinearity>
-		    	</Shift>
-		</Element>
-		
-					<Element> 
-		      <Visible>(A:Circuit Avionics on, bool)</Visible> 
-    	  		<Position X="0" Y="0"/>
-			<Image Name="Altitude Tape.bmp" Bright="Yes" ImageSizes="200,1800">
-				<Axis X="0" Y="0"/>
-		    	</Image>
-			<Clip Top="70" Left="1" Right="470" Bottom="340"/>	
-			<Shift>
-			     <Value>(A:Indicated Altitude, feet)</Value>
-				<Nonlinearity>   
-					<Item Value="36000" X="400" Y="-1565"/>
-					<Item Value="0" X="400" Y="235"/>
-					
-				</Nonlinearity>
-		    	</Shift>
-		</Element>
-		
-							<Element> 
-		      <Visible>(A:Circuit Avionics on, bool)</Visible> 
-    	  		<Position X="0" Y="0"/>
-			<Image Name="Altitude Tape_Upper.bmp" Bright="Yes" ImageSizes="200,1800">
-				<Axis X="0" Y="0"/>
-		    	</Image>
-			<Clip Top="70" Left="1" Right="470" Bottom="340"/>	
-			<Shift>
-			     <Value>(A:Indicated Altitude, feet)</Value>
-				<Nonlinearity>   
-					<Item Value="72000" X="400" Y="-1565"/>
-					<Item Value="36000" X="400" Y="230"/>
-					
-				</Nonlinearity>
-		    	</Shift>
-		</Element>
- 
- 
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="320" Y="215"/>
+      <Text X="80" Y="31" Bright="Yes" Length="6" Font="Tahoma" Color="Lime"
+      Adjust="Right" VerticalAdjust="Center">
+        <String>%((A:Indicated Altitude, feet)) %!5d!%</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (A:Radio height, feet) 1000 &lt;= and</Visible>
+      <Position X="315" Y="258"/>
+      <Text X="80" Y="30" Bright="Yes" Length="6" Font="tahoma" Color="Lime" Adjust="Right" VerticalAdjust="Center" Multiline="No" Fixed="No">
+        <String>%((A:Radio height, feet))%!5d!%  R%</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="60" Y="490"/>
+      <Text X="90" Y="20" Bright="Yes" Length="12" Font="Tahoma" Color="Lime"
+      Adjust="Left" VerticalAdjust="Center">
+        <String>%((P:Local time,hours) flr 23 + 24 % 1 +)%!02d! : %((P:Local time,minutes) flr 60 %)%!02d! : %((P:Local time,seconds) flr 60 %)%!02d!</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (A:G FORCE, GForce) 9.0 &gt;= and</Visible>
+      <Position X="153" Y="225"/>
+      <Text X="200" Y="30" Bright="Yes" Length="8" Font="Tahoma" Color="Lime"
+      Adjust="Center" VerticalAdjust="Center">
+        <String>% G LIMIT %</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool) (A:SPOILERS HANDLE POSITION, position) 0.01 &gt; and </Visible>
+      <Position X="153" Y="400"/>
+      <Text X="200" Y="30" Bright="Yes" Length="8" Font="Tahoma" Color="Lime"
+      Adjust="Center" VerticalAdjust="Center">
+        <String>% SPD BRK %</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="60" Y="370"/>
+      <Text X="90" Y="23" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
+      Adjust="Left" VerticalAdjust="Center">
+        <String>AOA %((A:INCIDENCE ALPHA,degrees))%!3.1f!</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="60" Y="410"/>
+      <Text X="90" Y="23" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
+      Adjust="Left" VerticalAdjust="Center">
+        <String>%((A:G FORCE, GForce))%!3.1f! G</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="60" Y="390"/>
+      <Text X="90" Y="23" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
+      Adjust="Left" VerticalAdjust="Center">
+        <String>%((A:AIRSPEED MACH, mach))%!3.3f!</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:AUTOPILOT MASTER,bool)</Visible>
+      <Position X="60" Y="440"/>
+      <Text X="90" Y="20" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
+      Adjust="Left" VerticalAdjust="Center">
+        <String>ALT %((A:AUTOPILOT ALTITUDE LOCK VAR, feet))%!5d!%</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:AUTOPILOT MASTER,bool)</Visible>
+      <Position X="60" Y="460"/>
+      <Text X="90" Y="20" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
+      Adjust="Left" VerticalAdjust="Center">
+        <String>V/S  %((A:AUTOPILOT VERTICAL HOLD VAR, ft/min))%!4d!%</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="0" Y="0"/>
+      <Image Name="Airspeed_Tape.bmp" Bright="Yes" ImageSizes="100,1200">
+        <Axis X="0" Y="0"/>
+      </Image>
+      <Clip Top="70" Left="1" Right="270" Bottom="340"/>
+      <Shift>
+        <Value>(A:Airspeed indicated, knot)</Value>
+        <Nonlinearity>
+          //---- 1 pxel per 1 knots
+          <Item Value="1200" X="0" Y="-1000"/>
+          <Item Value="0" X="0" Y="250"/>
+
+        </Nonlinearity>
+      </Shift>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="0" Y="0"/>
+      <Image Name="Altitude Tape.bmp" Bright="Yes" ImageSizes="200,1800">
+        <Axis X="0" Y="0"/>
+      </Image>
+      <Clip Top="70" Left="1" Right="470" Bottom="340"/>
+      <Shift>
+        <Value>(A:Indicated Altitude, feet)</Value>
+        <Nonlinearity>
+          <Item Value="36000" X="400" Y="-1565"/>
+          <Item Value="0" X="400" Y="235"/>
+
+        </Nonlinearity>
+      </Shift>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="0" Y="0"/>
+      <Image Name="Altitude Tape_Upper.bmp" Bright="Yes" ImageSizes="200,1800">
+        <Axis X="0" Y="0"/>
+      </Image>
+      <Clip Top="70" Left="1" Right="470" Bottom="340"/>
+      <Shift>
+        <Value>(A:Indicated Altitude, feet)</Value>
+        <Nonlinearity>
+          <Item Value="72000" X="400" Y="-1565"/>
+          <Item Value="36000" X="400" Y="230"/>
+
+        </Nonlinearity>
+      </Shift>
+    </Element>
+
+
 
     <Element id="Wind Direction">
-			<Visible>(A:Circuit Avionics on, bool)</Visible>
-        <Position X="435" Y="400"/>
-        <Image Name="wind_direction.bmp">
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="435" Y="400"/>
+      <Image Name="wind_direction.bmp">
         <Transparent>True</Transparent>
         <Axis X="14" Y="14"/>
         <Bright>True</Bright>
-        </Image>
-        <Rotate>
+      </Image>
+      <Rotate>
         <Value>(A:Ambient Wind Direction,degrees) (A:Plane heading degrees gyro,degrees) - (A:MAGVAR, degrees) - 180 - dgrd</Value>
-		</Rotate>
-	</Element>
+      </Rotate>
+    </Element>
 
 
     <Element>
-        <Position X="250" Y="55"/>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-        <Image Name="HDG_Arrow.bmp">
+      <Position X="250" Y="55"/>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Image Name="HDG_Arrow.bmp">
         <Transparent>True</Transparent>
         <Bright>True</Bright>
-        </Image>
-	</Element>
+      </Image>
+    </Element>
 
 
     <Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="320" Y="425"/>
-		<Text X="120" Y="30" Bright="Yes" Length="12" Font="Tahoma" Color="Lime"
-		Adjust="Right" VerticalAdjust="Center">
-		<String>%((A:Ambient Wind Velocity,knots) s0 0 &gt;)%{if}%(l0)%!3d!%{else}---%{end}</String>
-		</Text>
-	</Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="320" Y="425"/>
+      <Text X="120" Y="30" Bright="Yes" Length="12" Font="Tahoma" Color="Lime"
+      Adjust="Right" VerticalAdjust="Center">
+        <String>%((A:Ambient Wind Velocity,knots) s0 0 &gt;)%{if}%(l0)%!3d!%{else}---%{end}</String>
+      </Text>
+    </Element>
 
 
-  	<Element>
-		<Visible>(A:Circuit Avionics on,bool)</Visible>
-		<Position X="385" Y="485"/>
-		<Text X="90" Y="20" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>NAV1 %((A:NAV1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
-		</Text>
-	</Element>
+    <Element>
+      <Visible>(A:Circuit Avionics on,bool)</Visible>
+      <Position X="385" Y="485"/>
+      <Text X="90" Y="20" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+      Adjust="Left" VerticalAdjust="Center">
+        <String>NAV1 %((A:NAV1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
+      </Text>
+    </Element>
 
-  	<Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="345" Y="485"/>
-		<Text X="90" Y="20" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>%((A:Nav1 ident, string))%!s!</String>
-		</Text>
-	</Element>  
- 
-   	<Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="385" Y="465"/>
-		<Text X="90" Y="20" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
-		Adjust="Left" VerticalAdjust="Center">
-		<String>DME  %((A:NAV1 DME, nmiles) 999 min 0 max s1 0 &gt;=)%{if}%(l1 100 &gt;=)%{if}%(l1)%!d!%{else}%(l1)%!0.1f!%{end}%{else}----%{end}</String>
-		</Text>
-	</Element>  
- 
-           <!--Glideslope Elements-->
-		  
-          <Element>
-            <Visible>(A:HSI GSI needle valid, bool)</Visible>
-            <Position X="206" Y="256"/>
-            <Rectangle Height="2" Width="100" LineWidth="1" Color="Lime" FillColor="Lime" Bright="Yes"/>
-            <Shift>
-              <Value Minimum="-100" Maximum="100">(A:HSI GSI needle, number)</Value>
-              <Scale Y="0.3"/>
-            </Shift>
-          </Element>
-		  
-		            <Element>
-            <Visible>(A:HSI GSI needle valid, bool)</Visible>
-            <Position X="256" Y="206"/>
-            <Rectangle Height="100" Width="2" LineWidth="1" Color="Lime" FillColor="Lime" Bright="Yes"/>
-            <Shift>
-              <Value Minimum="-100" Maximum="100">(A:HSI CDI needle, number)</Value>
-              <Scale X="0.3"/>
-            </Shift>
-          </Element>
-		  
-		  	<Element>
-            <Visible>(A:HSI GSI needle valid, bool)</Visible>
-            <Position X="245" Y="240"/>
-            <Circle Height="20" Width="20" LineWidth="3" Color="Lime" Bright="Yes"/>
-          </Element>
-		  
-		  
-		
-		<!--Velocity Vector-->		
-		<Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-			<Image Name="Velocity_Vector.bmp" Bright="Yes" ImageSizes="90,65">
-			</Image>
-			<Shift>		 
-				<Value Minimum="-6.0" Maximum="6.0">(A:VELOCITY BODY X, m/s) (A:VELOCITY BODY Z, m/s) atg2 rddg</Value>				
-				<Nonlinearity>
-					<Item Value="-6.0"  X="180"/>
-					<Item Value="0.0"  X="212"/>
-					<Item Value="6.0" X="244"/>					
-				</Nonlinearity>
-			</Shift>
-			<Shift>
-		 		<Value Minimum="-10.0" Maximum="10.0">(A:VELOCITY BODY Y, m/s) (A:VELOCITY BODY Z, m/s) atg2 rddg</Value>				
-				<Nonlinearity>
-					<Item Value="-10" Y="500"/>
-					<Item Value="0.0"  Y="274"/>
-					<Item Value="10"  Y="200"/>
-				</Nonlinearity>
-			</Shift>
-			</Element>	
-			
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="345" Y="485"/>
+      <Text X="90" Y="20" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+      Adjust="Left" VerticalAdjust="Center">
+        <String>%((A:Nav1 ident, string))%!s!</String>
+      </Text>
+    </Element>
 
-			<!--Heading Tape-->	
- 	<Element>
-		<Clip Left="130" Right="400"/>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>		
-		<Image Name="Heading_tape.bmp" Bright="Yes" ImageSizes="1800,22">
-		 </Image>
-		<Shift>
-		<Value>(A:Plane heading degrees gyro, degrees) 60 -</Value>
-		<Nonlinearity>
-            <Item Value="0" X="-108" Y="20"/>
-			<Item Value="90" X="-508" Y="20"/>
-			<Item Value="180" X="-900" Y="20"/>
-			<Item Value="270" X="-1293" Y="20"/>
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="385" Y="465"/>
+      <Text X="90" Y="20" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+      Adjust="Left" VerticalAdjust="Center">
+        <String>DME  %((A:NAV1 DME, nmiles) 999 min 0 max s1 0 &gt;=)%{if}%(l1 100 &gt;=)%{if}%(l1)%!d!%{else}%(l1)%!0.1f!%{end}%{else}----%{end}</String>
+      </Text>
+    </Element>
+
+    <!--Glideslope Elements-->
+
+    <Element>
+      <Visible>(A:HSI GSI needle valid, bool)</Visible>
+      <Position X="206" Y="256"/>
+      <Rectangle Height="2" Width="100" LineWidth="1" Color="Lime" FillColor="Lime" Bright="Yes"/>
+      <Shift>
+        <Value Minimum="-100" Maximum="100">(A:HSI GSI needle, number)</Value>
+        <Scale Y="0.3"/>
+      </Shift>
+    </Element>
+
+    <Element>
+      <Visible>(A:HSI GSI needle valid, bool)</Visible>
+      <Position X="256" Y="206"/>
+      <Rectangle Height="100" Width="2" LineWidth="1" Color="Lime" FillColor="Lime" Bright="Yes"/>
+      <Shift>
+        <Value Minimum="-100" Maximum="100">(A:HSI CDI needle, number)</Value>
+        <Scale X="0.3"/>
+      </Shift>
+    </Element>
+
+    <Element>
+      <Visible>(A:HSI GSI needle valid, bool)</Visible>
+      <Position X="245" Y="240"/>
+      <Circle Height="20" Width="20" LineWidth="3" Color="Lime" Bright="Yes"/>
+    </Element>
+
+
+
+    <!--Velocity Vector-->
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Image Name="Velocity_Vector.bmp" Bright="Yes" ImageSizes="90,65">
+      </Image>
+      <Shift>
+        <Value Minimum="-6.0" Maximum="6.0">(A:VELOCITY BODY X, m/s) (A:VELOCITY BODY Z, m/s) atg2 rddg</Value>
+        <Nonlinearity>
+          <Item Value="-6.0"  X="180"/>
+          <Item Value="0.0"  X="212"/>
+          <Item Value="6.0" X="244"/>
         </Nonlinearity>
-		</Shift>	
-	</Element>
-	
-	<!--Pitch Ladders-->
- 
-	<Element>
-    	<Position X="0" Y="0"/>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-	    <MaskImage Name="Ladder_Mask.bmp" Bright="Yes" ImageSizes="512,512">
-		<Axis X="256" Y="256"/>
-		</MaskImage>
-		<Image Name="HUD_Ladder_5_30.bmp" Bright="Yes" ImageSizes="250,850">
-		<Axis X="125" Y="425"/>
-		</Image>
-		<Shift>
-        <Value Maximum="90" Minimum="-90">(A:Attitude indicator pitch degrees,degrees) /-/</Value>
-		<Nonlinearity>
-			<Item Value="0" Y="-510"/>
-			<Item Value="90" Y="2550"/>
-			<Item Value="-90" Y="-3235"/>
-		</Nonlinearity>
-		</Shift>
-	
+      </Shift>
+      <Shift>
+        <Value Minimum="-10.0" Maximum="10.0">(A:VELOCITY BODY Y, m/s) (A:VELOCITY BODY Z, m/s) atg2 rddg</Value>
+        <Nonlinearity>
+          <Item Value="-10" Y="500"/>
+          <Item Value="0.0"  Y="274"/>
+          <Item Value="10"  Y="200"/>
+        </Nonlinearity>
+      </Shift>
+    </Element>
 
-				
-		<Rotate>
-			<Value>(A:Attitude indicator bank degrees, radians)</Value>
-		</Rotate>
-	</Element>
-	
-			<Element>
-    	<Position X="0" Y="0"/>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-	    <MaskImage Name="Ladder_Mask.bmp" Bright="Yes" ImageSizes="512,512">
-		<Axis X="256" Y="256"/>
-		</MaskImage>
-		<Image Name="HUD_Ladder_35_60.bmp" Bright="Yes" ImageSizes="250,850">
-		<Axis X="125" Y="425"/>
-		</Image>
-		<Shift>
-        <Value Maximum="90" Minimum="-90">(A:Attitude indicator pitch degrees,degrees) /-/</Value>
-		<Nonlinearity>
-			<Item Value="0" Y="-1510"/>
-			<Item Value="90" Y="1510"/>
-			<Item Value="-90" Y="-4530"/>
-		</Nonlinearity>
-		</Shift>
-				
-		<Rotate>
-			<Value>(A:Attitude indicator bank degrees, radians)</Value>
-		</Rotate>
-	</Element>
-	
-				<Element>
-    	<Position X="0" Y="0"/>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-	    <MaskImage Name="Ladder_Mask.bmp" Bright="Yes" ImageSizes="512,512">
-		<Axis X="256" Y="256"/>
-		</MaskImage>
-		<Image Name="HUD_Ladder_65_90.bmp" Bright="Yes" ImageSizes="250,850">
-		<Axis X="125" Y="425"/>
-		</Image>
-		<Shift>
-        <Value Maximum="90" Minimum="-90">(A:Attitude indicator pitch degrees,degrees) /-/</Value>
-		<Nonlinearity>
-			<Item Value="0" Y="-2550"/>
-			<Item Value="90" Y="510"/>
-			<Item Value="-90" Y="6120"/>
-		</Nonlinearity>
-		</Shift>
-				
-		<Rotate>
-			<Value>(A:Attitude indicator bank degrees, radians)</Value>
-		</Rotate>
-	</Element>
-	
-	
-		<Element>
-    	<Position X="0" Y="0"/>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-	    <MaskImage Name="Ladder_Mask.bmp" Bright="Yes" ImageSizes="512,512">
-		<Axis X="256" Y="256"/>
-		</MaskImage>
-		<Image Name="HUD_Ladder_0_30_DOWN.bmp" Bright="Yes" ImageSizes="250,1032">
-		<Axis X="125" Y="516"/>
-		</Image>
-		<Shift>
-        <Value Maximum="90" Minimum="-90">(A:Attitude indicator pitch degrees,degrees) /-/</Value>
-		<Nonlinearity>
-			<Item Value="0" Y="510"/>
-			<Item Value="90" Y="3570"/>
-			<Item Value="-90" Y="-2550"/>
-		</Nonlinearity>
-		</Shift>
-				
-				<Rotate>
-			<Value>(A:Attitude indicator bank degrees, radians)</Value>
-		</Rotate>
-	</Element>
-	
-	
-			<Element>
-    	<Position X="0" Y="0"/>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-	    <MaskImage Name="Ladder_Mask.bmp" Bright="Yes" ImageSizes="512,512">
-		<Axis X="256" Y="256"/>
-		</MaskImage>
-		<Image Name="HUD_Ladder_30-60_DOWN.bmp" Bright="Yes" ImageSizes="249,1025">
-		<Axis X="125" Y="512"/>
-		</Image>
-		<Shift>
-        <Value Maximum="90" Minimum="-90">(A:Attitude indicator pitch degrees,degrees) /-/</Value>
-		<Nonlinearity>
-			<Item Value="0" Y="1530"/>
-			<Item Value="90" Y="4590"/>
-			<Item Value="-90" Y="-2040"/>
-		</Nonlinearity>
-		</Shift>
-				
-				<Rotate>
-			<Value>(A:Attitude indicator bank degrees, radians)</Value>
-		</Rotate>
-	</Element>
-	
-				<Element>
-    	<Position X="0" Y="0"/>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-	    <MaskImage Name="Ladder_Mask.bmp" Bright="Yes" ImageSizes="512,512">
-		<Axis X="256" Y="256"/>
-		</MaskImage>
-		<Image Name="HUD_Ladder_60-90_DOWN.bmp" Bright="Yes" ImageSizes="247,1008">
-		<Axis X="124" Y="504"/>
-		</Image>
-		<Shift>
-        <Value Maximum="90" Minimum="-90">(A:Attitude indicator pitch degrees,degrees) /-/</Value>
-		<Nonlinearity>
-			<Item Value="0" Y="2550"/>
-			<Item Value="90" Y="5570"/>
-			<Item Value="-90" Y="-1020"/>
-		</Nonlinearity>
-		</Shift>
-				
-				<Rotate>
-			<Value>(A:Attitude indicator bank degrees, radians)</Value>
-		</Rotate>
-	</Element>
 
-	
-	
-	
-			  	<Element>
-				<Position X="220" Y="430"/>
-				<Visible>(A:GEAR HANDLE POSITION, bool) (A:Circuit Avionics on, bool) &amp;&amp;</Visible>
-				<Axis X="12" Y="45"/>
-				<Image Name="AOA_B.bmp" Bright="Yes" ImageSizes="25,90">
-				</Image>
-				<Shift>
-		 		<Value Minimum="-10.0" Maximum="10.0">(A:INCIDENCE ALPHA,degrees)</Value>				
-				<Nonlinearity>
-					<Item Value="-8" X="190" Y="300"/>
-					<Item Value="0"  X="190" Y="410"/>
-					<Item Value="8"  X="190" Y="450"/>
-					</Nonlinearity>
-				</Shift>		
-			</Element>
+    <!--Heading Tape-->
+    <Element>
+      <Clip Left="130" Right="400"/>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Image Name="Heading_tape.bmp" Bright="Yes" ImageSizes="1800,22">
+      </Image>
+      <Shift>
+        <Value>(A:Plane heading degrees gyro, degrees) 60 -</Value>
+        <Nonlinearity>
+          <Item Value="0" X="-108" Y="20"/>
+          <Item Value="90" X="-508" Y="20"/>
+          <Item Value="180" X="-900" Y="20"/>
+          <Item Value="270" X="-1293" Y="20"/>
+        </Nonlinearity>
+      </Shift>
+    </Element>
 
-			
-			<Element>
-			<Visible>(A:Circuit Avionics on, bool)</Visible>
-			<Position X="212" Y="303"/>
-			<Image Name="Waterline.bmp" Bright="Yes" ImageSizes="35,90">
-			</Image>
-			</Element>
-			
-			
-			<Element>
-			<Visible>(A:Circuit Avionics on, bool)</Visible>
-			<Position X="256" Y="303"/>
-			<Image Name="Horizon.bmp" Bright="Yes" ImageSizes="30,400">
-			<Axis X="200" Y="15"/>
-			</Image>
-			<Shift>
+    <!--Pitch Ladders-->
+
+    <Element>
+      <Position X="0" Y="0"/>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <MaskImage Name="Ladder_Mask.bmp" Bright="Yes" ImageSizes="512,512">
+        <Axis X="256" Y="256"/>
+      </MaskImage>
+      <Image Name="HUD_Ladder_5_30.bmp" Bright="Yes" ImageSizes="250,850">
+        <Axis X="125" Y="425"/>
+      </Image>
+      <Shift>
         <Value Maximum="90" Minimum="-90">(A:Attitude indicator pitch degrees,degrees) /-/</Value>
-		<Nonlinearity>
-			<Item Value="0"    X="256" Y="303"/>
-			<Item Value="90"   X="256" Y="3060"/>
-			<Item Value="-90"  X="256" Y="-3060"/>
-		</Nonlinearity>
-		</Shift>
-			
-							<Rotate>
-			<Value>(A:Attitude indicator bank degrees, radians)</Value>
-		</Rotate>
-	</Element>
+        <Nonlinearity>
+          <Item Value="0" Y="-510"/>
+          <Item Value="90" Y="2550"/>
+          <Item Value="-90" Y="-3235"/>
+        </Nonlinearity>
+      </Shift>
 
-		</Element>
-				
+
+
+      <Rotate>
+        <Value>(A:Attitude indicator bank degrees, radians)</Value>
+      </Rotate>
+    </Element>
+
+    <Element>
+      <Position X="0" Y="0"/>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <MaskImage Name="Ladder_Mask.bmp" Bright="Yes" ImageSizes="512,512">
+        <Axis X="256" Y="256"/>
+      </MaskImage>
+      <Image Name="HUD_Ladder_35_60.bmp" Bright="Yes" ImageSizes="250,850">
+        <Axis X="125" Y="425"/>
+      </Image>
+      <Shift>
+        <Value Maximum="90" Minimum="-90">(A:Attitude indicator pitch degrees,degrees) /-/</Value>
+        <Nonlinearity>
+          <Item Value="0" Y="-1510"/>
+          <Item Value="90" Y="1510"/>
+          <Item Value="-90" Y="-4530"/>
+        </Nonlinearity>
+      </Shift>
+
+      <Rotate>
+        <Value>(A:Attitude indicator bank degrees, radians)</Value>
+      </Rotate>
+    </Element>
+
+    <Element>
+      <Position X="0" Y="0"/>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <MaskImage Name="Ladder_Mask.bmp" Bright="Yes" ImageSizes="512,512">
+        <Axis X="256" Y="256"/>
+      </MaskImage>
+      <Image Name="HUD_Ladder_65_90.bmp" Bright="Yes" ImageSizes="250,850">
+        <Axis X="125" Y="425"/>
+      </Image>
+      <Shift>
+        <Value Maximum="90" Minimum="-90">(A:Attitude indicator pitch degrees,degrees) /-/</Value>
+        <Nonlinearity>
+          <Item Value="0" Y="-2550"/>
+          <Item Value="90" Y="510"/>
+          <Item Value="-90" Y="6120"/>
+        </Nonlinearity>
+      </Shift>
+
+      <Rotate>
+        <Value>(A:Attitude indicator bank degrees, radians)</Value>
+      </Rotate>
+    </Element>
+
+
+    <Element>
+      <Position X="0" Y="0"/>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <MaskImage Name="Ladder_Mask.bmp" Bright="Yes" ImageSizes="512,512">
+        <Axis X="256" Y="256"/>
+      </MaskImage>
+      <Image Name="HUD_Ladder_0_30_DOWN.bmp" Bright="Yes" ImageSizes="250,1032">
+        <Axis X="125" Y="516"/>
+      </Image>
+      <Shift>
+        <Value Maximum="90" Minimum="-90">(A:Attitude indicator pitch degrees,degrees) /-/</Value>
+        <Nonlinearity>
+          <Item Value="0" Y="510"/>
+          <Item Value="90" Y="3570"/>
+          <Item Value="-90" Y="-2550"/>
+        </Nonlinearity>
+      </Shift>
+
+      <Rotate>
+        <Value>(A:Attitude indicator bank degrees, radians)</Value>
+      </Rotate>
+    </Element>
+
+
+    <Element>
+      <Position X="0" Y="0"/>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <MaskImage Name="Ladder_Mask.bmp" Bright="Yes" ImageSizes="512,512">
+        <Axis X="256" Y="256"/>
+      </MaskImage>
+      <Image Name="HUD_Ladder_30-60_DOWN.bmp" Bright="Yes" ImageSizes="249,1025">
+        <Axis X="125" Y="512"/>
+      </Image>
+      <Shift>
+        <Value Maximum="90" Minimum="-90">(A:Attitude indicator pitch degrees,degrees) /-/</Value>
+        <Nonlinearity>
+          <Item Value="0" Y="1530"/>
+          <Item Value="90" Y="4590"/>
+          <Item Value="-90" Y="-2040"/>
+        </Nonlinearity>
+      </Shift>
+
+      <Rotate>
+        <Value>(A:Attitude indicator bank degrees, radians)</Value>
+      </Rotate>
+    </Element>
+
+    <Element>
+      <Position X="0" Y="0"/>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <MaskImage Name="Ladder_Mask.bmp" Bright="Yes" ImageSizes="512,512">
+        <Axis X="256" Y="256"/>
+      </MaskImage>
+      <Image Name="HUD_Ladder_60-90_DOWN.bmp" Bright="Yes" ImageSizes="247,1008">
+        <Axis X="124" Y="504"/>
+      </Image>
+      <Shift>
+        <Value Maximum="90" Minimum="-90">(A:Attitude indicator pitch degrees,degrees) /-/</Value>
+        <Nonlinearity>
+          <Item Value="0" Y="2550"/>
+          <Item Value="90" Y="5570"/>
+          <Item Value="-90" Y="-1020"/>
+        </Nonlinearity>
+      </Shift>
+
+      <Rotate>
+        <Value>(A:Attitude indicator bank degrees, radians)</Value>
+      </Rotate>
+    </Element>
+
+
+
+
+    <Element>
+      <Position X="220" Y="430"/>
+      <Visible>(A:GEAR HANDLE POSITION, bool) (A:Circuit Avionics on, bool) &amp;&amp;</Visible>
+      <Axis X="12" Y="45"/>
+      <Image Name="AOA_B.bmp" Bright="Yes" ImageSizes="25,90">
+      </Image>
+      <Shift>
+        <Value Minimum="-10.0" Maximum="10.0">(A:INCIDENCE ALPHA,degrees)</Value>
+        <Nonlinearity>
+          <Item Value="-8" X="190" Y="300"/>
+          <Item Value="0"  X="190" Y="410"/>
+          <Item Value="8"  X="190" Y="450"/>
+        </Nonlinearity>
+      </Shift>
+    </Element>
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="212" Y="303"/>
+      <Image Name="Waterline.bmp" Bright="Yes" ImageSizes="35,90">
+      </Image>
+    </Element>
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="256" Y="303"/>
+      <Image Name="Horizon.bmp" Bright="Yes" ImageSizes="30,400">
+        <Axis X="200" Y="15"/>
+      </Image>
+      <Shift>
+        <Value Maximum="90" Minimum="-90">(A:Attitude indicator pitch degrees,degrees) /-/</Value>
+        <Nonlinearity>
+          <Item Value="0"    X="256" Y="303"/>
+          <Item Value="90"   X="256" Y="3060"/>
+          <Item Value="-90"  X="256" Y="-3060"/>
+        </Nonlinearity>
+      </Shift>
+
+      <Rotate>
+        <Value>(A:Attitude indicator bank degrees, radians)</Value>
+      </Rotate>
+    </Element>
+
+  </Element>
+
 </Gauge>

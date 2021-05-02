@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Gauge Name="DC Designs Drums">
- <Update Frequency="60"/>    
-   
-         <!--Comms Gauge-->
-   
-   
-	       <Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-  <Image Name="Comms Gauge.png"/>	  
-	<Size X="512" Y="512" />
-	   
-	   
-          			   <Element>
-					   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="10" Y="170"/>
- <Text X="200" Y="80" Bright="Yes" Length="100" Font="Tahoma" Color="White"
-Adjust="Left" VerticalAdjust="Center">
-<String>%((A:COM1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
- </Text>
- </Element>
- 
-   			   <Element>
-			   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="300" Y="170"/>
- <Text X="200" Y="80" Bright="Yes" Length="100" Font="Tahoma" Color="White"
-Adjust="Left" VerticalAdjust="Center">
- <String>%((A:COM1 STANDBY FREQUENCY, Megahertz))%!6.2f!</String>
- </Text>
- </Element>
- 
- </Element>
+  <Update Frequency="60"/>
+
+  <!--Comms Gauge-->
+
+
+  <Element>
+    <Visible>(A:Circuit Avionics on, bool)</Visible>
+    <Image Name="Comms Gauge.png"/>
+    <Size X="512" Y="512" />
+
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="10" Y="170"/>
+      <Text X="200" Y="80" Bright="Yes" Length="100" Font="Tahoma" Color="White"
+     Adjust="Left" VerticalAdjust="Center">
+        <String>%((A:COM1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
+      </Text>
+    </Element>
+
+    <Element>
+      <Visible>(A:Circuit Avionics on, bool)</Visible>
+      <Position X="300" Y="170"/>
+      <Text X="200" Y="80" Bright="Yes" Length="100" Font="Tahoma" Color="White"
+     Adjust="Left" VerticalAdjust="Center">
+        <String>%((A:COM1 STANDBY FREQUENCY, Megahertz))%!6.2f!</String>
+      </Text>
+    </Element>
+
+  </Element>
 
 </Gauge>

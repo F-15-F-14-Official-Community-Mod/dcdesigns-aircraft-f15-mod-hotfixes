@@ -1,32 +1,32 @@
 <Gauge Name="DC Designs Drums">
-   <Update Frequency="60"/>  
-   
-         <!--Comms Gauge-->
-   
-   
-	       <Element>
-<Visible>(A:Circuit Avionics on, bool)</Visible>
-  <Image Name="CTR_Tank.bmp"/>	  
-	   </Element>
-	   
-	   
-   	<Element>
-		<Visible>(A:Circuit Avionics on, bool)</Visible>
-		<Position X="250" Y="250"/>
-		<Text X="200" Y="30" Bright="Yes" Length="14" Font="Tahoma" Color="White"
+  <Update Frequency="60"/>
+
+  <!--Comms Gauge-->
+
+
+  <Element>
+    <Visible>(A:Circuit Avionics on, bool)</Visible>
+    <Image Name="CTR_Tank.bmp"/>
+  </Element>
+
+
+  <Element>
+    <Visible>(A:Circuit Avionics on, bool)</Visible>
+    <Position X="250" Y="250"/>
+    <Text X="200" Y="30" Bright="Yes" Length="14" Font="Tahoma" Color="White"
 		Adjust="Left" VerticalAdjust="Center">
-		<String>DME    %((A:NAV1 DME, nmiles) 999 min 0 max s1 0 &gt;=)%{if}%(l1 100 &gt;=)%{if}%(l1)%!d!%{else}%(l1)%!0.1f!%{end}%{else}----%{end}</String>
-		</Text>
-	</Element>
- 
-   			   <Element>
-			   <Visible>(A:Circuit Avionics on, bool)</Visible>
-			   <Position X="200" Y="0"/>
- <Text X="200" Y="30" Bright="Yes" Length="100" Font="Tahoma" Color="White"
-Adjust="Left" VerticalAdjust="Center">
- <String>%((A:NAV1 LOCALIZER, degrees))%!3.0f!</String>
- </Text>
- </Element>
+      <String>DME    %((A:NAV1 DME, nmiles) 999 min 0 max s1 0 &gt;=)%{if}%(l1 100 &gt;=)%{if}%(l1)%!d!%{else}%(l1)%!0.1f!%{end}%{else}----%{end}</String>
+    </Text>
+  </Element>
+
+  <Element>
+    <Visible>(A:Circuit Avionics on, bool)</Visible>
+    <Position X="200" Y="0"/>
+    <Text X="200" Y="30" Bright="Yes" Length="100" Font="Tahoma" Color="White"
+   Adjust="Left" VerticalAdjust="Center">
+      <String>%((A:NAV1 LOCALIZER, degrees))%!3.0f!</String>
+    </Text>
+  </Element>
 
 
 </Gauge>
