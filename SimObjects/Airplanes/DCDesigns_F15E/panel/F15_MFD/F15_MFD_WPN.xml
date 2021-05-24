@@ -8,7 +8,7 @@
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
     <Image Name="WPN_1.bmp"/>
-
+	<Size X="512" Y="512" />
 
 
     <Element>

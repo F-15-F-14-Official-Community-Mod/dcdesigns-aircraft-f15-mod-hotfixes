@@ -8,7 +8,7 @@
     <Image Name="DCD_HUD.bmp"/>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
     <Size X="512" Y="512" />
-  </Element>
+
 
 
   <Element>
@@ -237,7 +237,7 @@
 
   </Element>
 
-
+  </Element>
 
 
 

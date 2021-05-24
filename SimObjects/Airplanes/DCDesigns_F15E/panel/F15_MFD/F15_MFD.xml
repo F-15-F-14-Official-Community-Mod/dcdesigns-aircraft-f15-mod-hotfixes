@@ -6,9 +6,8 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Image Name="DCD_HSI.png"/>
     <Size X="512" Y="512" />
-  </Element>
+
 
   <Element>
     <Visible>(A:Circuit Avionics on,bool)</Visible>
@@ -370,7 +369,7 @@
 
 
 
-
+  </Element>
 
 
 
