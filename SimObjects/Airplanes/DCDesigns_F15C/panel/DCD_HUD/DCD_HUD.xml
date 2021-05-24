@@ -12,8 +12,8 @@
 
     <Element>
       <Visible>(A:Circuit Avionics on, bool)</Visible>
-      <Position X="63" Y="215"/>
-      <Text X="80" Y="31" Bright="Yes" Length="4" Font="Tahoma" Color="Lime"
+      <Position X="25" Y="215"/>
+      <Text X="120" Y="32" Bright="Yes" Length="4" Font="Tahoma" Color="Lime"
       Adjust="Right" VerticalAdjust="Center">
         <String>%((A:Airspeed indicated, knots)) %!3d!%</String>
       </Text>
@@ -21,8 +21,8 @@
 
     <Element>
       <Visible>(A:Circuit Avionics on, bool)</Visible>
-      <Position X="320" Y="238"/>
-      <Text X="80" Y="26" Bright="Yes" Length="6" Font="Tahoma" Color="Lime"
+      <Position X="280" Y="250"/>
+      <Text X="120" Y="28" Bright="Yes" Length="6" Font="Tahoma" Color="Lime"
       Adjust="Right" VerticalAdjust="Center">
         <String>%((A:VERTICAL SPEED, ft/min))%!5d!%</String>
       </Text>
@@ -30,8 +30,8 @@
 
     <Element>
       <Visible>(A:Circuit Avionics on, bool)</Visible>
-      <Position X="320" Y="215"/>
-      <Text X="80" Y="31" Bright="Yes" Length="6" Font="Tahoma" Color="Lime"
+      <Position X="300" Y="215"/>
+      <Text X="100" Y="32" Bright="Yes" Length="6" Font="Tahoma" Color="Lime"
       Adjust="Right" VerticalAdjust="Center">
         <String>%((A:Indicated Altitude, feet)) %!5d!%</String>
       </Text>
@@ -39,7 +39,7 @@
 
     <Element>
       <Visible>(A:Circuit Avionics on, bool) (A:Radio height, feet) 1000 &lt;= and</Visible>
-      <Position X="315" Y="258"/>
+      <Position X="350" Y="350"/>
       <Text X="80" Y="30" Bright="Yes" Length="6" Font="tahoma" Color="Lime" Adjust="Right" VerticalAdjust="Center" Multiline="No" Fixed="No">
         <String>%((A:Radio height, feet))%!5d!%  R%</String>
       </Text>
@@ -47,8 +47,8 @@
 
     <Element>
       <Visible>(A:Circuit Avionics on, bool)</Visible>
-      <Position X="60" Y="490"/>
-      <Text X="90" Y="20" Bright="Yes" Length="12" Font="Tahoma" Color="Lime"
+      <Position X="20" Y="490"/>
+      <Text X="120" Y="30" Bright="Yes" Length="12" Font="Tahoma" Color="Lime"
       Adjust="Left" VerticalAdjust="Center">
         <String>%((P:Local time,hours) flr 23 + 24 % 1 +)%!02d! : %((P:Local time,minutes) flr 60 %)%!02d! : %((P:Local time,seconds) flr 60 %)%!02d!</String>
       </Text>
@@ -57,7 +57,7 @@
     <Element>
       <Visible>(A:Circuit Avionics on, bool) (A:G FORCE, GForce) 9.0 &gt;= and</Visible>
       <Position X="153" Y="225"/>
-      <Text X="200" Y="30" Bright="Yes" Length="8" Font="Tahoma" Color="Lime"
+      <Text X="200" Y="40" Bright="Yes" Length="8" Font="Tahoma" Color="Lime"
       Adjust="Center" VerticalAdjust="Center">
         <String>% G LIMIT %</String>
       </Text>
@@ -65,8 +65,8 @@
 
     <Element>
       <Visible>(A:Circuit Avionics on, bool) (A:SPOILERS HANDLE POSITION, position) 0.01 &gt; and </Visible>
-      <Position X="153" Y="400"/>
-      <Text X="200" Y="30" Bright="Yes" Length="8" Font="Tahoma" Color="Lime"
+      <Position X="158" Y="350"/>
+      <Text X="200" Y="38" Bright="Yes" Length="8" Font="Tahoma" Color="Lime"
       Adjust="Center" VerticalAdjust="Center">
         <String>% SPD BRK %</String>
       </Text>
@@ -74,8 +74,8 @@
 
     <Element>
       <Visible>(A:Circuit Avionics on, bool)</Visible>
-      <Position X="60" Y="370"/>
-      <Text X="90" Y="23" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
+      <Position X="50" Y="370"/>
+      <Text X="115" Y="30" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
       Adjust="Left" VerticalAdjust="Center">
         <String>AOA %((A:INCIDENCE ALPHA,degrees))%!3.1f!</String>
       </Text>
@@ -83,8 +83,8 @@
 
     <Element>
       <Visible>(A:Circuit Avionics on, bool)</Visible>
-      <Position X="60" Y="410"/>
-      <Text X="90" Y="23" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
+      <Position X="50" Y="420"/>
+      <Text X="90" Y="30" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
       Adjust="Left" VerticalAdjust="Center">
         <String>%((A:G FORCE, GForce))%!3.1f! G</String>
       </Text>
@@ -92,8 +92,8 @@
 
     <Element>
       <Visible>(A:Circuit Avionics on, bool)</Visible>
-      <Position X="60" Y="390"/>
-      <Text X="90" Y="23" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
+      <Position X="50" Y="395"/>
+      <Text X="90" Y="30" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
       Adjust="Left" VerticalAdjust="Center">
         <String>%((A:AIRSPEED MACH, mach))%!3.3f!</String>
       </Text>
@@ -101,8 +101,8 @@
 
     <Element>
       <Visible>(A:AUTOPILOT MASTER,bool)</Visible>
-      <Position X="60" Y="440"/>
-      <Text X="90" Y="20" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
+      <Position X="45" Y="445"/>
+      <Text X="100" Y="28" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
       Adjust="Left" VerticalAdjust="Center">
         <String>ALT %((A:AUTOPILOT ALTITUDE LOCK VAR, feet))%!5d!%</String>
       </Text>
@@ -110,8 +110,8 @@
 
     <Element>
       <Visible>(A:AUTOPILOT MASTER,bool)</Visible>
-      <Position X="60" Y="460"/>
-      <Text X="90" Y="20" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
+      <Position X="45" Y="468"/>
+      <Text X="100" Y="28" Bright="Yes" Length="10" Font="Tahoma" Color="Lime"
       Adjust="Left" VerticalAdjust="Center">
         <String>V/S  %((A:AUTOPILOT VERTICAL HOLD VAR, ft/min))%!4d!%</String>
       </Text>
@@ -186,7 +186,7 @@
 
 
     <Element>
-      <Position X="250" Y="55"/>
+      <Position X="245" Y="55"/>
       <Visible>(A:Circuit Avionics on, bool)</Visible>
       <Image Name="HDG_Arrow.bmp">
         <Transparent>True</Transparent>
@@ -198,7 +198,7 @@
     <Element>
       <Visible>(A:Circuit Avionics on, bool)</Visible>
       <Position X="320" Y="425"/>
-      <Text X="120" Y="30" Bright="Yes" Length="12" Font="Tahoma" Color="Lime"
+      <Text X="120" Y="32" Bright="Yes" Length="12" Font="Tahoma" Color="Lime"
       Adjust="Right" VerticalAdjust="Center">
         <String>%((A:Ambient Wind Velocity,knots) s0 0 &gt;)%{if}%(l0)%!3d!%{else}---%{end}</String>
       </Text>
@@ -207,8 +207,8 @@
 
     <Element>
       <Visible>(A:Circuit Avionics on,bool)</Visible>
-      <Position X="385" Y="485"/>
-      <Text X="90" Y="20" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+      <Position X="375" Y="485"/>
+      <Text X="200" Y="28" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
       Adjust="Left" VerticalAdjust="Center">
         <String>NAV1 %((A:NAV1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
       </Text>
@@ -216,8 +216,8 @@
 
     <Element>
       <Visible>(A:Circuit Avionics on, bool)</Visible>
-      <Position X="345" Y="485"/>
-      <Text X="90" Y="20" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+      <Position X="310" Y="485"/>
+      <Text X="180" Y="28" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
       Adjust="Left" VerticalAdjust="Center">
         <String>%((A:Nav1 ident, string))%!s!</String>
       </Text>
@@ -225,10 +225,10 @@
 
     <Element>
       <Visible>(A:Circuit Avionics on, bool)</Visible>
-      <Position X="385" Y="465"/>
-      <Text X="90" Y="20" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
+      <Position X="345" Y="460"/>
+      <Text X="200" Y="28" Bright="Yes" Length="14" Font="Tahoma" Color="Lime"
       Adjust="Left" VerticalAdjust="Center">
-        <String>DME  %((A:NAV1 DME, nmiles) 999 min 0 max s1 0 &gt;=)%{if}%(l1 100 &gt;=)%{if}%(l1)%!d!%{else}%(l1)%!0.1f!%{end}%{else}----%{end}</String>
+        <String>DME     %((A:NAV1 DME, nmiles) 999 min 0 max s1 0 &gt;=)%{if}%(l1 100 &gt;=)%{if}%(l1)%!d!%{else}%(l1)%!0.1f!%{end}%{else}----%{end}</String>
       </Text>
     </Element>
 
@@ -278,9 +278,9 @@
       <Shift>
         <Value Minimum="-10.0" Maximum="10.0">(A:VELOCITY BODY Y, m/s) (A:VELOCITY BODY Z, m/s) atg2 rddg</Value>
         <Nonlinearity>
-          <Item Value="-10" Y="500"/>
-          <Item Value="0.0"  Y="274"/>
-          <Item Value="10"  Y="200"/>
+          <Item Value="-10" Y="450"/>
+          <Item Value="0.0"  Y="256"/>
+          <Item Value="10"  Y="50"/>
         </Nonlinearity>
       </Shift>
     </Element>
@@ -459,9 +459,9 @@
       <Shift>
         <Value Minimum="-10.0" Maximum="10.0">(A:INCIDENCE ALPHA,degrees)</Value>
         <Nonlinearity>
-          <Item Value="-8" X="190" Y="300"/>
-          <Item Value="0"  X="190" Y="410"/>
-          <Item Value="8"  X="190" Y="450"/>
+          <Item Value="-8" X="190" Y="250"/>
+          <Item Value="0"  X="190" Y="360"/>
+          <Item Value="8"  X="190" Y="400"/>
         </Nonlinearity>
       </Shift>
     </Element>
@@ -469,7 +469,7 @@
 
     <Element>
       <Visible>(A:Circuit Avionics on, bool)</Visible>
-      <Position X="212" Y="303"/>
+      <Position X="212" Y="302"/>
       <Image Name="Waterline.bmp" Bright="Yes" ImageSizes="35,90">
       </Image>
     </Element>
@@ -484,7 +484,7 @@
       <Shift>
         <Value Maximum="90" Minimum="-90">(A:Attitude indicator pitch degrees,degrees) /-/</Value>
         <Nonlinearity>
-          <Item Value="0"    X="256" Y="303"/>
+          <Item Value="0"    X="256" Y="284"/>
           <Item Value="90"   X="256" Y="3060"/>
           <Item Value="-90"  X="256" Y="-3060"/>
         </Nonlinearity>

@@ -1,354 +1,154 @@
 {
   "content": [
     {
-      "path": "LICENSE.txt",
-      "size": 540,
-      "date": 132608207070000000
+      "path": "MSFSLayoutGenerator.exe",
+      "size": 363520,
+      "date": 132472563715727977
     },
     {
-      "path": "README.md",
-      "size": 4720,
-      "date": 132608207070000000
+      "path": "Effects/LIGHT_ASOBO_BeaconRHS.fx",
+      "size": 1223,
+      "date": 132651786673192254
     },
     {
-      "path": "Effects/LIGHT_ASOBO_Landing_F15.fx",
-      "size": 1233,
-      "date": 132608207070000000
+      "path": "Effects/LIGHT_ASOBO_BeaconWing.fx",
+      "size": 1223,
+      "date": 132651783990637215
     },
     {
-      "path": "Effects/LIGHT_ASOBO_TaxiLarge_F15.fx",
-      "size": 1283,
-      "date": 132608207070000000
+      "path": "Effects/LIGHT_ASOBO_InteriorGreen.fx",
+      "size": 1227,
+      "date": 132653537040028979
+    },
+    {
+      "path": "Effects/LIGHT_ASOBO_NavigationGreenTip.fx",
+      "size": 1238,
+      "date": 132651793775119735
+    },
+    {
+      "path": "Effects/LIGHT_ASOBO_NavigationRedNormal.fx",
+      "size": 1227,
+      "date": 132651784994478865
+    },
+    {
+      "path": "Effects/LIGHT_ASOBO_NavigationRedWing.fx",
+      "size": 1227,
+      "date": 132651797522755072
+    },
+    {
+      "path": "Effects/LIGHT_ASOBO_NavigationWhiteLHS.fx",
+      "size": 1350,
+      "date": 132651742208940861
     },
     {
       "path": "html_ui/Pages/VLivery/liveries/f-15_panel/f15_lights.css",
       "size": 1203,
-      "date": 132617750405135841
+      "date": 132645376660000000
     },
     {
       "path": "html_ui/Pages/VLivery/liveries/f-15_panel/f15_lights.html",
       "size": 251,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "html_ui/Pages/VLivery/liveries/f-15_panel/f15_lights.js",
       "size": 1718,
-      "date": 132617751089562992
+      "date": 132656585041725501
     },
     {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/ai.cfg",
-      "size": 725,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/Approach.flt",
-      "size": 3229,
-      "date": 132614250079661724
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/apron.flt",
-      "size": 3084,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/cameras.cfg",
-      "size": 17810,
-      "date": 132637933302604967
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/Climb.flt",
-      "size": 2100,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/cockpit.cfg",
-      "size": 5123,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/Cruise.flt",
-      "size": 3313,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/engines.cfg",
-      "size": 9568,
-      "date": 132640419035573831
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/Final.flt",
-      "size": 3279,
-      "date": 132614249672298977
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/flight_model.cfg",
-      "size": 19449,
-      "date": 132640428658239886
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/hangar.flt",
-      "size": 3086,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/runway.FLT",
-      "size": 3062,
-      "date": 132608207070000000
+      "path": "SimObjects/Airplanes/DCDesigns_F15C/aircraft.cfg",
+      "size": 10765,
+      "date": 132653620942642672
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15C/systems.cfg",
-      "size": 13011,
-      "date": 132640422662186376
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/taxi.flt",
-      "size": 3029,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/model/DCDesignsF15C.xml",
-      "size": 15501,
-      "date": 132617764489916537
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/model/DCDesignsF15C_Interior.xml",
-      "size": 34476,
-      "date": 132617764641607550
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/model/DCDesigns_LVAR.xml",
-      "size": 5988,
-      "date": 132617764337029549
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/model/DC_Designs_Instruments.xml",
-      "size": 17734,
-      "date": 132617764200617665
+      "size": 13894,
+      "date": 132656554732614005
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/panel.cfg",
       "size": 1516,
-      "date": 132620655418429775
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/Altimeter/Altimeter.xml",
-      "size": 2976,
-      "date": 132617764842835499
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/Altimeter/Altimeter_Backup.xml",
-      "size": 2275,
-      "date": 132617765009720442
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/AUTO/Effect Controller.xml",
       "size": 292,
-      "date": 132614273789715881
+      "date": 132653528173745490
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/DCD RADAR/ALT.bmp",
       "size": 2854,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/DCD RADAR/AP.bmp",
       "size": 2854,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/DCD RADAR/APP.bmp",
       "size": 3174,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/DCD RADAR/DCD_RADAR.xml",
-      "size": 11829,
-      "date": 132617765287509975
+      "size": 12155,
+      "date": 132656512774882962
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/DCD RADAR/GPS.bmp",
       "size": 2854,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/DCD RADAR/HDG.bmp",
       "size": 2934,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/DCD RADAR/NAV.bmp",
       "size": 2934,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/DCD RADAR/Screen.bmp",
       "size": 675894,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/DCD RADAR/VS.bmp",
       "size": 2934,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/DCD RADAR/YD.bmp",
       "size": 2934,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/DCD_HUD/DCD_HUD.xml",
-      "size": 16418,
-      "date": 132617765551556136
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/DCD_HUD/DCD_HUD_Backup.xml",
-      "size": 15372,
-      "date": 132617765702528267
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/DCD_MFD/DCD_MFD_Backup.xml",
-      "size": 38074,
-      "date": 132617765994893947
+      "size": 16788,
+      "date": 132656125645185039
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/DCD_MFD/DCD_MFD_F15C.xml",
       "size": 5324,
-      "date": 132617766169393413
+      "date": 132653515977438309
     },
     {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/Drums/Comms.xml",
-      "size": 974,
-      "date": 132617766337236574
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/Drums/Drums Backup.xml",
-      "size": 1299,
-      "date": 132617766545964882
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/Drums/Drums.xml",
-      "size": 637,
-      "date": 132617767786628750
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/Drums/HSI_Numbers.xml",
-      "size": 1624,
-      "date": 132617767923792948
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/Drums/HSI_Numbers_Backup.xml",
-      "size": 938,
-      "date": 132617768533853366
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/NAV PANEL/Nav_Panel.xml",
-      "size": 967,
-      "date": 132617768684846652
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15C/panel/NAV PANEL/Nav_Panel_Backup.xml",
-      "size": 8692,
-      "date": 132617769023001321
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/ai.cfg",
-      "size": 725,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/Approach.flt",
-      "size": 3229,
-      "date": 132614250079661724
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/apron.flt",
-      "size": 3084,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/cameras.cfg",
-      "size": 17810,
-      "date": 132637933302604967
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/Climb.flt",
-      "size": 2100,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/cockpit.cfg",
-      "size": 5123,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/Cruise.flt",
-      "size": 3313,
-      "date": 132608207070000000
+      "path": "SimObjects/Airplanes/DCDesigns_F15D/aircraft.cfg",
+      "size": 3238,
+      "date": 132653621092739657
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15D/engines.cfg",
-      "size": 9568,
-      "date": 132640419035573831
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/Final.flt",
-      "size": 3279,
-      "date": 132614249672298977
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/flight_model.cfg",
-      "size": 19228,
-      "date": 132640428895223056
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/hangar.flt",
-      "size": 3086,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/runway.FLT",
-      "size": 3062,
-      "date": 132608207070000000
+      "size": 9567,
+      "date": 132643636075402448
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15D/systems.cfg",
-      "size": 13073,
-      "date": 132640419316181762
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/taxi.flt",
-      "size": 3029,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/model.D/DCDesignsF15D.xml",
-      "size": 15501,
-      "date": 132617769949202584
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/model.D/DCDesignsF15D_Interior.xml",
-      "size": 32604,
-      "date": 132617770387030633
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/model.D/DCDesigns_LVAR.xml",
-      "size": 5987,
-      "date": 132617769741990652
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/model.D/DCD_Switch_Template.xml",
-      "size": 1032,
-      "date": 132617769584002846
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/model.D/DC_Designs_Instruments.xml",
-      "size": 18680,
-      "date": 132617769430414918
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/model.D/model.CFG",
-      "size": 688,
-      "date": 132608207070000000
+      "size": 13957,
+      "date": 132653541041361488
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/panel.cfg",
@@ -356,479 +156,199 @@
       "date": 132613693450853056
     },
     {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/Altimeter/Altimeter.xml",
-      "size": 2822,
-      "date": 132617770558881746
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/Altimeter/Altimeter_Backup.xml",
-      "size": 2275,
-      "date": 132617770697528916
-    },
-    {
       "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/AUTO/Effect Controller.xml",
       "size": 292,
-      "date": 132614272961247160
+      "date": 132653528173745490
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/DCD RADAR/ALT.bmp",
       "size": 2854,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/DCD RADAR/AP.bmp",
       "size": 2854,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/DCD RADAR/APP.bmp",
       "size": 3174,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/DCD RADAR/DCD_RADAR.xml",
-      "size": 11829,
-      "date": 132617770868439528
+      "size": 12155,
+      "date": 132656512774882962
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/DCD RADAR/GPS.bmp",
       "size": 2854,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/DCD RADAR/HDG.bmp",
       "size": 2934,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/DCD RADAR/NAV.bmp",
       "size": 2934,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/DCD RADAR/Screen.bmp",
       "size": 675894,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/DCD RADAR/VS.bmp",
       "size": 2934,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/DCD RADAR/YD.bmp",
       "size": 2934,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/DCD_HUD/DCD_HUD.xml",
-      "size": 16422,
-      "date": 132617771021840419
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/DCD_MFD/DCD_MFD_Backup.xml",
-      "size": 38074,
-      "date": 132617771190555760
+      "size": 16792,
+      "date": 132656127871587320
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/DCD_MFD/DCD_MFD_F15C.xml",
-      "size": 5326,
-      "date": 132617771463861788
+      "size": 5324,
+      "date": 132653515977438309
     },
     {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/Drums/Comms.xml",
-      "size": 974,
-      "date": 132617771688435181
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/Drums/Drums Backup.xml",
-      "size": 1299,
-      "date": 132617771864027308
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/Drums/Drums.xml",
-      "size": 637,
-      "date": 132617772003358402
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/Drums/HSI_Numbers.xml",
-      "size": 1624,
-      "date": 132617772205296340
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/Drums/HSI_Numbers_Backup.xml",
-      "size": 938,
-      "date": 132617772342550653
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/NAV PANEL/Nav_Panel.xml",
-      "size": 967,
-      "date": 132617772489385967
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15D/panel/NAV PANEL/Nav_Panel_Backup.xml",
-      "size": 8692,
-      "date": 132617772625743126
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/ai.cfg",
-      "size": 725,
-      "date": 132637946421211679
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/Approach.flt",
-      "size": 3229,
-      "date": 132614250079661724
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/apron.flt",
-      "size": 3084,
-      "date": 132602449930000000
+      "path": "SimObjects/Airplanes/DCDesigns_F15E/aircraft.cfg",
+      "size": 8814,
+      "date": 132653621190471687
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/cameras.cfg",
-      "size": 17810,
-      "date": 132637933302604967
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/Climb.flt",
-      "size": 2100,
-      "date": 132602449930000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/cockpit.cfg",
-      "size": 5123,
-      "date": 132602449930000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/Cruise.flt",
-      "size": 3313,
-      "date": 132602449930000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/engines.cfg",
-      "size": 9552,
-      "date": 132640412378539598
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/Final.flt",
-      "size": 3279,
-      "date": 132614249672298977
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/flight_model.cfg",
-      "size": 19202,
-      "date": 132640429018220721
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/hangar.flt",
-      "size": 3086,
-      "date": 132602449930000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/runway.FLT",
-      "size": 3062,
-      "date": 132602449930000000
+      "size": 24006,
+      "date": 132656109062657639
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/systems.cfg",
-      "size": 13014,
-      "date": 132640357872391302
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/taxi.flt",
-      "size": 3029,
-      "date": 132602449930000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/model/DCDesignsF15E.xml",
-      "size": 14985,
-      "date": 132617759119714630
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/model/DCDesignsF15E_Interior.xml",
-      "size": 35067,
-      "date": 132617759465547439
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/model/DCDesigns_LVAR.xml",
-      "size": 5987,
-      "date": 132617758797313140
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/model/DCD_Switch_Template.xml",
-      "size": 1032,
-      "date": 132617758602511881
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/model/DC_Designs_Instruments.xml",
-      "size": 17920,
-      "date": 132617758339181779
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/model/model.CFG",
-      "size": 688,
-      "date": 132608207070000000
+      "size": 13991,
+      "date": 132653541109622261
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/panel.cfg",
       "size": 2440,
-      "date": 132620624976665201
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/Altimeter/Altimeter.xml",
-      "size": 2822,
-      "date": 132617759876806440
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/Altimeter/Altimeter_Backup.xml",
-      "size": 2275,
-      "date": 132617760040959497
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/AUTO/Effect Controller.xml",
       "size": 303,
-      "date": 132617760289661543
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/DCD_HUD/DCD_HUD.bmp",
       "size": 786486,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/DCD_HUD/DCD_HUD.png",
-      "size": 5186,
-      "date": 132608207070000000
+      "date": 132653591040277666
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/DCD_HUD/DCD_HUD.xml",
-      "size": 15128,
-      "date": 132617760555620163
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/Drums/Drums.xml",
-      "size": 637,
-      "date": 132617760766096957
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/ENGINE/Engine_Data.bmp",
-      "size": 3145850,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/ENGINE/Engine_Display.xml",
-      "size": 3947,
-      "date": 132620627950888929
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/ENGINE/Needle.bmp",
-      "size": 58502,
-      "date": 132608207070000000
+      "size": 15496,
+      "date": 132656123834869730
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/F15_MFD/ALT.bmp",
       "size": 2854,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/F15_MFD/AP.bmp",
       "size": 2854,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/F15_MFD/APP.bmp",
       "size": 3174,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/F15_MFD/F15_MFD.xml",
-      "size": 11536,
-      "date": 132621543501207254
+      "size": 11503,
+      "date": 132656485480428115
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/F15_MFD/F15_MFDL.xml",
-      "size": 9432,
-      "date": 132617762696059681
+      "size": 9399,
+      "date": 132656486358659487
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/F15_MFD/F15_MFD_R.xml",
-      "size": 5465,
-      "date": 132621531302915788
+      "size": 5407,
+      "date": 132656485619457982
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/F15_MFD/F15_MFD_WPN.xml",
-      "size": 7629,
-      "date": 132617761937675669
+      "size": 7654,
+      "date": 132656489423565127
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/F15_MFD/F15_MFD_WSO1.xml",
       "size": 7435,
-      "date": 132617762154224825
+      "date": 132656486005461136
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/F15_MFD/GPS.bmp",
       "size": 2854,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/F15_MFD/HDG.bmp",
       "size": 2934,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/F15_MFD/NAV.bmp",
       "size": 2934,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/F15_MFD/VS.bmp",
       "size": 2934,
-      "date": 132608207070000000
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/F15_MFD/YD.bmp",
       "size": 2934,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/NAV PANEL/F15_Nav_Panel.xml",
-      "size": 8505,
-      "date": 132617762894725433
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/NAV PANEL/F15_Nav_Panel_Backup.xml",
-      "size": 8692,
-      "date": 132617763130283770
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/NAV PANEL/Nav_Panel.xml",
-      "size": 967,
-      "date": 132617763341237314
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/NAV PANEL/Nav_Panel_Backup.xml",
-      "size": 8692,
-      "date": 132617763621774793
+      "date": 132645376660000000
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/NAV PANEL/UFCP.xml",
-      "size": 3319,
-      "date": 132617763804518410
+      "size": 7424,
+      "date": 132656492265398126
     },
     {
-      "path": "SimObjects/Airplanes/DCDesigns_F15E/panel/NAV PANEL/UFCP_Backup.xml",
-      "size": 4363,
-      "date": 132617763963170565
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/ai.cfg",
-      "size": 725,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/Approach.flt",
-      "size": 3229,
-      "date": 132614250079661724
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/apron.flt",
-      "size": 3084,
-      "date": 132608207070000000
+      "path": "SimObjects/Airplanes/DCDesigns_F15I/aircraft.cfg",
+      "size": 3192,
+      "date": 132653621291208418
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15I/cameras.cfg",
-      "size": 17810,
-      "date": 132637933302604967
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/Climb.flt",
-      "size": 2100,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/cockpit.cfg",
-      "size": 5123,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/Cruise.flt",
-      "size": 3313,
-      "date": 132608207070000000
+      "size": 24010,
+      "date": 132656133996311787
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15I/engines.cfg",
-      "size": 9507,
-      "date": 132640412378709374
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/Final.flt",
-      "size": 3279,
-      "date": 132614249672298977
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/flight_model.cfg",
-      "size": 19364,
-      "date": 132640429365216422
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/hangar.flt",
-      "size": 3086,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/runway.FLT",
-      "size": 3062,
-      "date": 132608207070000000
+      "size": 9568,
+      "date": 132643614399718837
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15I/systems.cfg",
-      "size": 13028,
-      "date": 132640413741503229
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/taxi.flt",
-      "size": 3029,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/model.I/DCDesignsF15I.xml",
-      "size": 14990,
-      "date": 132617752751055677
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/model.I/DCDesignsF15I_Interior.xml",
-      "size": 32121,
-      "date": 132617753113121961
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/model.I/DCDesigns_LVAR.xml",
-      "size": 5987,
-      "date": 132617752511125698
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/model.I/DCD_Switch_Template.xml",
-      "size": 1032,
-      "date": 132617752328198613
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/model.I/DC_Designs_Instruments.xml",
-      "size": 17920,
-      "date": 132617751977184615
+      "size": 13976,
+      "date": 132653541246773950
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/panel.cfg",
       "size": 2434,
       "date": 132613692047633318
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/Altimeter/Altimeter.xml",
-      "size": 2822,
-      "date": 132617753497836809
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/Altimeter/Altimeter_Backup.xml",
-      "size": 2275,
-      "date": 132617753664667203
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/AUTO/Effect Controller.xml",
@@ -841,34 +361,9 @@
       "date": 132608207070000000
     },
     {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/DCD_HUD/DCD_HUD.png",
-      "size": 5186,
-      "date": 132608207070000000
-    },
-    {
       "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/DCD_HUD/DCD_HUD.xml",
-      "size": 15128,
-      "date": 132617753953068048
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/Drums/Drums.xml",
-      "size": 637,
-      "date": 132617754407846587
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/ENGINE/Engine_Data.bmp",
-      "size": 3145850,
-      "date": 132608207070000000
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/ENGINE/Engine_Display.xml",
-      "size": 3933,
-      "date": 132617754618291049
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/ENGINE/Needle.bmp",
-      "size": 58502,
-      "date": 132608207070000000
+      "size": 15496,
+      "date": 132656518432235688
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/F15_MFD/ALT.bmp",
@@ -887,18 +382,18 @@
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/F15_MFD/F15_MFD.xml",
-      "size": 11490,
-      "date": 132621543346635533
+      "size": 11459,
+      "date": 132656490195883858
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/F15_MFD/F15_MFDL.xml",
-      "size": 9447,
-      "date": 132617755979044103
+      "size": 9414,
+      "date": 132656490657962904
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/F15_MFD/F15_MFD_R.xml",
-      "size": 5471,
-      "date": 132617755297279119
+      "size": 5407,
+      "date": 132656490657962904
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/F15_MFD/F15_MFD_WPN.xml",
@@ -908,7 +403,7 @@
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/F15_MFD/F15_MFD_WSO1.xml",
       "size": 7435,
-      "date": 132617755812502046
+      "date": 132656490463945941
     },
     {
       "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/F15_MFD/GPS.bmp",
@@ -936,34 +431,9 @@
       "date": 132608207070000000
     },
     {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/NAV PANEL/F15_Nav_Panel.xml",
-      "size": 8497,
-      "date": 132617756245159485
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/NAV PANEL/F15_Nav_Panel_Backup.xml",
-      "size": 8116,
-      "date": 132617731461347070
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/NAV PANEL/Nav_Panel.xml",
-      "size": 8457,
-      "date": 132617756469311688
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/NAV PANEL/Nav_Panel_Backup.xml",
-      "size": 8733,
-      "date": 132617757206242335
-    },
-    {
       "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/NAV PANEL/UFCP.xml",
-      "size": 6464,
-      "date": 132617757670341582
-    },
-    {
-      "path": "SimObjects/Airplanes/DCDesigns_F15I/panel/NAV PANEL/UFCP_Backup.xml",
-      "size": 4404,
-      "date": 132617757924097889
+      "size": 7328,
+      "date": 132656491613519876
     }
   ]
 }

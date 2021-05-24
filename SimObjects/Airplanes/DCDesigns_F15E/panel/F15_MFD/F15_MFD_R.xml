@@ -5,7 +5,6 @@
 
 
   <Element>
-    <Image Name="ENG_Screen.png"/>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
     <Size X="512" Y="512" />
 

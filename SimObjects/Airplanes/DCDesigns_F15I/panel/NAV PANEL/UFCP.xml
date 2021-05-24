@@ -5,7 +5,7 @@
   <Element>
     <Image Name="VC_Nav.bmp"/>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-  </Element>
+    <Size X="512" Y="512" />
 
 
 
@@ -107,7 +107,7 @@
       <String>TOTAL FUEL: %((A:FUEL TOTAL QUANTITY WEIGHT, pounds)) %!5d!%</String>
     </Text>
   </Element>
-
+  </Element>
 
   <Mouse>
 

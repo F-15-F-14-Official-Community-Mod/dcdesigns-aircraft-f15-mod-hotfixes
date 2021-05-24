@@ -4,7 +4,6 @@
 
 
   <Element>
-    <Image Name="VC_Nav.png"/>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
     <Size X="512" Y="512" />
 
@@ -110,6 +109,115 @@
 
   </Element>
 
+ <Mouse>
+
+
+    <Area Left="190" Top="80" Width="10" Height="30">
+      <Cursor Type="UpArrow"/>
+      <Click Event="ADF_100_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="200" Top="80" Width="10" Height="30">
+      <Cursor Type="DownArrow"/>
+      <Click Event="ADF_100_DEC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="210" Top="80" Width="10" Height="30">
+      <Cursor Type="UpArrow"/>
+      <Click Event="ADF_10_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="220" Top="80" Width="10" Height="30">
+      <Cursor Type="DownArrow"/>
+      <Click Event="ADF_10_DEC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="230" Top="80" Width="10" Height="30">
+      <Cursor Type="UpArrow"/>
+      <Click Event="ADF_1_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="240" Top="80" Width="10" Height="30">
+      <Cursor Type="DownArrow"/>
+      <Click Event="ADF_1_DEC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="250" Top="80" Width="10" Height="30">
+      <Cursor Type="UpArrow"/>
+      <Click Event="ADF_FRACT_INC_CARRY" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="260" Top="80" Width="10" Height="30">
+      <Cursor Type="DownArrow"/>
+      <Click Event="ADF_FRACT_DEC_CARRY" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="200" Top="138" Width="20" Height="30">
+      <Cursor Type="DownArrow"/>
+      <Click Event="NAV1_RADIO_WHOLE_DEC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="220" Top="138" Width="20" Height="30">
+      <Cursor Type="UpArrow"/>
+      <Click Event="NAV1_RADIO_WHOLE_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="230" Top="138" Width="20" Height="30">
+      <Cursor Type="DownArrow"/>
+      <Click Event="NAV1_RADIO_FRACT_DEC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="250" Top="138" Width="20" Height="30">
+      <Cursor Type="UpArrow"/>
+      <Click Event="NAV1_RADIO_FRACT_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="200" Top="198" Width="20" Height="30">
+      <Cursor Type="DownArrow"/>
+      <Click Event="COM_RADIO_WHOLE_DEC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="220" Top="198" Width="20" Height="30">
+      <Cursor Type="UpArrow"/>
+      <Click Event="COM_RADIO_WHOLE_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="230" Top="198" Width="20" Height="30">
+      <Cursor Type="DownArrow"/>
+      <Click Event="COM_RADIO_FRACT_DEC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="250" Top="198" Width="20" Height="30">
+      <Cursor Type="UpArrow"/>
+      <Click Event="COM_RADIO_FRACT_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="80" Top="290" Width="180" Height="40">
+      <Tooltip ID="TOOLTIPTEXT_TRANSPONDER_ID"/>
+    </Area>
+
+    <Area Left="160" Top="295" Width="10" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="XPNDR_1000_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="170" Top="295" Width="10" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="XPNDR_100_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="180" Top="295" Width="10" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="XPNDR_10_INC" Repeat="Yes"/>
+    </Area>
+
+    <Area Left="190" Top="295" Width="10" Height="40">
+      <Cursor Type="UpArrow"/>
+      <Click Event="XPNDR_1_INC" Repeat="Yes"/>
+    </Area>
+
+
+  </Mouse>		 
 </Gauge>
 
 

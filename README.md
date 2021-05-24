@@ -1,39 +1,5 @@
 <h1> F-15 (C/D/E/I) Official Community Mod </h1>
 
-
-<h4>To be used in conjunction with "DC Designs F-15 C, D, E & I Eagle (for MSFS)" paid aircraft, available through:
-           <ul>
-           <li>https://www.justflight.com/product/dc-designs-f15-c-d-e-i-eagle-microsoft-flight-simulator</li>
-           <li>MSFS In-Sim Marketplace</li>
-           <ul>
-</h4>
-<h4>Mod works as designed with Just Flight purchased DC Designs F-15(C/D/E/I)</h4>
-                      
-<h3>***MSFS Marketplace purchased DC Design F-15(C/D/E/I) users***</h3>
-<h4>For marketplace users of the official product, due to Asobo restrictions and DRM encryption protection,<br> 
-         it has limited many of the files we wish to edit.
-<h4>Current files that we believe work for the mod on the MSFS Marketplace version of jet:</h4>
-           <ul>
-                      <li>flight_model.cfg</li>
-                      <li>engines.cfg</li>
-                      <li>cameras.cfg</li>
-                      <li>autopilot functionality</li>
-                      <li>PiD values</li>
-                      <li>external UI config</li>
-           </ul>    
-           Improvements made to the HUD or MFDs will not be applied due to Microsoft DRM, at this current time. 
-  <br><br>          
-   
-#### Note- If there is any further progress or updates regarding the MSFS Marketplace version users, we will update you as soon as possible.
-</h4>
-
- <br> 
- <h3>Installation</h3>
-<h4> Mod to be installed in community folder. Details on finding community folder for your version of MSFS can be found below:
-            <p>https://www.flightsim.com/vbfs/content.php?21235-Finding-The-MSFS-2020-Community-Folder</p>
-</h4>
- <br><br> 
-
 <h3>Development Team</h3>
            <ul>
            <li>CodenameJack447</li>
@@ -49,6 +15,36 @@
            <li><a href="https://github.com/F-15-C-D-E-I-Official-Community-Mod/dcdesigns-aircraft-f15_v1.0.1_rev_1.16/files/6177904/1.16.pdf">v1.16.pdf</a></li>
            <li><a href="https://github.com/F-15-C-D-E-I-Official-Community-Mod/dcdesigns-aircraft-f15_rev_1.15-JustFlight/files/6137293/v1.0.1_rev_1.15i.pdf">v1.15i.pdf</a></li>
            </ul>
+                      <br>
+
+<h4>To be used in conjunction with "DC Designs F-15 C, D, E & I Eagle (for MSFS)" paid aircraft, available through:
+           <ul>
+           <li>https://www.justflight.com/product/dc-designs-f15-c-d-e-i-eagle-microsoft-flight-simulator</li>
+           <li>MSFS In-Sim Marketplace</li>
+           <ul>
+</h4>
+<h4>Mod works as designed with Just Flight purchased DC Designs F-15(C/D/E/I)</h4>
+                      
+<h3>***MSFS Marketplace purchased DC Design F-15(C/D/E/I) users***</h3>
+<h4>For marketplace users of the official product, due to Asobo restrictions and DRM encryption protection,<br> 
+         it has limited many of the files we wish to edit.
+<h4>Many of the modifications the team has made over the past, have made it into the official updates of the jet (enginges, flight model, etc). 
+           However, improvements made to the HUD or MFDs on the mod version will not be applied due to Microsoft DRM. ((only for MSFS marketplace purchasers)at this current time) </h4>
+          
+  <br><br>          
+   
+#### Note- If there is any further progress or updates regarding the MSFS Marketplace version users, we will update you as soon as possible.
+</h4>
+
+ <br> 
+ <h3>Installation</h3>
+<h4> Mod to be installed in community folder. Details on finding community folder for your version of MSFS can be found below:
+            <p>https://www.flightsim.com/vbfs/content.php?21235-Finding-The-MSFS-2020-Community-Folder</p>
+</h4>
+ <br><br> 
+
+
+
 
 <h3>Flight Envelopes</h3>
 

@@ -10,14 +10,15 @@
     <Visible>(A:Circuit Avionics on, bool)</Visible>
     <Size X="512" Y="512" />
     <Position X="50" Y="0"/>
-  </Element>
+			
+
 
 
 
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="65" Y="60"/>
+    <Position X="15" Y="60"/>
     <Text X="250" Y="30" Bright="Yes" Length="20" Font="Arial Unicode MS" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
       <String>XPDR:  %((A:TRANSPONDER CODE:1, number))%!4d!%</String>
@@ -27,7 +28,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on,bool)</Visible>
-    <Position X="65" Y="85"/>
+    <Position X="15" Y="85"/>
     <Text X="350" Y="30" Bright="Yes" Length="18" Font="Arial Unicode MS" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
       <String>NAV 1 FREQ: %((A:NAV1 ACTIVE FREQUENCY, Megahertz))%!6.2f!</String>
@@ -36,7 +37,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on,bool)</Visible>
-    <Position X="65" Y="115"/>
+    <Position X="15" Y="115"/>
     <Text X="350" Y="30" Bright="Yes" Length="18" Font="Arial Unicode MS" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
       <String>NAV 1 STBY: %((A:NAV1 STANDBY FREQUENCY, Megahertz))%!6.2f!</String>
@@ -47,7 +48,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on,bool)</Visible>
-    <Position X="65" Y="145"/>
+    <Position X="15" Y="145"/>
     <Text X="200" Y="30" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
       <String>%((A:Nav1 ident, string))%!s!</String>
@@ -57,7 +58,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="65" Y="175"/>
+    <Position X="15" Y="175"/>
     <Text X="350" Y="30" Bright="Yes" Length="18" Font="Arial Unicode MS" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
       <String>ADF FREQ: %((A:ADF ACTIVE FREQUENCY:1,KHz))%!5.1f!</String>
@@ -67,7 +68,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="65" Y="205"/>
+    <Position X="15" Y="205"/>
     <Text X="250" Y="30" Bright="Yes" Length="18" Font="Arial Unicode MS" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
       <String>%((A:KOHLSMAN SETTING HG,mbar))%!4d!</String>
@@ -76,7 +77,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="65" Y="235"/>
+    <Position X="15" Y="235"/>
     <Text X="250" Y="30" Bright="Yes" Length="18" Font="Arial Unicode MS" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
       <String>%((A:Kohlsman setting hg,inHg))%!2.2f!</String>
@@ -85,7 +86,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool) (A:GPS DRIVES NAV1, bool) (A:GPS IS ACTIVE WAY POINT,bool) and </Visible>
-    <Position X="65" Y="265"/>
+    <Position X="15" Y="265"/>
     <Text X="150" Y="30" Bright="Yes" Length="30" Font="Arial Unicode MS" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
       <String>%((A:GPS WP NEXT ID, String))%!s! %((A:GPS WP DISTANCE, nmiles))%!4.2f!%NM</String>
@@ -94,7 +95,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on,bool)</Visible>
-    <Position X="65" Y="5"/>
+    <Position X="15" Y="5"/>
     <Text X="150" Y="30" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
       <String>IAS %((A:Airspeed indicated, knots))%!3d!%kts</String>
@@ -103,7 +104,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on,bool)</Visible>
-    <Position X="200" Y="5"/>
+    <Position X="150" Y="5"/>
     <Text X="150" Y="30" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
       <String>TCAS %((A:airspeed TRUE, knots))%!4d!%kts</String>
@@ -112,7 +113,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on,bool)</Visible>
-    <Position X="365" Y="5"/>
+    <Position X="315" Y="5"/>
     <Text X="150" Y="30" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
       <String>Mach %((A:AIRSPEED MACH, mach))%!3.3f!</String>
@@ -121,7 +122,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="95" Y="475"/>
+    <Position X="45" Y="475"/>
     <Select>
       <Value>(A:AUTOPILOT MASTER,bool)</Value>
       <Case Value="1">
@@ -132,7 +133,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="155" Y="475"/>
+    <Position X="105" Y="475"/>
     <Select>
       <Value>(A:AUTOPILOT HEADING LOCK,bool)</Value>
       <Case Value="1">
@@ -143,7 +144,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="215" Y="475"/>
+    <Position X="165" Y="475"/>
     <Select>
       <Value>(A:AUTOPILOT NAV1 LOCK, bool)</Value>
       <Case Value="1">
@@ -154,7 +155,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="275" Y="475"/>
+    <Position X="225" Y="475"/>
     <Select>
       <Value>(A:AUTOPILOT YAW DAMPER, bool)</Value>
       <Case Value="1">
@@ -165,7 +166,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="335" Y="475"/>
+    <Position X="285" Y="475"/>
     <Select>
       <Value>(A:AUTOPILOT GLIDESLOPE HOLD,bool)</Value>
       <Case Value="1">
@@ -176,7 +177,7 @@
 
   <Element>
     <Visible>(A:AUTOPILOT MASTER,bool)</Visible>
-    <Position X="95" Y="445"/>
+    <Position X="45" Y="445"/>
     <Select>
       <Value>(A:AUTOPILOT ALTITUDE LOCK,bool)</Value>
       <Case Value="1">
@@ -188,7 +189,7 @@
 
   <Element>
     <Visible>(A:AUTOPILOT MASTER,bool)</Visible>
-    <Position X="115" Y="438"/>
+    <Position X="65" Y="438"/>
     <Text X="100" Y="30" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
     Adjust="Right" VerticalAdjust="Center">
       <String>%((A:AUTOPILOT ALTITUDE LOCK VAR, feet))%!5d!%</String>
@@ -197,7 +198,7 @@
 
   <Element>
     <Visible>(A:AUTOPILOT MASTER,bool)</Visible>
-    <Position X="215" Y="445"/>
+    <Position X="175" Y="445"/>
     <Select>
       <Value>(A:AUTOPILOT VERTICAL HOLD,bool)</Value>
       <Case Value="1">
@@ -208,7 +209,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="395" Y="475"/>
+    <Position X="350" Y="475"/>
     <Select>
       <Value>(A:GPS DRIVES NAV1,bool)</Value>
       <Case Value="1">
@@ -220,7 +221,7 @@
 
   <Element>
     <Visible>(A:AUTOPILOT MASTER,bool)</Visible>
-    <Position X="225" Y="438"/>
+    <Position X="175" Y="438"/>
     <Text X="100" Y="30" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
     Adjust="Right" VerticalAdjust="Center">
       <String>%((A:AUTOPILOT VERTICAL HOLD VAR, ft/min))%!5d!%</String>
@@ -229,7 +230,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="370" Y="335"/>
+    <Position X="320" Y="335"/>
     <Text X="150" Y="30" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
     Adjust="Left" VerticalAdjust="Center">
       <String>CRS %((A:NAV1 OBS,degrees))%!4.1f!%</String>
@@ -238,7 +239,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on,bool)</Visible>
-    <Position X="370" Y="365"/>
+    <Position X="320" Y="365"/>
     <Text X="150" Y="30" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
       <String>HDG %((A:Autopilot heading lock dir,degrees))%!4.1f!%</String>
@@ -249,7 +250,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on,bool)</Visible>
-    <Position X="65" Y="335"/>
+    <Position X="15" Y="335"/>
     <Text X="150" Y="30" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
       <String>Alt %((A:Indicated Altitude, feet))%!5d!%ft</String>
@@ -258,7 +259,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="206" Y="335"/>
+    <Position X="156" Y="335"/>
     <Text X="170" Y="30" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
       <String>G-Force %((A:G FORCE, GForce))%!3.1f!</String>
@@ -267,7 +268,7 @@
   
    <Element>
 		<Visible>(A:Circuit Avionics on,bool)</Visible>
-		<Position X="206" Y="365"/>
+		<Position X="156" Y="365"/>
 		<Text X="170" Y="30" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
 		<String>Throttle %((A:GENERAL ENG THROTTLE LEVER POSITION:1,Percent))%!3d!%%</String>
@@ -276,7 +277,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on,bool)</Visible>
-    <Position X="65" Y="365"/>
+    <Position X="15" Y="365"/>
     <Text X="150" Y="30" Bright="Yes" Length="14" Font="Arial Unicode MS" Color="Lime"
 		Adjust="Left" VerticalAdjust="Center">
       <String>Telv %((A:ELEVATOR TRIM PCT,Percent))%!3d!%%</String>
@@ -286,7 +287,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="335" Y="86"/>
+    <Position X="285" Y="86"/>
     <Text X="60" Y="20" Bright="Yes" Length="3" Font="Arial Unicode MS" Color="white"
 		Adjust="right" VerticalAdjust="Center">
       <String>%((A:TURB ENG N2:1, percent))%!3d!%</String>
@@ -295,7 +296,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="452" Y="86"/>
+    <Position X="402" Y="86"/>
     <Text X="60" Y="20" Bright="Yes" Length="3" Font="Arial Unicode MS" Color="white"
 		Adjust="left" VerticalAdjust="Center">
       <String>%((A:TURB ENG N2:2, percent))%!3d!%</String>
@@ -304,7 +305,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="333" Y="107"/>
+    <Position X="283" Y="107"/>
     <Text X="60" Y="20" Bright="Yes" Length="4" Font="Arial Unicode MS" Color="white"
 		Adjust="right" VerticalAdjust="Center">
       <String>%((A:TURB ENG ITT:1, Celsius))%!d!</String>
@@ -313,7 +314,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="454" Y="107"/>
+    <Position X="404" Y="107"/>
     <Text X="60" Y="20" Bright="Yes" Length="4" Font="Arial Unicode MS" Color="white"
 		Adjust="left" VerticalAdjust="Center">
       <String>%((A:TURB ENG ITT:2, Celsius))%!d!</String>
@@ -322,7 +323,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="338" Y="140"/>
+    <Position X="288" Y="140"/>
     <Text X="60" Y="20" Bright="Yes" Length="4" Font="Arial Unicode MS" Color="white"
 		Adjust="right" VerticalAdjust="Center">
       <String>%((A:TURB ENG CORRECTED FF:1, pounds per hour))%!4d!%</String>
@@ -331,7 +332,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="449" Y="140"/>
+    <Position X="399" Y="140"/>
     <Text X="60" Y="20" Bright="Yes" Length="4" Font="Arial Unicode MS" Color="white"
 		Adjust="left" VerticalAdjust="Center">
       <String>%((A:TURB ENG CORRECTED FF:2, pounds per hour))%!4d!%</String>
@@ -340,7 +341,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="330" Y="275"/>
+    <Position X="280" Y="275"/>
     <Text X="60" Y="20" Bright="Yes" Length="3" Font="Arial Unicode MS" Color="white"
 		Adjust="right" VerticalAdjust="Center">
       <String>%((A:GENERAL ENG1 OIL PRESSURE, PSI))%!3d!%</String>
@@ -350,7 +351,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="462" Y="275"/>
+    <Position X="412" Y="275"/>
     <Text X="60" Y="20" Bright="Yes" Length="3" Font="Arial Unicode MS" Color="white"
 		Adjust="left" VerticalAdjust="Center">
       <String>%((A:GENERAL ENG2 OIL PRESSURE, PSI))%!3d!%</String>
@@ -361,7 +362,7 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="340" Y="200"/>
+    <Position X="290" Y="200"/>
     <Text X="60" Y="35" Bright="Yes" Length="3" Font="Arial Unicode MS" Color="white"
 		Adjust="right" VerticalAdjust="Center">
       <String>%((A:TURB ENG PRIMARY NOZZLE PERCENT:1, percent))%!3d!%</String>
@@ -370,11 +371,11 @@
 
   <Element>
     <Visible>(A:Circuit Avionics on, bool)</Visible>
-    <Position X="442" Y="200"/>
+    <Position X="392" Y="200"/>
     <Text X="60" Y="35" Bright="Yes" Length="3" Font="Arial Unicode MS" Color="white"
 		Adjust="left" VerticalAdjust="Center">
       <String>%((A:TURB ENG PRIMARY NOZZLE PERCENT:2, percent))%!3d!%</String>
     </Text>
   </Element>
-
+  </Element>
 </Gauge>

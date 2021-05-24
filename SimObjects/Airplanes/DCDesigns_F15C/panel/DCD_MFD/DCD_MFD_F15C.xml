@@ -17,8 +17,8 @@
 
     <Element>
       <Visible>(A:Circuit Avionics on, bool)</Visible>
-      <Position X="130" Y="430"/>
-      <Text X="250" Y="30" Bright="Yes" Length="20" Font="Tahoma" Color="Lime"
+      <Position X="125" Y="430"/>
+      <Text X="300" Y="35" Bright="Yes" Length="30" Font="Tahoma" Color="Lime"
      Adjust="Left" VerticalAdjust="Center">
         <String>TOTAL WEIGHT: %((A:TOTAL WEIGHT,POUNDS))%!3d!%</String>
       </Text>
