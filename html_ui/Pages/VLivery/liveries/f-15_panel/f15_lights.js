@@ -39,8 +39,10 @@ class f15_lights extends TemplateElement {
             var ground = SimVar.GetSimVarValue("SIM ON GROUND", "Boolean");
             if (SimVar.GetSimVarValue("LIGHT TAXI", "bool") && gears_extracted <= 99)
                 SimVar.SetSimVarValue("K:TOGGLE_TAXI_LIGHTS", "bool", false)
-            else if (!SimVar.GetSimVarValue("LIGHT TAXI", "bool") && gears_extracted > 99 && !ground)
-                SimVar.SetSimVarValue("K:TOGGLE_TAXI_LIGHTS", "bool", true)
+            if (SimVar.GetSimVarValue("LIGHT LANDING", "bool") && gears_extracted <= 99)
+                SimVar.SetSimVarValue("K:LANDING_LIGHTS_TOGGLE", "bool", false)
+            
+
         }
 
 
