@@ -6,7 +6,7 @@
            <li>Severus Aviation</li>
            <li>SilentG37</li>
            <ul>
-                      <h2><em>***Mod currently not compatible with official release 1.0.5***</em></h2>
+                      <h2><em>***Mod/Hotfix will only work for those who have NOT purchased through MSFS in-sim marketplace***</em></h2>
 <br>
 <h4>Releases Notes/Changelogs:</h4>
            <ul>
